@@ -6,12 +6,13 @@ import './App.css'
 import { Footer } from './Components/Footer';
 import { Header } from './Components/Header';
 import { Container } from 'react-bootstrap';
+import  Routing  from './Components/Route';
 function App() {
  
   return (
     <>
     <Header />
-    <HomeComponent />
+    <Routing />
     <Footer /> 
     </>
   );

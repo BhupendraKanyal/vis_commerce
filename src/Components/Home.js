@@ -21,13 +21,13 @@ import tilesCarpet from './Helpers/tilesCarpet.svg';
 import LV from './Helpers/LV.webm';
 import lightingDetail from './Helpers/lightingDetail.svg';
 import Circlelogo from './Helpers/Circlelogo.svg';
-
+import furniture from './Helpers/furniture.png'
 import { MdFiberManualRecord } from 'react-icons/md';
 
 import lovesac from './Helpers/lovesac.jpeg'
 import { FaStar } from 'react-icons/fa'
 import Quardrant from './Helpers/Quardrant.svg'
-
+import coloredfabric from './Helpers/coloredfabric.svg'
 import { div_meta_data } from './Helpers/crousel_meta/landing_meta';
 import MyCarousel,{ImgCarousel} from './LandingCrousel.js'
 const HomeComponent = () => {
@@ -41,18 +41,18 @@ const HomeComponent = () => {
   const currentCrousel = (val)=>{
     setCrouselIndex(val)
   }
-  const childRefHandleNext = useRef(null);
-  const childRefHandlePrev = useRef(null);
-  const handleNext = ()=>{
-    if (childRefHandleNext.current) {
-        childRefHandleNext.current.handleNext();
-      }
+  
+  const dynamicData = [{name:'Furniture',value:`Showcase your furniture Instore and online. On common smartphone, tablets and pc's. 
+  Our solutions offer high material fedility. We leverage Nvidia, Adobe tecnologies. We conform to 3DCommerce asset guidelines. Showcase your furniture under diverse lighting conditions. for example under sunlight and night lighting. Help your costumers make the right choices using our Collaboration3D technology
+  `,imgUrl:furniture},{name:'Lighting',value:'Illuminate Your Potential! With Viscommerce, your lighting products become stars with our 3D capabilities. Let your brilliance shine through, captivating customers and setting your brand apart in the world of luminous possibilities.',imgUrl:lightingDetail},]
+  const handleClick = (e)=>{
+    const nameVal = e.target.name
+    console.log("eventName",nameVal)
+    let vals = dynamicData.find(val=>val.name == nameVal)
+    setCatalogStateVal(vals)
   }
-  const handlePrev = ()=>{
-    if (childRefHandlePrev.current) {
-        childRefHandlePrev.current.handleNext();
-      }
-  }
+  const [catalogStateVal,setCatalogStateVal]  = useState(dynamicData[0])
+
     return (
         <>
             <div style={divBackground}>
@@ -139,25 +139,19 @@ const HomeComponent = () => {
                         </div>
                     </Col>
 
-                    {/* <Col xs={12} md={4}>
-                        <div className='officeChairParentDiv'>
-                            <div className='officeChairDiv' style={{ flex: 1 }}>
-                                <div>
-                                    <h3>Catalog3D</h3>
-                                    <Button className='d-flex justify-content-center align-items-center'><img className='officeChairBt' src={plusIcon} /><span>Your Products</span></Button>
-                                </div>
-                                <img src={officeChair} />
-                            </div>
-                            <div className='officeChairButtonsParentDiv'>
-                                <Button className='officeChairButtons' style={{ marginTop: '0' }}><img src={myRoom} /><span>My Room</span></Button>
-                                <Button className='officeChairButtons'><img src={Furniture} /><span>Furniture</span></Button>
-                                <Button className='officeChairButtons'><img src={Lighting} /><span>Lighting</span></Button>
-                                <Button className='officeChairButtons'><img src={Paints} /><span>Paints</span></Button>
-                                <Button className='officeChairButtons'><img src={doorWindows} /><span>Door/Windows</span></Button>
-                                <Button className='officeChairButtons'><img src={tilesCarpet} /><span>Tiles/Carpet</span></Button>
-                            </div>
+                   <Col xs={12} md={4} className='d-flex align-items-center'>
+                        <div style={{background:'#F8493B',borderRadius:'20px'}}>
+                        <div style={{padding:'30px 30px 20px 30px'}}>
+                            <h3 style={{color:'#000'}}>Material<span style={{color:'#fff'}}>3D</span></h3>
+                            <p>Your platform for captivating digital material realism</p>
                         </div>
-                    </Col> */}
+
+
+                        <div style={{display: 'flex',justifyContent:'flex-end'}}>
+                            <img src={coloredfabric} style={{width:'300px',padding:'10px'}}/>
+                        </div>
+                        </div>
+                   </Col>
 
                 </Row>
                 <Row style={{ marginTop: '50px', marginBottom: '50px' }} >
@@ -168,27 +162,27 @@ const HomeComponent = () => {
                             <h3>About Catalog</h3>
                             <div className='row container'>
                                 <div className="servicesButtonDiv col-md-3" >
-                                    <Button><MdFiberManualRecord className='bulletIcon' /><span>Sample Room</span></Button>
-                                    <Button><MdFiberManualRecord className='bulletIcon' /><span>Furniture</span></Button>
-                                    <Button><MdFiberManualRecord className='bulletIcon' /><span>Lighting</span></Button>
-                                    <Button><MdFiberManualRecord className='bulletIcon' /><span>Paints</span></Button>
-                                    <Button><MdFiberManualRecord className='bulletIcon' /><span>Tiles</span></Button>
-                                    <Button><MdFiberManualRecord className='bulletIcon' /><span>Flooring</span></Button>
-                                    <Button><MdFiberManualRecord className='bulletIcon' /><span>Door/Windows</span></Button>
-                                    <Button><MdFiberManualRecord className='bulletIcon' /><span>Accesssories</span></Button>
+                                    <Button onClick={(e)=>handleClick(e)} name='Furniture'><MdFiberManualRecord className='bulletIcon' /><span>Sample Room</span></Button>
+                                    <Button onClick={(e)=>handleClick(e)} name='Furniture'><MdFiberManualRecord className='bulletIcon' /><span>Furniture</span></Button>
+                                    <Button onClick={(e)=>handleClick(e)} name='Lighting'><MdFiberManualRecord className='bulletIcon' /><span>Lighting</span></Button>
+                                    <Button onClick={(e)=>handleClick(e)} name='Furniture'><MdFiberManualRecord className='bulletIcon' /><span>Paints</span></Button>
+                                    <Button onClick={(e)=>handleClick(e)} name='Furniture'><MdFiberManualRecord className='bulletIcon' /><span>Tiles</span></Button>
+                                    <Button onClick={(e)=>handleClick(e)} name='Furniture'><MdFiberManualRecord className='bulletIcon' /><span>Flooring</span></Button>
+                                    <Button onClick={(e)=>handleClick(e)} name='Furniture'><MdFiberManualRecord className='bulletIcon' /><span>Door/Windows</span></Button>
+                                    <Button onClick={(e)=>handleClick(e)} name='Furniture'><MdFiberManualRecord className='bulletIcon' /><span>Accesssories</span></Button>
                                 </div>
                                 <div className='servicesDetailDiv col-md-7'>
-                                    <h5 style={{ color: '#FF4233' }}>Furniture</h5>
-                                    <p style={{ color: '#fff' }}>Step into the Future of Furnishing! Elevate your brand with VisCommerce's immersive 3D models, showcasing your furniture in stunning realism. Transform the shopping experience and engage customers like never before.</p>
+                                    <h5 style={{ color: '#FF4233' }}>{catalogStateVal?.name}</h5>
+                                    <p style={{ color: '#fff' }}>{catalogStateVal?.value}</p>
                                 </div>
                             </div>
                         </div>
                     </Col>
                     <Col xs={12} md={6} style={{ background: '#424242', textAlign: 'center' }}>
-                        <div style={{borderTopLeftRadius:'20px',borderBottomLeftRadius:'20px'}}><img  src={lightingDetail} /></div>
+                        <div style={{borderTopLeftRadius:'20px',borderBottomLeftRadius:'20px'}}><img  src={catalogStateVal?.imgUrl} /></div>
                     </Col>
                 </Row>
-                <Row style={{marginBottom:'50px'}}>
+                <Row style={{marginBottom:'60px'}}>
                     <Col xs={12} md={3} className='d-flex align-items-center'>
                         <div className='industryInsight'>
                             <h3>
@@ -203,6 +197,7 @@ const HomeComponent = () => {
                        <MyCarousel currentCrousel={currentCrousel}/>
                     </Col>
                     <Col xs={12} md={4} className='d-flex align-items-center'>
+                        {console.log("div_meta_data",div_meta_data)}
                         {crouselIndex && crouselIndex==div_meta_data.length-1 ? div_meta_data[0] : div_meta_data[crouselIndex+1]}
                     </Col>
                     {/* <button onClick={handleNext}>Call Child Function 1</button>
@@ -210,13 +205,8 @@ const HomeComponent = () => {
                 </Row>
 
 
-            
-
-               
-                <Row style={{marginBottom:'50px'}}>
-                    <h4 style={{color:'#FF422E',fontWeight:'800',textAlign:'center'}}>HDRenders</h4>
+                    
                     <ImgCarousel />
-                </Row>
             </Container>
         </>
     );

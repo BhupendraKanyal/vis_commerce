@@ -21,7 +21,7 @@ export const Header = ()=>{
           <Nav className="ml-auto">
           <Nav.Link href="#home">Solutions</Nav.Link>
             <Nav.Link href="#home">Benefits</Nav.Link>
-            <Nav.Link href="#home">HDRenders</Nav.Link>
+            <Nav.Link href="/hdrenderer">HDRenders</Nav.Link>
             <Nav.Link href="#about">Pricing</Nav.Link>
             <Nav.Link href="#services">Resources</Nav.Link>
             <NavDropdown
