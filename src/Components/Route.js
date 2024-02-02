@@ -5,7 +5,7 @@ import Home from './Home.js';
 import Card from './HdRenderer/Cards/Card.jsx';
 const Routing = () => {
   return (
-    <Router>
+    <Router basename='website'>
       <Routes>
         <Route  path='/' element={<Home />} />
         <Route  path='/hdrenderer' element={<Card />} />
