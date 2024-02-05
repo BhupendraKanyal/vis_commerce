@@ -1,7 +1,4 @@
-
-
-
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 .card-style {
   background-color: #2f2f2e;
@@ -26,12 +23,11 @@
 
 .form {
   background-color: #282828;
-  color: wheat;
+  color: white;
   border: 3px solid #ff4233;
   font-size: 12px;
   padding: 12px;
   text-align: center;
-  width: 50%;
 }
 .buttons {
   background-color: orange;
@@ -39,14 +35,132 @@
   padding: 12px;
 }
 .title {
-  padding: 1px 3px;
+  padding-top: 40px;
   color: #ffffff;
-  font-size: 20px;
+
+  font-size: 30px;
 }
 .subtitle {
+  font-family: "Roboto", sans-serif;
   color: #ffffff;
-  padding: 3px;
+  padding-top: 2px;
+  padding-bottom: 25px;
 }
 .titles {
   padding: 10px;
+}
+
+.card-bg {
+  width: 1486px;
+  height: 300px;
+  background-color: #2f2f2e;
+  color: white;
+  border-radius: 13px;
+}
+
+.card-img {
+  flex: 1;
+  height: 300px;
+  overflow: hidden;
+}
+
+.card-img .f {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-img-sm {
+  height: 250px;
+  width: 300px;
+}
+
+.space {
+  padding: 2px 50px;
+}
+/* to Small devices */
+@media (max-width: 627px) {
+  .title {
+    padding-top: 10px;
+    color: #ffffff;
+    font-size: 18px;
+  }
+  .subtitle {
+    color: #ffffff;
+    padding-bottom: 15px;
+    font-size: 15px;
+  }
+  .space {
+    padding: 2px 20px;
+  }
+  .card-bg {
+    width: 90vw;
+    height: 250px;
+    background-color: #2f2f2e;
+    color: rgb(114, 113, 35);
+    margin: 20px;
+    border-radius: 13px;
+  }
+  /* .width {
+    width: 80%;
+  } */
+  .customize-tryNow {
+    width: 125px;
+    height: 45px;
+  }
+  .customize-video {
+    width: 125px;
+    height: 76px;
+  }
+  .card-img {
+    height: 250px;
+    overflow: hidden;
+  }
+  .card-img .f {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .card-img-sm {
+    width: 200px;
+    height: 250px;
+  }
+}
+
+/* Large Devices */
+@media (min-width: 768px) {
+  .card-bg {
+    width: 90vw;
+    height: 350px;
+    background-color: #2f2f2e;
+    margin: 20px;
+    border-radius: 13px;
+    background-color: red;
+  }
+  .card-img {
+    height: 350px;
+    overflow: hidden;
+  }
+  .card-img .f {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .width {
+    width: 50%;
+  }
+  .customize-tryNow {
+    width: 200px;
+    height: 55px;
+  }
+  .customize-video {
+    width: 193px;
+    height: 105px;
+  }
+  .card-img-sm {
+    background-color: red;
+
+    width: 250px;
+    height: 350px;
+  }
 }

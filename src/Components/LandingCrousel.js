@@ -1,11 +1,12 @@
 
-import React, { useState, useEffect } from 'react';
-import { Carousel, Button,Container,Row,Col } from 'react-bootstrap';
+import React, { useState, useEffect,forwardRef,useImperativeHandle } from 'react';
+import { Carousel,Row,Col, Button } from 'react-bootstrap';
 import { crousel_meta } from './Helpers/crousel_meta/landing_meta.js';
 import hdRendererRight from './Helpers/hdRendererRight.png'
 import hdRenderercenter from './Helpers/hdRenderercenter.png'
-import hdRendererLeft from './Helpers/hdRendererLeft.png'
-const MyCarousel = React.forwardRef(({currentCrousel},ref)=>{
+import hdRendererLeft from './Helpers/hdRendererLeft.png';
+import { ButtonGroup } from 'react-bootstrap';
+const MyCarousel = forwardRef(({currentCrousel},ref)=>{
   const [index, setIndex] = useState(0);
   const [items, setItems] = useState(crousel_meta);
 
@@ -18,6 +19,7 @@ const MyCarousel = React.forwardRef(({currentCrousel},ref)=>{
   }, [index]); 
 
   const handleSelect = (selectedIndex) => {
+    console.log("inside handle select")
     currentCrousel(selectedIndex)
     setIndex(selectedIndex);
   };
@@ -33,9 +35,8 @@ const MyCarousel = React.forwardRef(({currentCrousel},ref)=>{
     currentCrousel(newIndex)
     setIndex(newIndex);
   };
-  React.useImperativeHandle(ref, () => ({
-    handleNext,
-    handlePrev
+  useImperativeHandle(ref, () => ({
+    handleSelect
   }));
 
   return (
@@ -56,14 +57,14 @@ export const ImgCarousel = ()=> {
     return (
     <Row style={{marginTop:'20px',marginBottom:'100px'}}>
       <h4 style={{color:'#FF422E',fontWeight:'800',textAlign:'center',fontSize:'40px',marginBottom:'40px'}}>HDRenders</h4>
-    <Col xs={12} md={4}>
+    <Col className='cols' xs={12} md={4}>
       <img src={hdRendererLeft} style={{width:'auto',maxWidth:'100%'}} />
     </Col>
-    <Col xs={12} md={4}>
+    <Col className='cols' xs={12} md={4}>
       <img className='scaled-image' style={{width:'auto',maxWidth:'100%'}} src={hdRenderercenter} />
     </Col>
-    <Col xs={12} md={4}>
-      <img src={hdRendererLeft}  style={{width:'auto',maxWidth:'100%'}} />
+    <Col className='cols' xs={12} md={4}>
+      <img src={hdRendererRight}  style={{width:'auto',maxWidth:'100%',borderRadius:'20px'}} />
     </Col>
   </Row>
     )
