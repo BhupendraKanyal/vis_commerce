@@ -1,0 +1,48 @@
+
+.card-style {
+    background-color: #2f2f2e;
+    /* height: 500px; */
+    min-width: "20rem";
+    background-color: "#ffcccc";
+    border-bottom: "5px solid red";
+    margin: "0 10px";
+  }
+  .white {
+    color: white;
+    background-color: black;
+  }
+  
+  /* replace after styled */
+  .text-white {
+    color: wheat;
+  }
+  .bgred {
+    color: red;
+  }
+  
+  .form {
+    background-color: #282828;
+    color: wheat;
+    border: 3px solid #ff4233;
+    font-size: 12px;
+    padding: 12px;
+    text-align: center;
+    width: 50%;
+  }
+  .buttons {
+    background-color: orange;
+    width: 120px;
+    padding: 12px;
+  }
+  .title {
+    padding: 1px 3px;
+    color: #ffffff;
+    font-size: 20px;
+  }
+  .subtitle {
+    color: #ffffff;
+    padding: 3px;
+  }
+  .titles {
+    padding: 10px;
+  }

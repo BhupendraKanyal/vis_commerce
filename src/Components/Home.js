@@ -1,5 +1,5 @@
 import React, { useState,useRef } from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col, Button, ButtonGroup } from 'react-bootstrap';
 import LandingV from './Helpers/LandingV.mp4'
 import Play from './Helpers/Play.svg'
 import Showroom from './Helpers/Showroom.svg'
@@ -30,14 +30,26 @@ import Quardrant from './Helpers/Quardrant.svg'
 import coloredfabric from './Helpers/coloredfabric.svg'
 import { div_meta_data } from './Helpers/crousel_meta/landing_meta';
 import MyCarousel,{ImgCarousel} from './LandingCrousel.js'
+import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
 const HomeComponent = () => {
+    const [crouselIndex,setCrouselIndex] = useState(0)
+    const childRef = useRef()
+    const handleParentButtonClick =(e)=>{
+        const nameVal = e.currentTarget.name
+        if(nameVal == 'prevClick') {
+            childRef.current.handleSelect(crouselIndex == 0 ? div_meta_data.length-1 : crouselIndex-1)
+        }
+        if(nameVal == 'nextClick') {
+            childRef.current.handleSelect(crouselIndex == div_meta_data.length-1 ? 0 : crouselIndex+1)
+        }
+    }
     const divBackground = {
         backgroundImage: `url(${backImg})`,
         backgroundSize: '100% 100%',
         backgroundRepeat: 'no-repeat',
         background: 'background: linear-gradient(180deg, rgba(18, 18, 18, 0.00) 0%, rgba(18, 18, 18, 0.00) 0.01%, #02030B 49.53%);'
     };
-  const [crouselIndex,setCrouselIndex] = useState(0)
+  
   const currentCrousel = (val)=>{
     setCrouselIndex(val)
   }
@@ -46,8 +58,7 @@ const HomeComponent = () => {
   Our solutions offer high material fedility. We leverage Nvidia, Adobe tecnologies. We conform to 3DCommerce asset guidelines. Showcase your furniture under diverse lighting conditions. for example under sunlight and night lighting. Help your costumers make the right choices using our Collaboration3D technology
   `,imgUrl:furniture},{name:'Lighting',value:'Illuminate Your Potential! With Viscommerce, your lighting products become stars with our 3D capabilities. Let your brilliance shine through, captivating customers and setting your brand apart in the world of luminous possibilities.',imgUrl:lightingDetail},]
   const handleClick = (e)=>{
-    const nameVal = e.target.name
-    console.log("eventName",nameVal)
+    const nameVal = e.currentTarget.name
     let vals = dynamicData.find(val=>val.name == nameVal)
     setCatalogStateVal(vals)
   }
@@ -70,14 +81,16 @@ const HomeComponent = () => {
                                     <li>Web & Native Apps on Smartphones, Tablets, PC’s.</li>
                                     <li>3D, AI, Web, Crypto technologies.</li>
                                 </ul>
-                                <div style={{ display: 'flex', flexDirection: 'row', marginTop: '30px', alignItems: 'center' }}>
-                                    <Button variant="danger" style={{ borderRadius: '1.5rem', padding: '0.6rem 3rem' }}>Contact Us</Button>
-                                    <div style={{ display: 'flex', alignItems: 'center', marginLeft: '15px', marginRight: '15px' }}>
+                                <div className='Commerce3DDiv'><img className='Commerce3D2' src={Commerce3D} /></div>
+                                <div className='watchVideoDiv'>
+                                    <Button className='contactBt' variant="danger" >Contact Us</Button>
+                                    <div className='playButtonDiv' >
                                         <Button className='playButton'>
                                             <img src={Play} alt="Play Icon" />
                                         </Button>
                                     </div>
                                     <p style={{ margin: '0 0 0 4px' }}>Watch Video</p>
+                                   
                                 </div>
 
 
@@ -95,7 +108,7 @@ const HomeComponent = () => {
                         </Col>
                     </Row>
                     <Row>
-                        <div className='ThreeDButtons' style={{ display: 'flex', flexDirection: 'row', padding: '20px' }}>
+                        <div className='ThreeDButtons'>
                             <Button variant='none' style={{ borderRadius: '1.5rem', marginRight: '10px', color: '#FFF' }}><img src={Showroom} /><p>Showroom<span>3D</span></p></Button>
                             <Button variant='none' style={{ borderRadius: '1.5rem', marginRight: '10px', color: '#FFF' }}><img src={Catalog} /><p>Catalog<span>3D</span></p></Button>
                             <Button variant='none' style={{ borderRadius: '1.5rem', marginRight: '10px', color: '#FFF' }}><img src={Collaboration} /><p>Collaboration<span>3D</span></p></Button>
@@ -139,7 +152,7 @@ const HomeComponent = () => {
                         </div>
                     </Col>
 
-                   <Col xs={12} md={4} className='d-flex align-items-center'>
+                   <Col  xs={12} md={4} className='d-flex cols align-items-center'>
                         <div style={{background:'#F8493B',borderRadius:'20px'}}>
                         <div style={{padding:'30px 30px 20px 30px'}}>
                             <h3 style={{color:'#000'}}>Material<span style={{color:'#fff'}}>3D</span></h3>
@@ -157,19 +170,31 @@ const HomeComponent = () => {
                 <Row style={{ marginTop: '50px', marginBottom: '50px' }} >
 
 
-                    <Col xs={12} md={6} style={{ paddingRight: '0px' }}>
-                        <div className='aboutServices'>
-                            <h3>About Catalog</h3>
+                    <Col xs={12} md={6} className='aboutServicesCol'>
+                        <div style={{overflow:'auto'}} className='aboutServices'>
+                            <h3>Catalog3D</h3>
+                            <div className="servicesButtonDiv servicesButtonDivF col-md-3" >
+                                    <ButtonGroup>
+                                    <Button onClick={(e)=>handleClick(e)} name='Furniture'><MdFiberManualRecord className='bulletIcon' />Sample Room</Button>
+                                    <Button onClick={(e)=>handleClick(e)} name='Furniture'><MdFiberManualRecord className='bulletIcon' />Furniture</Button>
+                                    <Button onClick={(e)=>handleClick(e)} name='Lighting'><MdFiberManualRecord className='bulletIcon' />Lighting</Button>
+                                    <Button onClick={(e)=>handleClick(e)} name='Furniture'><MdFiberManualRecord className='bulletIcon' />Paints</Button>
+                                    <Button onClick={(e)=>handleClick(e)} name='Furniture'><MdFiberManualRecord className='bulletIcon' />Tiles</Button>
+                                    <Button onClick={(e)=>handleClick(e)} name='Furniture'><MdFiberManualRecord className='bulletIcon' />Flooring</Button>
+                                    <Button onClick={(e)=>handleClick(e)} name='Furniture'><MdFiberManualRecord className='bulletIcon' />Door/Windows</Button>
+                                    <Button  onClick={(e)=>handleClick(e)} name='Furniture'><MdFiberManualRecord className='bulletIcon' />Accesssories</Button>
+                                </ButtonGroup>
+                                </div>
                             <div className='row container'>
-                                <div className="servicesButtonDiv col-md-3" >
-                                    <Button onClick={(e)=>handleClick(e)} name='Furniture'><MdFiberManualRecord className='bulletIcon' /><span>Sample Room</span></Button>
-                                    <Button onClick={(e)=>handleClick(e)} name='Furniture'><MdFiberManualRecord className='bulletIcon' /><span>Furniture</span></Button>
-                                    <Button onClick={(e)=>handleClick(e)} name='Lighting'><MdFiberManualRecord className='bulletIcon' /><span>Lighting</span></Button>
-                                    <Button onClick={(e)=>handleClick(e)} name='Furniture'><MdFiberManualRecord className='bulletIcon' /><span>Paints</span></Button>
-                                    <Button onClick={(e)=>handleClick(e)} name='Furniture'><MdFiberManualRecord className='bulletIcon' /><span>Tiles</span></Button>
-                                    <Button onClick={(e)=>handleClick(e)} name='Furniture'><MdFiberManualRecord className='bulletIcon' /><span>Flooring</span></Button>
-                                    <Button onClick={(e)=>handleClick(e)} name='Furniture'><MdFiberManualRecord className='bulletIcon' /><span>Door/Windows</span></Button>
-                                    <Button onClick={(e)=>handleClick(e)} name='Furniture'><MdFiberManualRecord className='bulletIcon' /><span>Accesssories</span></Button>
+                                <div className="servicesButtonDiv servicesButtonDivS col-md-3" >
+                                    <Button onClick={(e)=>handleClick(e)} name='Furniture'><MdFiberManualRecord className='bulletIcon' />Sample Room</Button>
+                                    <Button onClick={(e)=>handleClick(e)} name='Furniture'><MdFiberManualRecord className='bulletIcon' />Furniture</Button>
+                                    <Button onClick={(e)=>handleClick(e)} name='Lighting'><MdFiberManualRecord className='bulletIcon' />Lighting</Button>
+                                    <Button onClick={(e)=>handleClick(e)} name='Furniture'><MdFiberManualRecord className='bulletIcon' />Paints</Button>
+                                    <Button onClick={(e)=>handleClick(e)} name='Furniture'><MdFiberManualRecord className='bulletIcon' />Tiles</Button>
+                                    <Button onClick={(e)=>handleClick(e)} name='Furniture'><MdFiberManualRecord className='bulletIcon' />Flooring</Button>
+                                    <Button onClick={(e)=>handleClick(e)} name='Furniture'><MdFiberManualRecord className='bulletIcon' />Door/Windows</Button>
+                                    <Button style={{marginBottom:'25px'}} onClick={(e)=>handleClick(e)} name='Furniture'><MdFiberManualRecord className='bulletIcon' />Accesssories</Button>
                                 </div>
                                 <div className='servicesDetailDiv col-md-7'>
                                     <h5 style={{ color: '#FF4233' }}>{catalogStateVal?.name}</h5>
@@ -178,8 +203,8 @@ const HomeComponent = () => {
                             </div>
                         </div>
                     </Col>
-                    <Col xs={12} md={6} style={{ background: '#424242', textAlign: 'center' }}>
-                        <div style={{borderTopLeftRadius:'20px',borderBottomLeftRadius:'20px'}}><img  src={catalogStateVal?.imgUrl} /></div>
+                    <Col xs={12} md={6}  className='catalog3DCol'>
+                        <div  className='catalog3DColImgDiv'><img  src={catalogStateVal?.imgUrl} /></div>
                     </Col>
                 </Row>
                 <Row style={{marginBottom:'60px'}}>
@@ -194,19 +219,25 @@ const HomeComponent = () => {
                         </div>
                     </Col>
                     <Col xs={12} md={5}>
-                       <MyCarousel currentCrousel={currentCrousel}/>
+                       <MyCarousel ref={childRef} currentCrousel={currentCrousel}/>
                     </Col>
-                    <Col xs={12} md={4} className='d-flex align-items-center'>
-                        {console.log("div_meta_data",div_meta_data)}
-                        {crouselIndex && crouselIndex==div_meta_data.length-1 ? div_meta_data[0] : div_meta_data[crouselIndex+1]}
+                    <Col xs={12} md={4} className='sCrousel' >
+                        <div className=''>
+                        <div className='sCrouselDiv'>
+                            {crouselIndex && crouselIndex==div_meta_data.length-1 ? div_meta_data[0] : div_meta_data[crouselIndex+1]}
+                            </div>
+                        <div className='crouselBtn'>
+                        <Button name='prevClick' onClick={handleParentButtonClick}><BsArrowLeft /></Button>
+                        <Button name='nextClick' onClick={handleParentButtonClick}><BsArrowRight /></Button>
+                        </div>
+                        </div>
                     </Col>
-                    {/* <button onClick={handleNext}>Call Child Function 1</button>
-      <button onClick={handlePrev}>Call Child Function 2</button> */}
                 </Row>
 
 
                     
                     <ImgCarousel />
+                  
             </Container>
         </>
     );

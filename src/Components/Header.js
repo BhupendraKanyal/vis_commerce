@@ -9,7 +9,7 @@ export const Header = ()=>{
       setShowDropdown(false);
     };
    return (
-    <div style={{background:'linear-gradient(180deg, rgba(18, 18, 18, 0.00) 0%, rgba(18, 18, 18, 0.00) 0.01%, #02030B 49.53%)'}}>
+    // <div style={{background:'linear-gradient(180deg, rgba(18, 18, 18, 0.00) 0%, rgba(18, 18, 18, 0.00) 0.01%, #02030B 49.53%)'}}>
    <Container>
       <Navbar variant="dark" bg='dark' expand="lg" className="">
         <Navbar.Brand href="#home"  className="mr-4 d-flex align-items-center">
@@ -44,6 +44,6 @@ export const Header = ()=>{
         </Navbar.Collapse>
       </Navbar>
     </Container>
-    </div>
+    // </div>
    )
 }

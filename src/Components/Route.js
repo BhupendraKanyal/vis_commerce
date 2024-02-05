@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
 import Home from './Home.js';
-import Card from './HdRenderer/Cards/Card.jsx';
+import Card from './HdRenderer/Cards/Screen.jsx';
 const Routing = () => {
   return (
     <Router>

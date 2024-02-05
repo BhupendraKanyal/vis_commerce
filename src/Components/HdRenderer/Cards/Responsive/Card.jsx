@@ -1,12 +1,11 @@
-import React from "react";
 import CustomCard from "./CustomCard";
-import cardData from "./Data";
+import Data from "../Data";
 
 function Card() {
   return (
     <div className="container">
       <div className="row">
-        {cardData.map((card, index) => (
+        {Data.map((card, index) => (
           <div key={index} className="col-sm-6 col-md-6 col-lg-4 mb-3">
             <CustomCard
               id={index}
