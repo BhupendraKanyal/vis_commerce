@@ -142,7 +142,7 @@ const HomeComponent = () => {
                     </Col>
                 </Row>
 
-                <Row style={{ marginTop: '50px', marginBottom: '50px' }} >
+                <Row  >
 
 
                     <Col xs={12} md={6} className='aboutServicesCol'>
@@ -183,7 +183,7 @@ const HomeComponent = () => {
                     </Col>
                 </Row>
 
-                 <Row style={{}}>
+                 <Row style={{ marginTop: '50px', marginBottom: '50px' }}>
                     <Col xs={12} md={8} className='d-flex align-items-center' style={{ borderRadius: '20px' }}>
                         <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '15px', height: '100%' }}>
                             <video autoPlay muted loop style={{ objectFit: 'cover', width: '100%', height: '100%' }}>
