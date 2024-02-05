@@ -142,31 +142,6 @@ const HomeComponent = () => {
                     </Col>
                 </Row>
 
-                <Row style={{}}>
-                    <Col xs={12} md={8} className='d-flex align-items-center' style={{ borderRadius: '20px' }}>
-                        <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '15px', height: '100%' }}>
-                            <video autoPlay muted loop style={{ objectFit: 'cover', width: '100%', height: '100%' }}>
-                                <source src={LV} type="video/mp4" />
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </Col>
-
-                   <Col  xs={12} md={4} className='d-flex cols align-items-center'>
-                        <div style={{background:'#F8493B',borderRadius:'20px'}}>
-                        <div style={{padding:'30px 30px 20px 30px'}}>
-                            <h3 style={{color:'#000'}}>Material<span style={{color:'#fff'}}>3D</span></h3>
-                            <p>Your platform for captivating digital material realism</p>
-                        </div>
-
-
-                        <div style={{display: 'flex',justifyContent:'flex-end'}}>
-                            <img src={coloredfabric} style={{width:'300px',padding:'10px'}}/>
-                        </div>
-                        </div>
-                   </Col>
-
-                </Row>
                 <Row style={{ marginTop: '50px', marginBottom: '50px' }} >
 
 
@@ -207,6 +182,33 @@ const HomeComponent = () => {
                         <div  className='catalog3DColImgDiv'><img  src={catalogStateVal?.imgUrl} /></div>
                     </Col>
                 </Row>
+
+                 <Row style={{}}>
+                    <Col xs={12} md={8} className='d-flex align-items-center' style={{ borderRadius: '20px' }}>
+                        <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '15px', height: '100%' }}>
+                            <video autoPlay muted loop style={{ objectFit: 'cover', width: '100%', height: '100%' }}>
+                                <source src={LV} type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </Col>
+
+                   <Col  xs={12} md={4} className='d-flex cols align-items-center'>
+                        <div style={{background:'#F8493B',borderRadius:'20px'}}>
+                        <div style={{padding:'30px 30px 20px 30px'}}>
+                            <h3 style={{color:'#000'}}>Material<span style={{color:'#fff'}}>3D</span></h3>
+                            <p>Your platform for captivating digital material realism</p>
+                        </div>
+
+
+                        <div style={{display: 'flex',justifyContent:'flex-end'}}>
+                            <img src={coloredfabric} style={{width:'300px',padding:'10px'}}/>
+                        </div>
+                        </div>
+                   </Col>
+
+                </Row>
+
                 <Row style={{marginBottom:'60px'}}>
                     <Col xs={12} md={3} className='d-flex align-items-center'>
                         <div className='industryInsight'>
