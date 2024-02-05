@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col } from "react-bootstrap";
 import watch from "../../assets/watch-icon.svg";
 import button from "../../assets/button.svg";
-import "../Card.css";
+import "../card.css";
 
 const Link = () => {
   return (

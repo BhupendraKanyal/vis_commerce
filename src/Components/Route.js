@@ -5,7 +5,8 @@ import Home from './Home.js';
 import Card from './HdRenderer/Cards/Screen.jsx';
 const Routing = () => {
   return (
-    <Router basename='website'>
+    <Router>
+      {/* if you are adding the basename website please provide the url in route also otherwise no page will render */}
       <Routes>
         <Route  path='/' element={<Home />} />
         <Route  path='/hdrenderer' element={<Card />} />
