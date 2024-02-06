@@ -77,28 +77,26 @@ p {
 .crouselItemf, 
 .crouselItemL {
 background: #000;
-/* background: #2B2B2B; */
 border-radius: 20px;
-height: max-content;;
-/* height: 409px; */
+ height: 400px;
 }
 
 .crouselItemf h4 {
-padding: 27px 40px 0 40px !important;
+padding: 27px 30px 0 30px !important;
 }
 
 .crouselItemf h2 {
 color: #FF4B4B !important;
 font-size: 15px !important;
-padding: 0 40px !important;
+padding: 0 30px !important;
 }
 
 .crouselItemf p {
-padding: 0 40px 15px 40px;
+padding: 0 30px 15px 30px;
 margin: 0;
 font-size: 15px;
 font-weight: 100;
-min-height: 132px;
+min-height: 177.8px;
 }
 
 .crouselItemDivS {
@@ -121,11 +119,11 @@ padding: 40px;
 }
 .textImgSpan{
 margin-top: -29.2px !important;
-min-height: 87px !important;
+min-height: 144.5px !important;
 }
 .textImgSpan span{
 color: #C6C6C6;
-font-size: 20px;
+font-size: 30px;
 }
 /* .crouselItemf img{
 width: auto;
@@ -157,6 +155,9 @@ width: 222px;
 min-height: 70px !important;
 padding: 25px;
 }
+.crouselItemL .textImgSpan span{
+  font-size: 20px !important;
+  }
 .crouselBtn{
   display: flex;
   flex-direction: row;
@@ -284,7 +285,6 @@ border-bottom-left-radius: 10px; */
   background: var(--Gradient, linear-gradient(87deg, #FB1807 3.98%, #FF4031 94.53%));
   border: none;
   border-bottom: 1px solid #C1BDBD;
-  ;
   font-family: "Be Vietnam Pro" !important;
   font-weight: 400;
   font-size: 16px;
@@ -361,7 +361,111 @@ border-bottom-left-radius: 10px; */
 .industryInsight {
   margin-top: -5rem;
 }
+.material3dDiv img{
+  width: auto;
+  max-width: 100%;
+}
+.material3dDiv{
+  background:#F8493B;
+  border-radius:20px;
+  height: 100%;
+}
+.material3dDiv h3 {
+  font-size: 40px;
+  font-weight: 600;
+}
+.material3dDiv p{
+  font-size: 20px;
+}
+.material3dDivCh{
+  padding: 30px 30px 20px 30px ;
+}
+.tabCrousel{
+  display: none;
+}
+
+.socialLinks img {
+  margin: 0 5px 0 5px;
+  width: 30px !important;
+  margin-top: -35px;
+}
+.footerUrls h5 {
+  margin-top: 1.6rem;
+  color: #FF422E;
+  font-weight: 600;
+}
+
+.footerUrls .footerUrlsUl {
+  margin-top: 1rem;
+}
+
+.footerUrlsUl li {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.subscribeInput {
+  width: 22rem;
+  background: rgb(221, 220, 220);
+  color: rgb(17, 17, 17);
+  padding: 0px 23px;
+  border: 1px solid rgb(221, 220, 220);
+  border-radius: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.subscribeInput:focus-visible {
+  outline: none;
+}
+
+.subscribeButton {
+  color: #FFF;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: capitalize;
+  background-color: #FF422E;
+  border: 1px solid #FF422E;
+  margin-left: 10px;
+}
+
+.subscribeButton:hover {
+  background-color: #FF422E;
+  border: 1px solid #FF422E;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 20px;
+}
+
+.subscribeDiv {
+  margin-top: 1.6rem;
+}
+.logoName {
+  margin-bottom: 0;
+  background: #fff !important;
+  color: #000 !important;
+  font-weight: 500;
+  text-align: center;
+  padding: 5px 40px !important;
+  font-size: 20px !important;
+  border-radius: 15px 25px 25px 0px;
+  margin-top: 10px;
+  margin-left: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.startsDiv {
+  margin-left: 55px;
+  margin-top: 2px;
+}
 @media screen and (min-width: 992px) {
+  .material3dDiv p{
+    width: 24rem;
+  }
+ 
   .aboutServicesCol{
   padding-right: 0;
 }
@@ -462,66 +566,6 @@ border-bottom-left-radius: 10px; */
     font-weight: 800;
     line-height: 50px;
     width: 35rem;
-  }
-
-  .socialLinks img {
-    margin: 0 5px 0 5px;
-    width: 35px;
-    margin-top: -40px;
-  }
-
-  .footerUrls h5 {
-    margin-top: 1.6rem;
-    color: #FF422E;
-    font-weight: 600;
-  }
-
-  .footerUrls .footerUrlsUl {
-    margin-top: 1rem;
-  }
-
-  .footerUrlsUl li {
-    padding-top: 7px;
-    padding-bottom: 7px;
-  }
-
-  .subscribeInput {
-    width: 22rem;
-    background: rgb(221, 220, 220);
-    color: rgb(17, 17, 17);
-    padding: 0px 23px;
-    border: 1px solid rgb(221, 220, 220);
-    border-radius: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-
-  .subscribeInput:focus-visible {
-    outline: none;
-  }
-
-  .subscribeButton {
-    color: #FFF;
-    text-align: center;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    text-transform: capitalize;
-    background-color: #FF422E;
-    border: 1px solid #FF422E;
-    margin-left: 10px;
-  }
-
-  .subscribeButton:hover {
-    background-color: #FF422E;
-    border: 1px solid #FF422E;
-    padding-left: 30px;
-    padding-right: 30px;
-    border-radius: 20px;
-  }
-
-  .subscribeDiv {
-    margin-top: 1.6rem;
   }
 
   .officeChairParentDiv {
@@ -634,31 +678,8 @@ border-bottom-left-radius: 10px; */
     padding-left: 15px;
     font-size: 20px;
   }
-
-  
-
   .landingCrousel {
     border-radius: 20px !important;
-  }
-
-  .logoName {
-    margin-bottom: 0;
-    background: #fff !important;
-    color: #000 !important;
-    font-weight: 500;
-    text-align: center;
-    padding: 5px 40px !important;
-    font-size: 20px !important;
-    border-radius: 15px 25px 25px 0px;
-    margin-top: 10px;
-    margin-left: 30px;
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-
-  .startsDiv {
-    margin-left: 55px;
-    margin-top: 2px;
   }
 
 .crouselItemL{
@@ -691,9 +712,10 @@ border-bottom-left-radius: 10px; */
   display: none !important;
 }
 }
-@media screen and (width: 1280px) {
-}
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
+  .hdRendererIMgs img{
+    width: -webkit-fill-available !important;
+  }
   .ThreeDButtons{
     display: none !important;
     /* flex-direction: column !important; */
@@ -819,7 +841,13 @@ border-top-right-radius: 10px;
   padding-right: 10px;
   text-align: left;
   padding-bottom: 20px;
-  overflow: scroll;
+  overflow-x: scroll;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.servicesButtonDiv::-webkit-scrollbar {
+  display: none;
 }
 .servicesButtonDiv button{
   width: 170px;
@@ -844,3 +872,127 @@ border-top-right-radius: 10px;
   margin-top: 0;
 }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .aboutServices{
+    border-radius: 10px !important;
+    border-top-right-radius:0px !important;
+    border-bottom-right-radius: 0px !important;
+  }
+  .servicesDetailDiv{
+    width: auto;
+    max-width: fit-content;
+}
+.aboutServicesCol {
+  padding-right: 0;
+}
+.catalog3DCol{
+  padding-left: 0;
+  border-radius: 0 10px 10px 0px !important;
+}
+.catalog3DColImgDiv{
+  border-radius: 0 10px 10px 0px !important;
+}
+.aboutServices h3{
+  border-top-right-radius: 0;
+}
+.Commerce3DRow{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+.Commerce3DDiv{
+  display: none;
+}
+.material3dCol{
+  margin: 0 !important;
+}
+.material3dDiv h3{
+  font-size: 25px !important;
+}
+.material3dDiv p{
+  font-size: 15px !important;
+  width: 17rem;
+}
+.material3dDivCh {
+  padding: 30px 15px 20px 15px !important;
+}
+.normalCrousel,.sCrousel{
+ display: none;
+}
+.tabCrousel{
+  display: block !important;
+}
+.crouselItemf p{
+  min-height: 178.9px;
+  font-size: 15px;
+}
+.crouselItemf h2{
+  font-size: 15px !important;
+}
+.textImgSpan{
+  min-height: 144.3px !important;
+}
+.industryInsight{
+  margin-top: 0px !important;
+}
+.subscribeDiv h3{
+  font-size: 20px !important;
+}
+.subscribeInputDiv{
+  display: flex;
+  flex-direction: column;
+}
+.subscribeInput{
+  width: -webkit-fill-available !important;
+  border-radius: 7px;
+  margin-bottom: 15px;
+}
+.subscribeButton{
+  margin: 0 !important;
+  width: -webkit-fill-available !important;
+}
+.socialLinks img{
+  width: 25px !important;
+  margin-top: -20px !important;
+}
+}
+@media screen and (min-width: 1024px) and (max-width:1400px) {
+  .ThreeDButtons{
+    margin-top: 0px !important;
+  }
+  .crouselItemf h2{
+    font-size: 20px !important;
+  }
+  .crouselItemf h4 {
+    font-size: 30px !important;
+  }
+  .crouselItemf p{
+    min-height: 164.9px !important;
+    font-size: 20px !important;
+  }
+  .servicesButtonDiv{
+    width: 185px !important
+  }
+  .servicesButtonDiv button{
+    width:165px !important;
+  }
+  .servicesDetailDiv p{
+    width: 230px !important;
+  }
+  .servicesDetailDiv {
+    padding-left: 15px !important;
+  }
+  .navbar-expand-lg .navbar-nav .nav-link{
+    padding-left: 0px !important;
+  }
+  .custom-navlink{
+    margin-left: 0 !important;
+  }
+}
+@media screen and (max-width:540px) {
+  .crouselBtn{
+    display:none;
+  } 
+}
+

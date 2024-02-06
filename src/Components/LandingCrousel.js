@@ -5,7 +5,6 @@ import { crousel_meta } from './Helpers/crousel_meta/landing_meta.js';
 import hdRendererRight from './Helpers/hdRendererRight.png'
 import hdRenderercenter from './Helpers/hdRenderercenter.png'
 import hdRendererLeft from './Helpers/hdRendererLeft.png';
-import { ButtonGroup } from 'react-bootstrap';
 const MyCarousel = forwardRef(({currentCrousel},ref)=>{
   const [index, setIndex] = useState(0);
   const [items, setItems] = useState(crousel_meta);
@@ -19,7 +18,6 @@ const MyCarousel = forwardRef(({currentCrousel},ref)=>{
   }, [index]); 
 
   const handleSelect = (selectedIndex) => {
-    console.log("inside handle select")
     currentCrousel(selectedIndex)
     setIndex(selectedIndex);
   };
@@ -55,7 +53,7 @@ export default MyCarousel;
 
 export const ImgCarousel = ()=> {
     return (
-    <Row style={{marginTop:'20px',marginBottom:'100px'}}>
+    <Row className='hdRendererIMgs' style={{marginTop:'20px',marginBottom:'100px'}}>
       <h4 style={{color:'#FF422E',fontWeight:'800',textAlign:'center',fontSize:'40px',marginBottom:'40px'}}>HDRenders</h4>
     <Col className='cols' xs={12} md={4}>
       <img src={hdRendererLeft} style={{width:'auto',maxWidth:'100%'}} />

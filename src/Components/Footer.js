@@ -55,7 +55,7 @@ export const Footer = () => {
                         <div className="subscribeDiv" style={{ background: '#FFF', padding: '20px', borderRadius: '20px' }}>
                             <h3 style={{ color: '#111', fontWeight: '800' }}>Keep up to date on VisCommerce</h3>
                             <p style={{ color: '#111', fontWeight: '500', fontSize: '20px', marginTop: '-6px' }}>Subscribe</p>
-                            <div className="d-flex" style={{paddingBottom:'10px'}}>
+                            <div className="d-flex subscribeInputDiv" style={{paddingBottom:'10px'}}>
                                 <input type="text" className="subscribeInput" placeholder="Enter Your E-mail Id here" />
                                 <Button className="subscribeButton">Sbscribe </Button>
                             </div>

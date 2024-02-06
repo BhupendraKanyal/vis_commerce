@@ -184,7 +184,7 @@ const HomeComponent = () => {
                 </Row>
 
                  <Row style={{ marginTop: '50px', marginBottom: '50px' }}>
-                    <Col xs={12} md={8} className='d-flex align-items-center' style={{ borderRadius: '20px' }}>
+                    <Col xs={12} md={7} className='d-flex align-items-center' style={{ borderRadius: '20px' }}>
                         <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '15px', height: '100%' }}>
                             <video autoPlay muted loop style={{ objectFit: 'cover', width: '100%', height: '100%' }}>
                                 <source src={LV} type="video/mp4" />
@@ -193,23 +193,23 @@ const HomeComponent = () => {
                         </div>
                     </Col>
 
-                   <Col  xs={12} md={4} className='d-flex cols align-items-center'>
-                        <div style={{background:'#F8493B',borderRadius:'20px'}}>
-                        <div style={{padding:'30px 30px 20px 30px'}}>
+                   <Col  xs={12} md={5} className='cols material3dCol'>
+                        <div className = 'material3dDiv'>
+                        <div className='material3dDivCh'>
                             <h3 style={{color:'#000'}}>Material<span style={{color:'#fff'}}>3D</span></h3>
                             <p>Your platform for captivating digital material realism</p>
                         </div>
 
 
                         <div style={{display: 'flex',justifyContent:'flex-end'}}>
-                            <img src={coloredfabric} style={{width:'300px',padding:'10px'}}/>
+                            <img src={coloredfabric} />
                         </div>
                         </div>
                    </Col>
 
                 </Row>
 
-                <Row style={{marginBottom:'60px'}}>
+                <Row className='normalCrousel' style={{marginBottom:'60px'}}>
                     <Col xs={12} md={3} className='d-flex align-items-center'>
                         <div className='industryInsight'>
                             <h3>
@@ -236,8 +236,25 @@ const HomeComponent = () => {
                     </Col>
                 </Row>
 
-
-                    
+                <Row className='tabCrousel' style={{marginBottom:'60px'}}>
+                    <div className='d-flex align-items-center'>
+                        <div className='industryInsight'>
+                            <h3>
+                                Testimonials
+                            </h3>
+                            <h4>
+                                Industry Insights
+                            </h4>
+                        </div>
+                    </div>
+                    <Col xs={12} md={12}>
+                       <MyCarousel ref={childRef} currentCrousel={currentCrousel}/>
+                       <div className='crouselBtn'>
+                        <Button name='prevClick' onClick={handleParentButtonClick}><BsArrowLeft /></Button>
+                        <Button name='nextClick' onClick={handleParentButtonClick}><BsArrowRight /></Button>
+                        </div>
+                    </Col>
+                </Row>
                     <ImgCarousel />
                   
             </Container>
