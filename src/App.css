@@ -513,15 +513,13 @@ border-bottom-left-radius: 10px; */
   .custom-navlink {
     background-color: #FF4233;
     border: 1px solid #FF4233;
-    /* padding-left: 15px !important;
-  padding-right: 15px !important; */
     border-radius: 1.5rem;
     width: fit-content;
     color: #FFF;
     text-decoration: none;
     width: 6rem;
     text-align: center;
-    padding: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px !important;
   }
 
   /* Styles for screens wider than 768 pixels */
@@ -968,8 +966,11 @@ border-top-right-radius: 10px;
     font-size: 30px !important;
   }
   .crouselItemf p{
-    min-height: 164.9px !important;
+    min-height: 164px;
     font-size: 20px !important;
+  }
+  .crouselItemf .textImgSpan span{
+    min-height: 144.3px !important;
   }
   .servicesButtonDiv{
     width: 185px !important
@@ -984,15 +985,19 @@ border-top-right-radius: 10px;
     padding-left: 15px !important;
   }
   .navbar-expand-lg .navbar-nav .nav-link{
-    padding-left: 0px !important;
+    padding-left: 0px;
   }
   .custom-navlink{
     margin-left: 0 !important;
+    padding-left: 5px !important;
   }
 }
 @media screen and (max-width:540px) {
   .crouselBtn{
     display:none;
   } 
+  .crouselItemf, .crouselItemL{
+    height:auto !important
+  }
 }
 
