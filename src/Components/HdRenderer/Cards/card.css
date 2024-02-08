@@ -29,6 +29,14 @@
   padding: 12px;
   text-align: center;
 }
+
+
+.form-control:focus {
+  border: 1px solid rgb(255, 132, 132) !important;
+  box-shadow: none !important;
+  /* background-color: transparent; */
+}
+
 .buttons {
   background-color: orange;
   width: 120px;
@@ -37,7 +45,7 @@
 .title {
   padding-top: 40px;
   color: #ffffff;
-
+  background-color: rebeccapurple;
   font-size: 30px;
 }
 .subtitle {
@@ -105,12 +113,12 @@
     width: 80%;
   } */
   .customize-tryNow {
-    width: 125px;
-    height: 45px;
+    width: 115px;
+    height: 55px;
   }
   .customize-video {
     width: 125px;
-    height: 76px;
+    height: 66px;
   }
   .card-img {
     height: 250px;
@@ -150,12 +158,12 @@
     width: 50%;
   }
   .customize-tryNow {
-    width: 200px;
+    width: 193px;
     height: 55px;
   }
   .customize-video {
     width: 193px;
-    height: 105px;
+    height: 115px;
   }
   .card-img-sm {
     background-color: red;

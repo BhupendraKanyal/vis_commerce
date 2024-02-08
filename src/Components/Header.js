@@ -37,7 +37,7 @@ export const Header = ()=>{
               <NavDropdown.Item href="#/action-2">Option 2</NavDropdown.Item>
               <NavDropdown.Item href="#/action-3">Option 3</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link to="/custom-link" className="custom-navlink">
+            <Nav.Link href="/demos" className="custom-navlink">
               Demos
             </Nav.Link>
           </Nav>

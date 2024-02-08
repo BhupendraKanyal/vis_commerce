@@ -6,30 +6,32 @@ import "./CardNew.css";
 
 function ImageContent({ id, image, title, subtitle }) {
   return (
-    <div>
+    <div className="container">
       <Card
-        className="text-white p-3 m-5 "
+        className="text-white mt-5"
         style={{
           backgroundColor: "#2f2f2e",
           minWidth: "20rem",
           margin: "0 10px",
+          borderRadius: "15px",
         }}
       >
         <Row className="align-items-start justify-content-start">
           <Col xs={12} lg={6} className="">
-            <div>
+            <div className="image-container">
               <Card.Img
                 variant="top"
                 src={image}
-                className="w-100" // Ensure the image fills its container
+                className="w-100 h-100 " // Make sure image takes full height and width of its container
               />
             </div>
           </Col>
-          <Col xs={12} lg={6} className="pl-lg-5 mt-3  ">
-            <div className="d-flex flex-column justify-content-between  px-5">
+
+          <Col xs={12} lg={6} className="pl-lg-5 mt-3">
+            <div className="d-flex flex-column justify-content-between px-5">
               <div>
                 <Card.Title
-                  style={{ fontSize: "45px" }}
+                  style={{ fontSize: "38px" }}
                   className="text-md-right custom-text mb-2"
                 >
                   {title}
@@ -39,15 +41,15 @@ function ImageContent({ id, image, title, subtitle }) {
                   style={{
                     wordSpacing: "3px",
                     letterSpacing: "1px",
-                    fontSize: "28px",
+                    fontSize: "25px",
                   }}
                   className="text-md-right subtitle mb-2"
                 >
                   {subtitle}
                 </Card.Text>
               </div>
-              <div className="pt-5 pb-2">
-                <Select id={id}/>
+              <div className="pt-3 pb-2">
+                <Select id={id} />
               </div>
               <p style={{ color: "#F8493B" }} className="mt-2">
                 Select Your Screen First

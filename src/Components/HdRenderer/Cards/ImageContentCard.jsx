@@ -4,8 +4,9 @@ import ImageContent from "./ImageContent";
 import "./card.css"
 
 function ImageComponentCard() {
+  console.log(Data);
   return (
-    <div >
+    <div style={{marginBottom:'50px'}}>
         {Data.map((card, index) => (
           <ImageContent
               key={index}

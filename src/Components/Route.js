@@ -10,7 +10,7 @@ const Routing = () => {
       {/* if you are adding the basename website please provide the url in route also otherwise no page will render */}
       <Routes>
         <Route  path='/' element={<Home />} />
-        <Route  path='/hdrenderer' element={<Card />} />
+        <Route  path='/demos' element={<Card />} />
         <Route path='/pricing' element={<Pricing />} />
       </Routes>
     </Router>
