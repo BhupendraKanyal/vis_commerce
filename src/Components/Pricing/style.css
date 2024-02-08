@@ -1,0 +1,167 @@
+.fRow{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+.sRow{
+    margin-top: 4rem;
+}
+.sRow h4{
+        font-size: 45px;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        margin-left: 15px;
+}
+.ulPPDiv {
+    display: flex;
+    margin-top: 20px;
+}
+.ulPDiv {
+    margin-right: 6rem;
+}
+.ulFDiv, .ulSDiv {
+    display: inline-flex;
+    align-items: center;
+}
+.parentDiv h2{
+    color: #FF4233;
+    font-family: Roboto;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+}
+.parentDiv h5{
+    color: #FFF;
+font-family: Roboto;
+font-size: 50px;
+font-style: normal;
+font-weight: 700;
+letter-spacing: 2px;
+}
+.ulFDiv p{
+    color: #fff;
+}
+.ulSDiv p{
+    color: #FF4233;
+}
+.ulFDiv p,.ulSDiv p{
+font-family: Roboto;
+font-size: 25px;
+font-style: normal;
+font-weight: 400;
+margin-bottom: 0;
+margin-left: 10px;
+}
+.ulPDiv ul{
+    margin-top: 5px;
+    padding-left: 20px;
+}
+.ulPDiv li{
+    color: #818181 !important;
+font-family: Roboto;
+font-size: 15px;
+font-style: normal;
+}
+.ulFDiv img{
+    width: 30px;
+}
+.pricingImgDiv{
+    text-align: center;
+}
+.pricingImgDiv img{
+    width: 350px;
+}
+.ulList {
+    margin-left: 6rem;
+    text-align: left;
+  }
+  .ulSDivP {
+    height: 100%; /* Set a fixed height for ulSDivP */
+  }
+  
+  .ulSDiv {
+    align-items: center;
+  }
+  
+  .ulSDiv img {
+    width: auto;
+    height: 80px;
+  }
+  
+  .ulList {
+    padding: 0;
+    margin: 0;
+  }
+  .ulSRow{
+    padding: 40px;
+    border: 1px solid #FF4233;
+    border-radius: 10px;
+  }
+  .joinUsPPDiv{
+    background: #fff;
+    border-radius: 10px;
+    height: 450px;
+}
+.joinUsPDiv{
+    padding: 30px 25px 25px 35px ;
+}
+  .joinUsPDiv h4{
+    color: #F8493B;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  .phoneDiv p , .mailDiv p{
+    color: #1D1D1B;
+    margin-left: 10px;
+  }
+  .phoneDiv, .mailDiv{
+    display: flex;
+    align-items: baseline;
+  }
+  .phoneDiv img, .mailDiv img{
+    width: 20px;
+  }
+  .formPDiv{
+    height: 450px;
+    border: 1px solid #F87171;
+    padding: 40px;
+    border-radius: 10px;
+    background: #1D1D1B;
+}
+.formPDiv .form-control{
+    margin-bottom: 15px;
+    border: 1px solid #F87171;
+    background: #171717;
+    border-radius: 10px;
+    color: #959595 !important;
+}
+.formPDiv .form-control::placeholder{
+    color: #959595;
+}
+.formPDiv .form-control:focus{
+    background: #171717;
+    color: #959595 !important;
+    border: 1px solid #F87171;
+    box-shadow: none;
+}
+.formPDiv .form-control:focus-visible{
+    outline:none;
+}
+.formBt{
+background: var(--Gradient, linear-gradient(87deg, #FB1807 3.98%, #FF4031 94.53%));
+backdrop-filter: blur(50px);
+border: none;
+border-radius: 20px;
+padding-left: 30px;
+padding-right: 30px ;
+color: #fff;
+}
+#formDescription{
+    min-height: 75px;
+    max-height: 75px;
+}
+.custom-recaptcha-style{
+    margin-bottom: 15px;
+}
+.tRow{
+    margin-bottom: 100px;
+}

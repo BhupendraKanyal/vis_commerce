@@ -34,13 +34,21 @@ import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
 const HomeComponent = () => {
     const [crouselIndex,setCrouselIndex] = useState(0)
     const childRef = useRef()
+    const childRefNew = useRef()
     const handleParentButtonClick =(e)=>{
         const nameVal = e.currentTarget.name
         if(nameVal == 'prevClick') {
             childRef.current.handleSelect(crouselIndex == 0 ? div_meta_data.length-1 : crouselIndex-1)
         }
-        if(nameVal == 'nextClick') {
+        else if(nameVal == 'nextClick') {
             childRef.current.handleSelect(crouselIndex == div_meta_data.length-1 ? 0 : crouselIndex+1)
+        }
+        else if(nameVal == 'prevClickNew'){
+            childRefNew.current.handleSelect(crouselIndex == 0 ? div_meta_data.length-1 : crouselIndex-1)
+        }
+        else if(nameVal == 'nextClickNew')
+        {
+            childRefNew.current.handleSelect(crouselIndex == div_meta_data.length-1 ? 0 : crouselIndex+1)
         }
     }
     const divBackground = {
@@ -248,10 +256,10 @@ const HomeComponent = () => {
                         </div>
                     </div>
                     <Col xs={12} md={12}>
-                       <MyCarousel ref={childRef} currentCrousel={currentCrousel}/>
+                       <MyCarousel ref={childRefNew} currentCrousel={currentCrousel}/>
                        <div className='crouselBtn'>
-                        <Button name='prevClick' onClick={handleParentButtonClick}><BsArrowLeft /></Button>
-                        <Button name='nextClick' onClick={handleParentButtonClick}><BsArrowRight /></Button>
+                        <Button name='prevClickNew' onClick={handleParentButtonClick}><BsArrowLeft /></Button>
+                        <Button name='nextClickNew' onClick={handleParentButtonClick}><BsArrowRight /></Button>
                         </div>
                     </Col>
                 </Row>

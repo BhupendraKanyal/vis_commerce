@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
 import Home from './Home.js';
 import Card from './HdRenderer/Cards/Screen.jsx';
+import {Pricing} from './Pricing/Pricing.js';
 const Routing = () => {
   return (
     <Router>
@@ -10,6 +11,7 @@ const Routing = () => {
       <Routes>
         <Route  path='/' element={<Home />} />
         <Route  path='/hdrenderer' element={<Card />} />
+        <Route path='/pricing' element={<Pricing />} />
       </Routes>
     </Router>
   );
