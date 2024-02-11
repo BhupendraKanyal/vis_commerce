@@ -1,0 +1,21 @@
+.card-style {
+    background-color: #222222;
+    width: 100%; /* Adjusted width */
+    max-width: 401px; /* Added max-width */
+    height: 568px;
+    color: white;
+    border-radius: 20px;
+    border-bottom: 5px solid #ff4233;
+  }
+  
+.benefit-title{
+    font-size: 55px;
+    color: #F8493B;
+}
+.benefit-subtitle{
+    color: #FFFFFF;
+    font-size: 28px;
+}
+.text-red{
+    color: #6b5c5b;
+}

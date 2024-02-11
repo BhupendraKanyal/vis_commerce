@@ -1,0 +1,27 @@
+.bg-color {
+  background-color: red;
+}
+
+
+.image-container {
+  width: 80%;
+  height: 100%;
+}
+
+.image {
+  width: 100%;
+  height: auto; /* Adjust height proportionally */
+  max-width: 450px; /* Set max-width for responsiveness */
+  max-height: 550px; /* Set max-height for responsiveness */
+}
+.collo-image-container {
+  width: 80%;
+  height: 100%;
+}
+
+.collo-image {
+  width: 100%;
+  height: auto; /* Adjust height proportionally */
+  max-width: 450px; /* Set max-width for responsiveness */
+  max-height: 550px; /* Set max-height for responsiveness */
+}

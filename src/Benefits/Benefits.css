@@ -1,0 +1,51 @@
+.overflow-hidden {
+    overflow-y: hidden;
+  }
+  
+.card-style {
+    background-color: #222222;
+    width: 100%; /* Adjusted width */
+    max-width: 401px; /* Added max-width */
+    height: 500px;
+    color: white;
+    border-radius: 20px;
+    border-bottom: 5px solid #ff4233;
+  }
+  
+.benefit-title{
+    font-size: 55px;
+    color: #F8493B;
+}
+.benefit-subtitle{
+    color: #FFFFFF;
+    font-size: 28px;
+}
+.benefit-common-style{
+    font-size: 55px;
+}
+.text-red{
+    color: #FF4233;
+    font-size: 55px;
+}
+.absolute{
+ background-color: red;
+ position: relative;
+ width: 300px;
+ height: 200px;
+ border: 6px solid blue;
+}
+.relative{
+
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    /* position: absolute;
+
+ background-color: green;
+ left: 5;
+ right: 30; */
+ 
+}
