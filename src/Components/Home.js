@@ -1,6 +1,6 @@
 import React, { useState,useRef } from 'react';
 import { Container, Row, Col, Button, ButtonGroup } from 'react-bootstrap';
-import LandingV from './Helpers/LandingV.mp4'
+import LandingV from './Helpers/concept_office.mp4'
 import Play from './Helpers/Play.svg'
 import Showroom from './Helpers/Showroom.svg'
 import Catalog from './Helpers/Catalog.svg'
@@ -30,7 +30,8 @@ import Quardrant from './Helpers/Quardrant.svg'
 import coloredfabric from './Helpers/coloredfabric.svg'
 import { div_meta_data } from './Helpers/crousel_meta/landing_meta';
 import MyCarousel,{ImgCarousel} from './LandingCrousel.js'
-import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
+import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
+import contactIcon from './Helpers/contactIcon.svg'
 const HomeComponent = () => {
     const [crouselIndex,setCrouselIndex] = useState(0)
     const childRef = useRef()
@@ -91,7 +92,7 @@ const HomeComponent = () => {
                                 </ul>
                                 <div className='Commerce3DDiv'><img className='Commerce3D2' src={Commerce3D} /></div>
                                 <div className='watchVideoDiv'>
-                                    <Button className='contactBt' variant="danger" >Contact Us</Button>
+                                    <Button className='contactBt' >Contact Us <img src={contactIcon} alt="Play Icon" /></Button>
                                     <div className='playButtonDiv' >
                                         <Button className='playButton'>
                                             <img src={Play} alt="Play Icon" />
@@ -107,12 +108,13 @@ const HomeComponent = () => {
 
                         </Col>
                         <Col xs={12} md={5}>
-                            <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '15px', padding: '' }}>
-                                <video width="100%" className='LandingV' autoPlay muted loop style={{ objectFit: 'cover', clipPath: 'polygon(53% 3%, 95% 7%, 91% 80%, 42% 97%, 7% 77%, 4% 6%)' }}>
+                            <div className='LandingVDiv'>
+                                <video width="100%" className='LandingV' autoPlay muted loop >
                                     <source src={LandingV} type="video/mp4" />
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
+
                         </Col>
                     </Row>
                     <Row>
@@ -142,7 +144,7 @@ const HomeComponent = () => {
                     </Col>
                     <Col xs={12} md={8}>
                         <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '15px', padding: '' }}>
-                            <video width="100%" autoPlay muted loop style={{ objectFit: 'cover' }}>
+                            <video width="100%" autoPlay muted loop style={{ objectFit: 'cover',}}>
                                 <source src={ShowCase} type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
@@ -203,71 +205,80 @@ const HomeComponent = () => {
 
                    <Col  xs={12} md={5} className='cols material3dCol'>
                         <div className = 'material3dDiv'>
-                        <div className='material3dDivCh'>
-                            <h3 style={{color:'#000'}}>Material<span style={{color:'#fff'}}>3D</span></h3>
-                            <p>Your platform for captivating digital material realism</p>
-                        </div>
-
-
-                        <div style={{display: 'flex',justifyContent:'flex-end'}}>
+                        <div className='material3dImgDiv'>
                             <img src={coloredfabric} />
+                        </div>
+                        <div className='material3dDivCh'>
+                            <h3>Material<span >3D</span></h3>
+                            <p>Your platform for captivating digital material <br />realism</p>
                         </div>
                         </div>
                    </Col>
 
                 </Row>
 
-                <Row className='normalCrousel' style={{marginBottom:'60px'}}>
-                    <Col xs={12} md={3} className='d-flex align-items-center'>
-                        <div className='industryInsight'>
-                            <h3>
-                                Testimonials
-                            </h3>
-                            <h4>
-                                Industry Insights
-                            </h4>
-                        </div>
-                    </Col>
-                    <Col xs={12} md={5}>
-                       <MyCarousel ref={childRef} currentCrousel={currentCrousel}/>
-                    </Col>
-                    <Col xs={12} md={4} className='sCrousel' >
-                        <div className=''>
-                        <div className='sCrouselDiv'>
-                            {crouselIndex && crouselIndex==div_meta_data.length-1 ? div_meta_data[0] : div_meta_data[crouselIndex+1]}
-                            </div>
-                        <div className='crouselBtn'>
-                        <Button name='prevClick' onClick={handleParentButtonClick}><BsArrowLeft /></Button>
-                        <Button name='nextClick' onClick={handleParentButtonClick}><BsArrowRight /></Button>
-                        </div>
-                        </div>
-                    </Col>
-                </Row>
-
-                <Row className='tabCrousel' style={{marginBottom:'60px'}}>
-                    <div className='d-flex align-items-center'>
-                        <div className='industryInsight'>
-                            <h3>
-                                Testimonials
-                            </h3>
-                            <h4>
-                                Industry Insights
-                            </h4>
-                        </div>
-                    </div>
-                    <Col xs={12} md={12}>
-                       <MyCarousel ref={childRefNew} currentCrousel={currentCrousel}/>
-                       <div className='crouselBtn'>
-                        <Button name='prevClickNew' onClick={handleParentButtonClick}><BsArrowLeft /></Button>
-                        <Button name='nextClickNew' onClick={handleParentButtonClick}><BsArrowRight /></Button>
-                        </div>
-                    </Col>
-                </Row>
-                    <ImgCarousel />
-                  
+                
             </Container>
         </>
     );
 };
 
 export default HomeComponent;
+
+
+
+//  {/* <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '15px', padding: '' }}>
+//                                 <video width="100%" className='LandingV' autoPlay muted loop style={{ objectFit: 'cover', clipPath: 'polygon(53% 3%, 95% 7%, 91% 80%, 42% 97%, 7% 77%, 4% 6%)' }}>
+//                                     <source src={LandingV} type="video/mp4" />
+//                                     Your browser does not support the video tag.
+//                                 </video>
+//                             </div> */}
+
+// <Row className='normalCrousel' style={{marginBottom:'60px'}}>
+//                     <Col xs={12} md={3} className='d-flex align-items-center'>
+//                         <div className='industryInsight'>
+//                             <h3>
+//                                 Testimonials
+//                             </h3>
+//                             <h4>
+//                                 Industry Insights
+//                             </h4>
+//                         </div>
+//                     </Col>
+//                     <Col xs={12} md={5}>
+//                        <MyCarousel ref={childRef} currentCrousel={currentCrousel}/>
+//                     </Col>
+//                     <Col xs={12} md={4} className='sCrousel' >
+//                         <div className=''>
+//                         <div className='sCrouselDiv'>
+//                             {crouselIndex && crouselIndex==div_meta_data.length-1 ? div_meta_data[0] : div_meta_data[crouselIndex+1]}
+//                             </div>
+//                         <div className='crouselBtn'>
+//                         <Button name='prevClick' onClick={handleParentButtonClick}><BsArrowLeft /></Button>
+//                         <Button name='nextClick' onClick={handleParentButtonClick}><BsArrowRight /></Button>
+//                         </div>
+//                         </div>
+//                     </Col>
+//                 </Row>
+
+//                 <Row className='tabCrousel' style={{marginBottom:'60px'}}>
+//                     <div className='d-flex align-items-center'>
+//                         <div className='industryInsight'>
+//                             <h3>
+//                                 Testimonials
+//                             </h3>
+//                             <h4>
+//                                 Industry Insights
+//                             </h4>
+//                         </div>
+//                     </div>
+//                     <Col xs={12} md={12}>
+//                        <MyCarousel ref={childRefNew} currentCrousel={currentCrousel}/>
+//                        <div className='crouselBtn'>
+//                         <Button name='prevClickNew' onClick={handleParentButtonClick}><BsArrowLeft /></Button>
+//                         <Button name='nextClickNew' onClick={handleParentButtonClick}><BsArrowRight /></Button>
+//                         </div>
+//                     </Col>
+//                 </Row>
+//                     <ImgCarousel />
+                  
