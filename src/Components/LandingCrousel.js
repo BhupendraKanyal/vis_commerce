@@ -5,6 +5,11 @@ import { crousel_meta } from './Helpers/crousel_meta/landing_meta.js';
 import hdRendererRight from './Helpers/hdRendererRight.png'
 import hdRenderercenter from './Helpers/hdRenderercenter.png'
 import hdRendererLeft from './Helpers/hdRendererLeft.png';
+import IKEAtestimonial from './Helpers/IKEAtestimonial.png';
+import LovesacTestimonial from './Helpers/LovesacTestimonial.png';
+import MacysTestimonial from './Helpers/MacysTestimonial.png';
+import ShopifyTestimonial from './Helpers/ShopifyTestimonial.png';
+import WayfairTestimonial from './Helpers/WayfairTestimonial.png';
 const MyCarousel = forwardRef(({currentCrousel},ref)=>{
   const [index, setIndex] = useState(0);
   const [items, setItems] = useState(crousel_meta);
@@ -53,18 +58,72 @@ export default MyCarousel;
 
 export const ImgCarousel = ()=> {
     return (
-    <Row className='hdRendererIMgs' style={{marginTop:'20px',marginBottom:'100px'}}>
-      <h4 style={{color:'#FF422E',fontWeight:'800',textAlign:'center',fontSize:'40px',marginBottom:'40px'}}>HDRenders</h4>
-    <Col className='cols' xs={12} md={4}>
-      <img src={hdRendererLeft} style={{width:'auto',maxWidth:'100%'}} />
-    </Col>
-    <Col className='cols' xs={12} md={4}>
-      <img className='scaled-image' style={{width:'auto',maxWidth:'100%'}} src={hdRenderercenter} />
-    </Col>
-    <Col className='cols' xs={12} md={4}>
-      <img src={hdRendererRight}  style={{width:'auto',maxWidth:'100%',borderRadius:'20px'}} />
-    </Col>
-  </Row>
+  //   <Row className='hdRendererIMgs' style={{marginTop:'20px',marginBottom:'100px'}}>
+  //     <h4 style={{color:'#FF422E',fontWeight:'800',textAlign:'center',fontSize:'40px',marginBottom:'40px'}}>HDRenders</h4>
+  //   <Col className='cols' xs={12} md={4}>
+  //     <img src={hdRendererLeft} style={{width:'auto',maxWidth:'100%'}} />
+  //   </Col>
+  //   <Col className='cols' xs={12} md={4}>
+  //     <img className='scaled-image' style={{width:'auto',maxWidth:'100%'}} src={hdRenderercenter} />
+  //   </Col>
+  //   <Col className='cols' xs={12} md={4}>
+  //     <img src={hdRendererRight}  style={{width:'auto',maxWidth:'100%',borderRadius:'20px'}} />
+  //   </Col>
+  // </Row>
+  <>
+   <Carousel>
+      <Carousel.Item>
+        <Row>
+          <Col sm={4} className='imgColsCr'>
+            <img
+              className="d-block w-100"
+              src={WayfairTestimonial}
+              alt="First slide"
+            />
+          </Col>
+          <Col sm={4} className='imgColsCr'>
+            <img
+              className="d-block w-100"
+              src={LovesacTestimonial}
+              alt="Second slide"
+            />
+          </Col>
+          <Col sm={4} className='imgColsCr'>
+            <img
+              className="d-block w-100"
+              src={IKEAtestimonial}
+              alt="Third slide"
+            />
+          </Col>
+        </Row>
+      </Carousel.Item>
+      <Carousel.Item>
+        <Row>
+          <Col sm={4} className='imgColsCr'>
+            <img
+              className="d-block w-100"
+              src={ShopifyTestimonial}
+              alt="First slide"
+            />
+          </Col>
+          <Col sm={4} className='imgColsCr'>
+            <img
+              className="d-block w-100"
+              src={MacysTestimonial}
+              alt="Second slide"
+            />
+          </Col>
+          <Col sm={4} className='imgColsCr'>
+            <img
+              className="d-block w-100"
+              src={IKEAtestimonial}
+              alt="Third slide"
+            />
+          </Col>
+        </Row>
+      </Carousel.Item>
+    </Carousel>
+  </>
     )
   }
 

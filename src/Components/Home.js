@@ -1,6 +1,6 @@
 import React, { useState,useRef } from 'react';
 import { Container, Row, Col, Button, ButtonGroup } from 'react-bootstrap';
-import LandingV from './Helpers/concept_office.mp4'
+import LandingV from './Helpers/concept_office.webm'
 import Play from './Helpers/Play.svg'
 import Showroom from './Helpers/Showroom.svg'
 import Catalog from './Helpers/Catalog.svg'
@@ -8,7 +8,7 @@ import Material from './Helpers/Material.svg'
 import Collaboration from './Helpers/Collaboration.svg'
 import Lightning from './Helpers/Lightning.svg'
 import Commerce3D from './Helpers/Commerce3D.svg'
-import ShowCase from './Helpers/ShowCase.mp4'
+import ShowCase from './Helpers/Showcase_and_sell_Video_Loop.webm'
 import officeChair from './Helpers/officeChair.png'
 import backImg from './Helpers/backImg.webp';
 import plusIcon from './Helpers/plusIcon.svg';
@@ -18,7 +18,7 @@ import Lighting from './Helpers/Lighting.svg';
 import Paints from './Helpers/Paints.svg';
 import doorWindows from './Helpers/doorWindows.svg';
 import tilesCarpet from './Helpers/tilesCarpet.svg';
-import LV from './Helpers/LV.webm';
+import LV from './Helpers/Hero_Section_Lighting_.webm';
 import lightingDetail from './Helpers/lightingDetail.svg';
 import Circlelogo from './Helpers/Circlelogo.svg';
 import furniture from './Helpers/furniture.png'
@@ -56,7 +56,7 @@ const HomeComponent = () => {
         backgroundImage: `url(${backImg})`,
         backgroundSize: '100% 100%',
         backgroundRepeat: 'no-repeat',
-        background: 'background: linear-gradient(180deg, rgba(18, 18, 18, 0.00) 0%, rgba(18, 18, 18, 0.00) 0.01%, #02030B 49.53%);'
+        background: 'background: linear-gradient(180deg, rgba(18, 18, 18, 0.00) 0%, rgba(18, 18, 18, 0.00) 0.01%, #02030B 49.53%)'
     };
   
   const currentCrousel = (val)=>{
@@ -152,7 +152,7 @@ const HomeComponent = () => {
                     </Col>
                 </Row>
 
-                <Row  >
+                <Row style={{ marginTop: '50px', marginBottom: '50px' }} >
 
 
                     <Col xs={12} md={6} className='aboutServicesCol'>
@@ -217,7 +217,9 @@ const HomeComponent = () => {
 
                 </Row>
 
-                
+                <Row style={{ marginTop: '50px', marginBottom: '100px' }}>
+                <ImgCarousel />
+                </Row>
             </Container>
         </>
     );
