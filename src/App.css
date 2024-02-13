@@ -236,6 +236,14 @@ backdrop-filter: blur(51.375px);
 .carousel-control-next-icon{
   margin-right: -14rem;
 }
+
+.MobCrousel{
+  display: none;
+}
+.deskCrousel{
+  display: block;
+}
+
 button {
   font-family: 'Roboto' !important;
 }
@@ -521,8 +529,18 @@ margin-right: 15px;
   margin-left: 55px;
   margin-top: 2px;
 }
+.topPad{
+  margin-top: 50px;
+}
+.topBottomPad{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.topBottomPadMore{
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
 @media screen and (min-width: 992px) {
-
   .aboutServicesCol{
   padding-right: 0;
 }
@@ -532,41 +550,29 @@ margin-right: 15px;
   .navBarDiv {
     background: linear-gradient(180deg, rgba(18, 18, 18, 0.00) 0%, rgba(18, 18, 18, 0.00) 0.01%, #02030B 49.53%);
   }
-
-  
-
   .navLogo {
     padding: 0 10px 0 0px;
     height: 50px;
     margin-left: 1.1rem;
   }
-
   .navbar {
     margin-top: 20px !important;
     margin-bottom: 20px !important;
   }
-
   .navbar-dark .navbar-brand,
   .navbar-dark .navbar-nav .nav-link {
     color: #FFF;
   }
-
   .navbar-dark {
-    /* border: 2px solid #FF4233;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(90deg, rgba(251, 24, 7, 0.10) -51.32%, rgba(35, 180, 115, 0.10) 98.95%); */
-    /* backdrop-filter: blur(50px); */
     border-radius: 4rem;
   }
-
   .navbar-nav:hover .nav-link+.nav-dropdown-hover .dropdown-menu {
     display: block;
     z-index: 1;
   }
-
   .dropdown-toggle::after {
     vertical-align: 0.199em !important;
   }
-
   .custom-navlink {
     background-color: #FF4233;
     border: 1px solid #FF4233;
@@ -594,15 +600,6 @@ margin-right: 15px;
     margin-left: 1.1rem !important;
     margin-right: 1.1rem !important;
   }
-
-
-  /* @media screen and (max-width: 991px) {
-  .container {
-    width: auto !important;
-    max-width: 100vh !important;
-  }
-
-} */
   .Commerce3D {
     width: 150px;
   }
@@ -617,147 +614,6 @@ margin-right: 15px;
     line-height: 50px;
     width: 35rem;
   }
-
-  .officeChairParentDiv {
-    background: #FF4233;
-    display: flex;
-    flex-direction: row;
-    padding: 30px;
-    border-radius: 20px;
-  }
-
-  .officeChairButtonsParentDiv {
-    text-align: end;
-  }
-
-  .officeChairDiv {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .officeChairDiv h3 {
-    color: #1D1D1B;
-    font-family: "Be Vietnam Pro" !important;
-    font-size: 27px;
-    font-style: normal;
-    font-weight: 600;
-    /* line-height: 57px; */
-    text-transform: capitalize;
-  }
-
-  .officeChairDiv button {
-    border-radius: 33px;
-    background: #FFBBB6;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    text-align: end;
-    border: #FFBBB6;
-    color: #000;
-    padding-left: 15px;
-    padding-right: 15px;
-    text-align: center;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    font-size: 15px;
-    font-weight: 500;
-    margin-top: 25px;
-    margin-bottom: 12px;
-  }
-
-  .officeChairDiv .btn:active {
-    background: #FFBBB6;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    border: #FFBBB6;
-    color: #000;
-  }
-
-  .officeChairDiv .btn:hover {
-    background: #FFBBB6;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    border: #FFBBB6;
-    color: #000;
-  }
-
-  .officeChairDiv img {
-    margin-top: 20px;
-  }
-
-  .officeChairDiv span {
-    margin-left: 5px;
-  }
-
-  .officeChairBt {
-    margin-top: 0 !important;
-  }
-
-  .officeChairButtons {
-    text-align: left;
-  }
-
-  .officeChairButtons {
-    margin-top: 20px;
-    border-radius: 10px;
-    background: #F0645A;
-    height: 70px;
-    width: 230px;
-    border: 1px solid #F0645A;
-    color: #000;
-    font-weight: 400;
-  }
-
-  .officeChairButtons:hover {
-    border: 1px solid #F0645A;
-    background: #F0645A;
-    color: #000;
-  }
-
-  .officeChairButtons:active {
-    border: 1px solid #F0645A !important;
-    background: #F0645A !important;
-    color: #000 !important;
-    --bs-btn-focus-shadow-rgb: :'none' !important;
-  }
-
-  .officeChairButtons:focus-visible {
-    border: 1px solid #F0645A !important;
-    background: #F0645A !important;
-    color: #000 !important;
-    --bs-btn-focus-shadow-rgb: :'none' !important;
-  }
-
-  .officeChairButtons span {
-    padding-left: 15px;
-    font-size: 20px;
-  }
-  .landingCrousel {
-    border-radius: 20px !important;
-  }
-
-.crouselItemL{
-  width: 430px !important;
-  height: 270px;
-}
-.crouselItemFimgS{
-  width:80px;
-  margin-left: 30px;
-}
-.crouselItemSimgs{
-  width: 120px;
-  margin-top: -94px;
-  border-bottom-left-radius:20px;
-}
-.sCrousel{
-  display: grid;
-  place-items: center;
-}
-.meta_data{
-  position: relative;
-  display: none;
-  float: left;
-  width: 100%;
-  margin-right: -100%;
-  backface-visibility: hidden;
-  transition: transform .6s ease-in-out;
-}
 .servicesButtonDivF {
   display: none !important;
 }
@@ -924,6 +780,74 @@ border-top-right-radius: 10px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1280px) {
+  .navbar{
+    border-radius: 4rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .navLogo {
+    margin: 0px 5px 0 15px;
+}
+.navbar-toggler{
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.Commerce3D{
+  width: 125px !important;
+}
+.headingF{
+  font-size: 28px;
+  width: 15rem;
+}
+.ulListF{
+  margin-top:0.5rem !important;
+  margin-bottom: 0.8rem !important;
+}
+.contactBt img{
+  width:35px !important;
+}
+.contactBt {
+  padding: 0.4rem 1rem 0.4rem 1.5rem !important;
+}
+.watchVideoDiv{
+  margin-bottom: 30px;
+  margin-top: 15px !important;
+}
+.LandingVDiv {
+  margin-top: -1rem;
+}
+.LandingV{
+  margin-left: revert;
+} 
+.ThreeDButtons{
+  display: flex !important;
+}
+.ThreeDButtons img{
+  width: 20% !important;
+}
+.ThreeDButtons p{
+  font-size: 11px !important;
+  padding-left: 5px !important;
+}
+.ThreeDButtons button{
+  width: fit-content !important;
+  margin-right: 10px !important;
+  padding: 15px;
+}
+.ThreeDButtons{
+  margin-top:-1.5rem !important;
+  margin-bottom: 12px !important;
+  padding: 30px 20px !important;
+}
+.servicesDetailDiv {
+  padding-bottom: 32px;
+}
+.carousel-control-prev-icon{
+  margin-left: -7rem;
+}
+.carousel-control-next-icon{
+  margin-left: -7rem;
+}
   .aboutServices{
     border-radius: 10px !important;
     border-top-right-radius:0px !important;
@@ -1044,12 +968,81 @@ border-top-right-radius: 10px;
     padding-left: 5px !important;
   }
 }
-@media screen and (max-width:540px) {
-  .crouselBtn{
-    display:none;
-  } 
-  .crouselItemf, .crouselItemL{
-    height:auto !important
+@media screen and (max-width:767px) {
+  .navbar{
+    border: none !important;
+    background: none !important;
+  }
+  .navLogo{
+    margin: 0px 10px 0px 5px;
+  }
+  .Commerce3D2 {
+    width: 90px !important;
+    margin-top: -3rem !important;
+}
+.contactBt{
+  padding: 0.5rem 1rem !important;
+}
+.contactBt img{
+  width: 30px !important;
+}
+.LandingVDiv{
+  margin-top: -1rem !important;
+}
+.LandingV{
+  margin-left: 0px !important;
+}
+.showCaseParentDiv{
+  margin-left: 0.5rem;
+}
+.showCaseDiv h4{
+  font-size: 30px !important;
+  font-weight: 600 !important;
+}
+.aboutServices{
+  border-radius: 10px 10px 0px 0px !important;
+}
+.servicesDetailDiv {
+  padding-bottom: 35px;
+}
+.material3dDivCh{
+  margin-top: -1rem !important;
+}
+.material3dDiv p{
+  margin-bottom: 3rem;
+  font-size: 15px !important;
+  font-weight: 300 !important;
+}
+.subscribeInputDiv{
+  display: flex !important;
+  flex-direction: column !important;
+}
+.subscribeInput{
+  width: -webkit-fill-available !important;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px !important;
+}
+.subscribeButton{
+  margin:0 !important;
+}
+.socialLinks{
+  margin-top: -20px;
+}
+.socialLinks img{
+  width: 25px !important;
+}
+  .carousel-control-prev-icon{
+    margin-left: 0 !important;
+  }
+  .carousel-control-next-icon{
+    margin-right: 0 !important;
+  }
+  .MobCrousel{
+    display: block !important;
+  }
+  .deskCrousel{
+    display: none !important;
   }
 }
 

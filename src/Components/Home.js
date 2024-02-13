@@ -1,4 +1,4 @@
-import React, { useState,useRef } from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col, Button, ButtonGroup } from 'react-bootstrap';
 import LandingV from './Helpers/concept_office.webm'
 import Play from './Helpers/Play.svg'
@@ -9,59 +9,22 @@ import Collaboration from './Helpers/Collaboration.svg'
 import Lightning from './Helpers/Lightning.svg'
 import Commerce3D from './Helpers/Commerce3D.svg'
 import ShowCase from './Helpers/Showcase_and_sell_Video_Loop.webm'
-import officeChair from './Helpers/officeChair.png'
 import backImg from './Helpers/backImg.webp';
-import plusIcon from './Helpers/plusIcon.svg';
-import myRoom from './Helpers/myRoom.svg';
-import Furniture from './Helpers/furniture.svg';
-import Lighting from './Helpers/Lighting.svg';
-import Paints from './Helpers/Paints.svg';
-import doorWindows from './Helpers/doorWindows.svg';
-import tilesCarpet from './Helpers/tilesCarpet.svg';
 import LV from './Helpers/Hero_Section_Lighting_.webm';
 import lightingDetail from './Helpers/lightingDetail.svg';
-import Circlelogo from './Helpers/Circlelogo.svg';
 import furniture from './Helpers/furniture.png'
 import { MdFiberManualRecord } from 'react-icons/md';
 
-import lovesac from './Helpers/lovesac.jpeg'
-import { FaStar } from 'react-icons/fa'
-import Quardrant from './Helpers/Quardrant.svg'
-import coloredfabric from './Helpers/coloredfabric.svg'
-import { div_meta_data } from './Helpers/crousel_meta/landing_meta';
-import MyCarousel,{ImgCarousel} from './LandingCrousel.js'
-import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
+import coloredfabric from './Helpers/coloredfabric.svg';
+import {ImgCarousel, MobImgCarousel} from './LandingCrousel.js'
 import contactIcon from './Helpers/contactIcon.svg'
 const HomeComponent = () => {
-    const [crouselIndex,setCrouselIndex] = useState(0)
-    const childRef = useRef()
-    const childRefNew = useRef()
-    const handleParentButtonClick =(e)=>{
-        const nameVal = e.currentTarget.name
-        if(nameVal == 'prevClick') {
-            childRef.current.handleSelect(crouselIndex == 0 ? div_meta_data.length-1 : crouselIndex-1)
-        }
-        else if(nameVal == 'nextClick') {
-            childRef.current.handleSelect(crouselIndex == div_meta_data.length-1 ? 0 : crouselIndex+1)
-        }
-        else if(nameVal == 'prevClickNew'){
-            childRefNew.current.handleSelect(crouselIndex == 0 ? div_meta_data.length-1 : crouselIndex-1)
-        }
-        else if(nameVal == 'nextClickNew')
-        {
-            childRefNew.current.handleSelect(crouselIndex == div_meta_data.length-1 ? 0 : crouselIndex+1)
-        }
-    }
     const divBackground = {
         backgroundImage: `url(${backImg})`,
         backgroundSize: '100% 100%',
         backgroundRepeat: 'no-repeat',
         background: 'background: linear-gradient(180deg, rgba(18, 18, 18, 0.00) 0%, rgba(18, 18, 18, 0.00) 0.01%, #02030B 49.53%)'
     };
-  
-  const currentCrousel = (val)=>{
-    setCrouselIndex(val)
-  }
   
   const dynamicData = [{name:'Furniture',value:`Showcase your furniture Instore and online. On common smartphone, tablets and pc's. 
   Our solutions offer high material fedility. We leverage Nvidia, Adobe tecnologies. We conform to 3DCommerce asset guidelines. Showcase your furniture under diverse lighting conditions. for example under sunlight and night lighting. Help your costumers make the right choices using our Collaboration3D technology
@@ -130,8 +93,8 @@ const HomeComponent = () => {
             </div>
             <Container>
 
-                <Row style={{ marginTop: '50px' }}>
-                    <Col xs={12} md={4} className='d-flex align-items-center'>
+                <Row className='topPad'>
+                    <Col xs={12} md={4} className='d-flex align-items-center cols'>
                         <div className='showCaseParentDiv'>
                             <div className='showCaseDiv' style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '', height: '100%' }}>
                                 <h4 className='heading'>Insights</h4>
@@ -142,7 +105,7 @@ const HomeComponent = () => {
 
 
                     </Col>
-                    <Col xs={12} md={8}>
+                    <Col xs={12} md={8} className='cols'>
                         <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '15px', padding: '' }}>
                             <video width="100%" autoPlay muted loop style={{ objectFit: 'cover',}}>
                                 <source src={ShowCase} type="video/mp4" />
@@ -152,7 +115,7 @@ const HomeComponent = () => {
                     </Col>
                 </Row>
 
-                <Row style={{ marginTop: '50px', marginBottom: '50px' }} >
+                <Row  className='topBottomPad'>
 
 
                     <Col xs={12} md={6} className='aboutServicesCol'>
@@ -193,8 +156,8 @@ const HomeComponent = () => {
                     </Col>
                 </Row>
 
-                 <Row style={{ marginTop: '50px', marginBottom: '50px' }}>
-                    <Col xs={12} md={7} className='d-flex align-items-center' style={{ borderRadius: '20px' }}>
+                 <Row className='topBottomPad'>
+                    <Col xs={12} md={7} className='d-flex align-items-center cols' style={{ borderRadius: '20px' }}>
                         <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '15px', height: '100%' }}>
                             <video autoPlay muted loop style={{ objectFit: 'cover', width: '100%', height: '100%' }}>
                                 <source src={LV} type="video/mp4" />
@@ -203,7 +166,7 @@ const HomeComponent = () => {
                         </div>
                     </Col>
 
-                   <Col  xs={12} md={5} className='cols material3dCol'>
+                   <Col  xs={12} md={5} className='cols material3dCol cols'>
                         <div className = 'material3dDiv'>
                         <div className='material3dImgDiv'>
                             <img src={coloredfabric} />
@@ -217,8 +180,11 @@ const HomeComponent = () => {
 
                 </Row>
 
-                <Row style={{ marginTop: '50px', marginBottom: '100px' }}>
+                <Row className='deskCrousel topBottomPadMore' >
                 <ImgCarousel />
+                </Row>
+                <Row className='MobCrousel topBottomPadMore' >
+                <MobImgCarousel />
                 </Row>
             </Container>
         </>
@@ -227,60 +193,3 @@ const HomeComponent = () => {
 
 export default HomeComponent;
 
-
-
-//  {/* <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '15px', padding: '' }}>
-//                                 <video width="100%" className='LandingV' autoPlay muted loop style={{ objectFit: 'cover', clipPath: 'polygon(53% 3%, 95% 7%, 91% 80%, 42% 97%, 7% 77%, 4% 6%)' }}>
-//                                     <source src={LandingV} type="video/mp4" />
-//                                     Your browser does not support the video tag.
-//                                 </video>
-//                             </div> */}
-
-// <Row className='normalCrousel' style={{marginBottom:'60px'}}>
-//                     <Col xs={12} md={3} className='d-flex align-items-center'>
-//                         <div className='industryInsight'>
-//                             <h3>
-//                                 Testimonials
-//                             </h3>
-//                             <h4>
-//                                 Industry Insights
-//                             </h4>
-//                         </div>
-//                     </Col>
-//                     <Col xs={12} md={5}>
-//                        <MyCarousel ref={childRef} currentCrousel={currentCrousel}/>
-//                     </Col>
-//                     <Col xs={12} md={4} className='sCrousel' >
-//                         <div className=''>
-//                         <div className='sCrouselDiv'>
-//                             {crouselIndex && crouselIndex==div_meta_data.length-1 ? div_meta_data[0] : div_meta_data[crouselIndex+1]}
-//                             </div>
-//                         <div className='crouselBtn'>
-//                         <Button name='prevClick' onClick={handleParentButtonClick}><BsArrowLeft /></Button>
-//                         <Button name='nextClick' onClick={handleParentButtonClick}><BsArrowRight /></Button>
-//                         </div>
-//                         </div>
-//                     </Col>
-//                 </Row>
-
-//                 <Row className='tabCrousel' style={{marginBottom:'60px'}}>
-//                     <div className='d-flex align-items-center'>
-//                         <div className='industryInsight'>
-//                             <h3>
-//                                 Testimonials
-//                             </h3>
-//                             <h4>
-//                                 Industry Insights
-//                             </h4>
-//                         </div>
-//                     </div>
-//                     <Col xs={12} md={12}>
-//                        <MyCarousel ref={childRefNew} currentCrousel={currentCrousel}/>
-//                        <div className='crouselBtn'>
-//                         <Button name='prevClickNew' onClick={handleParentButtonClick}><BsArrowLeft /></Button>
-//                         <Button name='nextClickNew' onClick={handleParentButtonClick}><BsArrowRight /></Button>
-//                         </div>
-//                     </Col>
-//                 </Row>
-//                     <ImgCarousel />
-                  
