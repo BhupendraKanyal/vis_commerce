@@ -15,7 +15,8 @@ export const Pricing = () => {
     return (
         <Container>
             <Row className='fRow'>
-                <Col xs={12} md={6}>
+            {/* order-last order-sm-first */}
+                <Col xs={12} md={6} className=''>
                     <div className='pricingImgDiv'>
                         <img src={pricingImg} />
                     </div>
@@ -51,7 +52,8 @@ export const Pricing = () => {
                     </div>
                 </Col>
             </Row>
-            <Row className='ulSRow'>
+            <Row className='ulSRow ulSRowDesk'>
+               
                 <Col className='ulSCol d-flex justify-content-center align-items-center' xs={12} md={4}>
                     <div className='ulSDivP'>
                         <div className='ulSDiv'>
@@ -88,12 +90,55 @@ export const Pricing = () => {
                         </ul>
                     </div>
                 </Col>
+               
             </Row>
+            {/* <Row className=' '> */}
+               <div className='row ulSRowMob'>
+                <div className='ulSRow'>
+                <div className='ulSCol d-flex col-sm-12 col-md-4'>
+                    <div className='ulSDivP'>
+                        <div className='ulSDiv'>
+                            <img src={smartPhone} alt="Smartphone" />
+                            <p>Smartphone</p>
+                        </div>
+                        <ul className=" ulList">
+                            <li>Android, IOS</li>
+                            <li>IPhone, Google Pixel Samsung Galaxy...</li>
+                        </ul>
+                    </div>
+                </div>
+                <div className='ulSCol d-flex col-sm-12 col-md-4' xs={12} md={4}>
+                    <div className='ulSDivP'>
+                        <div className='ulSDiv'>
+                            <img src={tablet} alt="Tablet" />
+                            <p>Tablet</p>
+                        </div>
+                        <ul className="ulList">
+                            <li>IPad, Samsung Galaxy, Microsoft surface</li>
+                            <li>IOS, Android, Windows</li>
+                            <li>Various screen sizes</li>
+                        </ul>
+                    </div>
+                </div>
+                <div className='ulSCol d-flex col-sm-12 col-md-4' xs={12} md={4}>
+                    <div className='ulSDivP'>
+                        <div className='ulSDiv ulSDivImgs'>
+                            <img src={desktop} alt="Desktop" />
+                            <p>Desktop</p>
+                        </div>
+                        <ul className=" ulList">
+                            <li>Windows, IMac, Linux</li>
+                        </ul>
+                    </div>
+                </div>
+               </div>
+               </div>
+            {/* </Row> */}
 
             <Row className='sRow'><h4>Join Us</h4></Row>
 
             <Row className='tRow'>
-                <Col xs={12} md={4}>
+                <Col xs={12} md={4} className='joinUsCol'>
                     <div className='joinUsPPDiv'>
                         <div className='joinUsPDiv'>
                             <div>
@@ -110,7 +155,7 @@ export const Pricing = () => {
                         </div>
                     </div>
                 </Col>
-                <Col xs={12} md={8}>
+                <Col xs={12} md={8} className='cols formCol'>
                     <div className='formPDiv'>
                         <FormComponent />
                     </div>
@@ -177,7 +222,7 @@ const FormComponent = () => {
                 <Form.Control type="text" placeholder="Name" name='fullName' onChange={handleInputChange} />
             </Form.Group>
 
-            <Row>
+            <Row className='flexControls'>
                 <Col>
                     <Form.Group controlId="formEmail">
                         <Form.Control type="text" placeholder="Email" name='emailAddress' onChange={handleInputChange} />

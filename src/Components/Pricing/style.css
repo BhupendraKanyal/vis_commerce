@@ -68,7 +68,7 @@ font-style: normal;
     text-align: center;
 }
 .pricingImgDiv img{
-    width: 350px;
+    width: 350px !important;
 }
 .ulList {
     margin-left: 6rem;
@@ -164,4 +164,97 @@ color: #fff;
 }
 .tRow{
     margin-bottom: 100px;
+}
+.ulSRowMob{
+    display: none;
+}
+.ulSRowDesk{
+    display: flex;
+}
+
+@media screen and (max-width:1024px){
+    .parentDiv h5{
+        font-size: 40px;
+    }
+    .parentDiv h2,.ulFDiv p, .ulSDiv p{
+        font-size: 20px;
+    }
+    .phoneDiv, .mailDiv {
+        align-items: center !important;
+        margin-bottom: 25px;
+    }
+    
+   
+    .ulFDiv img{
+        width: 30px !important;
+    }
+    .ulPDiv{
+        margin-right: 2rem;
+    }
+    .ulPDiv li{
+        font-size: 12px;
+    }
+    .formPDiv{
+        height:100% !important;
+        padding: 30px 20px !important;
+    }
+    .formPDiv .form-control{
+        margin-bottom: 25px !important;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .formPDiv .flexControls{
+        flex-direction: column !important;
+    }
+    .joinUsPPDiv{
+        height: 100% !important;
+    }
+}
+@media screen and (max-width:767px) {
+    .fRow{
+        margin-top: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+    .pricingImgDiv{
+        text-align: end !important;
+    }
+    .pricingImgDiv img{
+        width:200px !important;
+    }
+    .parentDiv{
+        margin-top:-90px;
+    }
+    
+    .ulSRowMob{
+        display: flex !important;
+        padding:10px !important;
+    }
+    .ulSRowDesk{
+        display: none !important;
+    }
+    .ulSDivImgs{
+        margin-left: -20px;
+    }
+    .ulList li{
+        margin-top: 10px !important;
+        margin-bottom: 15px !important;
+    }
+    .sRow{
+        margin-top:1.5rem !important;
+    }
+    .sRow h4{
+        width: fit-content !important;
+    }
+   
+}
+@media screen and (max-width:1024px){
+    .formCol{
+        margin: 0 !important;
+    }
+    .joinUsCol{
+        width: 40% !important;
+    }
+    .formCol{
+        width: 60% !important;
+    }
 }
