@@ -1,0 +1,96 @@
+body {
+  color: white;
+}
+:root {
+  --brand-color: #ff595d;
+}
+.overflow-hidden {
+  overflow-y: hidden;
+}
+.card-border {
+  border: 2px solid white;
+}
+.benefit_inital {
+  background-color: #090b0d;
+}
+.card-style {
+  background-color: #222222;
+  width: 100%; /* Adjusted width */
+  max-width: 401px; /* Added max-width */
+  height: 500px;
+  color: white;
+  border-radius: 20px;
+}
+
+.text-white {
+  color: #ffffff;
+}
+.textRed{
+  color: var(--brand-color);
+}
+.benefit-title {
+  font-size: 45px;
+  color: var(--brand-color);
+}
+.benefit-subtitle {
+  color: #ffffff;
+  font-size: 22px;
+}
+.benefit-common-style {
+  font-size: 55px;
+}
+.text-red {
+  color: var(--brand-color);
+  font-size: 55px;
+}
+.absolute {
+  background-color: red;
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border: 6px solid blue;
+}
+.relative {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  /* position: absolute;
+
+ background-color: green;
+ left: 5;
+ right: 30; */
+}
+
+.reset {
+  margin: 0 !important;
+}
+/* colloboration */
+.bg-color {
+  background-color: red;
+}
+
+.image-container {
+  width: 80%;
+  height: 100%;
+}
+
+.image {
+  width: 100%;
+  height: auto; /* Adjust height proportionally */
+  max-width: 450px; /* Set max-width for responsiveness */
+  max-height: 550px; /* Set max-height for responsiveness */
+}
+.collo-image-container {
+  width: 80%;
+  height: 100%;
+}
+
+.collo-image {
+  width: 100%;
+  height: auto; /* Adjust height proportionally */
+  max-width: 450px; /* Set max-width for responsiveness */
+  max-height: 550px; /* Set max-height for responsiveness */
+}
