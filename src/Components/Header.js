@@ -19,11 +19,11 @@ export const Header = ()=>{
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
-          <Nav.Link href="#home">Solutions</Nav.Link>
-            <Nav.Link href="#home">Benefits</Nav.Link>
+          <Nav.Link href="/">Solutions</Nav.Link>
+            <Nav.Link href="/benefits">Benefits</Nav.Link>
             <Nav.Link href="/hdrenderer">HDRenders</Nav.Link>
             <Nav.Link href="/pricing">Pricing</Nav.Link>
-            <Nav.Link href="#services">Resources</Nav.Link>
+            <Nav.Link href="/">Resources</Nav.Link>
             <NavDropdown
               title="Company"
               id="basic-nav-dropdown"
