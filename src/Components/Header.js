@@ -12,14 +12,14 @@ export const Header = ()=>{
     // <div style={{background:'linear-gradient(180deg, rgba(18, 18, 18, 0.00) 0%, rgba(18, 18, 18, 0.00) 0.01%, #02030B 49.53%)'}}>
    <Container>
       <Navbar variant="dark" bg='dark' expand="lg" className="">
-        <Navbar.Brand href="#home"  className="mr-4 d-flex align-items-center">
+        <Navbar.Brand href="/"  className="mr-4 d-flex align-items-center">
           <img className="navLogo" src={logo} alt="logo/brand" />
           <span className="ml-2">VisCommerce</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
-          <Nav.Link href="/">Solutions</Nav.Link>
+          <Nav.Link href="/solutions">Solutions</Nav.Link>
             <Nav.Link href="/benefits">Benefits</Nav.Link>
             <Nav.Link href="/hdrenderer">HDRenders</Nav.Link>
             <Nav.Link href="/pricing">Pricing</Nav.Link>

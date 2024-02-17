@@ -5,33 +5,89 @@ img{
 p{
     margin-bottom: 0;
 }
+.ShowroomRow{
+    padding-top: 50px;
+    padding-bottom: 90px;
+}
 .ShowroomCol{
     display: grid;
     margin: auto;
+}
+.ShowroomDiv{
+    padding-bottom: 20px;
+}
+.ShowroomDiv h2{
+    color: #FFF;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 80px;
+}
+.ShowroomDiv p{
+font-size: 20px;
+font-style: normal;
+font-weight: 200;
+line-height: 28px; 
+width: 35rem;
+}
+.tryOuts button{
+    width: 150px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 100px;
+    margin-right: 20px;
+}
+.tryOuts .contactBt{
+    border: 1px solid var(--Primary, #FF595D);
+    background: var(--Button-Overlay, rgba(33, 33, 33, 0.90));
+    backdrop-filter: blur(50px);
+    color: #FF595D;
+    
+}
+.tryOuts .contactBt:hover,.tryOuts .contactBt:focus-visible,.tryOuts .contactBt:focus{
+    border: 1px solid var(--Primary, #FF595D);
+    background: var(--Button-Overlay, rgba(33, 33, 33, 0.90));
+    color: #FF595D;
+    box-shadow: none;
 }
 .showRoomBtDiv{
     background: #FF4233;
     border-radius: 10px;
     width: max-content;
     padding: 20px;
+    display: inline-flex;
+    /* overflow-x: scroll; */
 }
-.showRoomBtDiv button {
+/* .showRoomBtDivP{
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+} */
+
+.showRoomBtDiv button,.showRoomBtDiv button:active {
     background: none;
     color: #fff;
     border: none;
     width: 99.1px;
 }
-.showRoomBtDiv button:hover {
-    background: #fff;
+.showRoomBtDiv button:active {
+    background: none !important;
+    color: #fff !important;
+}
+.showRoomBtDiv button:hover, .showRoomBtDiv button:focus ,.showRoomBtDiv button:focus-visible{
+    background: #fff ;
     color: #FF5A50;
     border: none;
 }
 .showRoomFPDiv{
     border: 1px solid #FF4233;
     border-radius: 15px;
-    background:#222;
+    background:#fff;
     height: max-content;
     padding-bottom: 35px;
+    margin-top: 50px;
 }
 .image-row {
     display: flex;
@@ -46,9 +102,38 @@ hr{
 }
 .imgCDiv{
     padding: 0 15px 0 15px;
-    background: #4D4949;
+    background: lightgrey;
     border-radius: 10px;
     padding-bottom: 15px;
+}
+.imgCDiv p{
+    color: #000;
+    font-size: 12px;
+    text-align: center;
+}
+.brownImg,.blackImg,.greyImg{
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.blackImg{
+    border-radius: 13.397px;
+background:linear-gradient(180deg, #515151 0%, #494949 100%);
+box-shadow: 0px 3.573px 3.573px 0px rgba(0, 0, 0, 0.25);
+border: none;
+}
+.brownImg{
+    border-radius: 13.397px;
+background:linear-gradient(180deg, #6B564D 0%, #665146 100%);
+box-shadow: 0px 3.573px 3.573px 0px rgba(0, 0, 0, 0.25);
+border: none;
+}
+.greyImg{
+    border-radius: 13.397px;
+background: linear-gradient(180deg, #9A9A9A 0%, #BCBCBC 100%);
+box-shadow: 0px 3.573px 3.573px 0px rgba(0, 0, 0, 0.25);
+border: none;
 }
 .svgImgDivs{
     margin-right: 5rem;
@@ -66,10 +151,11 @@ hr{
     margin-left: 20px;
 }
 .flexDivs{
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .flexDivP{
     padding: 50px 20px 0 20px;
+    margin-top: 50px;
 }
 .flexDivP h4 {
     font-weight: 700;
@@ -88,9 +174,19 @@ hr{
 .svgImgDivs {
     width: 350px;
 }
-.customizeDiv h4 {
+.customizeDiv h4,.lightningrow h4{
     font-size: 40px;
     font-weight: 700;
+}
+.lightCtrl h4{
+    font-size: 35px;
+}
+.lightCtrl p{
+    font-size: 18px;
+    margin-top: 1rem;
+}
+.lightningrow h4{
+    margin-bottom: 20px;
 }
 .listsDiv{
     display: flex;
@@ -138,7 +234,7 @@ hr{
     flex-direction: row;
 }
 .chairsImgDivs img{
-    width: 300px;
+    width: 350px;
 }
 .chairsImgDivs{
     width: -webkit-fill-available;
@@ -158,17 +254,65 @@ hr{
 }
 .flexDivs p{
     margin-left: 15px;
+    font-size: 15px;
 }
 .flexDivss img{
-    width:40px;
+    width:30px;
 }
-.flexDivss{
-    margin-right: 10rem;
-    margin-top: 20px;
+.flexDivss {
+    margin-right: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 .flexDivsImg{
     width: 20px;
 }
 .vDiv video{
     border-radius: 10px;
+}
+.leatherCol{
+    display: grid;
+    margin: auto;
+}
+.collaboration3DRow img{
+    margin-left: -10px;
+    margin-top: 20px;
+}
+.collaboration3DCol{
+    display: grid;
+    margin: auto;
+}
+.collaboration3DCol{
+    padding: 30px;
+}
+.collaboration3DRow p{
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 50px;
+    margin-bottom: 35px;
+}
+.collaboration3DRow ul li{
+    font-size: 20px;
+    font-weight: 500;
+}
+.showCaseMore{
+    font-size:50px;
+}
+.showCaseMoreRow{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.showCaseMoreRow img{
+    border-radius: 10px;
+}
+.space3DCol{
+    display: grid;
+    margin: auto;
+}
+.space3DColS{
+    text-align: end;
+}
+.space3DColS img{
+    width: 450px !important;
 }

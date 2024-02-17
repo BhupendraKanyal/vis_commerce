@@ -171,7 +171,15 @@ color: #fff;
 .ulSRowDesk{
     display: flex;
 }
-
+.custom-modal {
+    width: 50%;
+  }
+.iFrameBt{
+    margin:0px 20px 20px;
+}
+iframe{
+    border-radius: 10px;
+}
 @media screen and (max-width:1024px){
     .parentDiv h5{
         font-size: 40px;
