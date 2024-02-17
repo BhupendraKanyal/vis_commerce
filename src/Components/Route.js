@@ -6,6 +6,7 @@ import Card from './HdRenderer/Cards/Screen.jsx';
 import {Pricing} from './Pricing/Pricing.js';
 import { ShowRoom3D } from './ShowRoom3D/ShowRoom3D.js';
 import Benefit from './Benefitss/Benefit.jsx';
+import About from './About/About.jsx';
 const Routing = () => {
   return (
     <Router>
@@ -16,6 +17,8 @@ const Routing = () => {
         <Route  path='/benefits' element={<Benefit />} />
         <Route path='/pricing' element={<Pricing />} />
         <Route path='/showroom3D' element={<ShowRoom3D />} />
+        <Route path='/about' element={<About />} />
+
       </Routes>
     </Router>
   );
