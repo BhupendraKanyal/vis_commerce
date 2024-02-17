@@ -18,6 +18,7 @@ import { MdFiberManualRecord } from 'react-icons/md';
 import coloredfabric from './Helpers/coloredfabric.svg';
 import {ImgCarousel, MobImgCarousel} from './LandingCrousel.js'
 import contactIcon from './Helpers/contactIcon.svg'
+import YouTubeModal from './Helpers/YouTubeModal/YouTubeModal';
 const HomeComponent = () => {
     const divBackground = {
         backgroundImage: `url(${backImg})`,
@@ -35,6 +36,10 @@ const HomeComponent = () => {
     setCatalogStateVal(vals)
   }
   const [catalogStateVal,setCatalogStateVal]  = useState(dynamicData[0])
+  const [showModal,setShowModal] = useState(false)
+  const playVideo = ()=>{
+    setShowModal(!showModal)
+  }
 
     return (
         <>
@@ -42,6 +47,9 @@ const HomeComponent = () => {
                 <Container>
                     <Row className='Commerce3DRow'>
                         <img className='Commerce3D' src={Commerce3D} />
+                    </Row>
+                    <Row>
+                        <YouTubeModal showModal={showModal} playvideo={playVideo}/>
                     </Row>
                     <Row>
                         <Col xs={12} md={7}>
@@ -57,7 +65,7 @@ const HomeComponent = () => {
                                 <div className='watchVideoDiv'>
                                     <Button className='contactBt' >Contact Us <img src={contactIcon} alt="Play Icon" /></Button>
                                     <div className='playButtonDiv' >
-                                        <Button className='playButton'>
+                                        <Button className='playButton' onClick={playVideo}>
                                             <img src={Play} alt="Play Icon" />
                                         </Button>
                                     </div>
@@ -93,7 +101,7 @@ const HomeComponent = () => {
             </div>
             <Container>
 
-                <Row className='topPad'>
+                <Row className='topPad' >
                     <Col xs={12} md={4} className='d-flex align-items-center cols'>
                         <div className='showCaseParentDiv'>
                             <div className='showCaseDiv' style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '', height: '100%' }}>

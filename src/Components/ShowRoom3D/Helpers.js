@@ -4,6 +4,7 @@ import chf from './assets/ch1.png';
 export const Chairs =()=>{
     return(
          <div className='showRoomFPDiv'>
+            <div className="showRoomBtDivP">
                         <div className='showRoomBtDiv'>
                             <Button>Chair</Button>
                             <Button>Table</Button>
@@ -11,6 +12,7 @@ export const Chairs =()=>{
                             <Button>Lighting</Button>
                             <Button>Paints</Button>
                             <Button>Flooring</Button>
+                        </div>
                         </div>
                         <div className='image-row row'>
                             <div className='imgPDiv col-md-4'>

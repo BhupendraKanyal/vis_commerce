@@ -15,7 +15,7 @@ const Routing = () => {
         <Route  path='/demos' element={<Card />} />
         <Route  path='/benefits' element={<Benefit />} />
         <Route path='/pricing' element={<Pricing />} />
-        <Route path='/showroom3D' element={<ShowRoom3D />} />
+        <Route path='/solutions' element={<ShowRoom3D />} />
       </Routes>
     </Router>
   );

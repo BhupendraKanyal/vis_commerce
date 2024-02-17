@@ -4,13 +4,12 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import pricingImg from './assets/pricingImg.svg';
 import catalog from './assets/catalog.svg';
 import integration from './assets/integration.svg';
-import smartPhone from './assets/smartPhone.svg';
-import tablet from './assets/tablet.svg';
-import desktop from './assets/desktop.svg';
+
 import { BsDot } from 'react-icons/bs'
 import phone from './assets/phone.svg';
 import mail from './assets/mail.svg';
 import ReCAPTCHA from 'react-google-recaptcha';
+import { Helpers } from './Helper';
 export const Pricing = () => {
     return (
         <Container>
@@ -52,89 +51,7 @@ export const Pricing = () => {
                     </div>
                 </Col>
             </Row>
-            <Row className='ulSRow ulSRowDesk'>
-               
-                <Col className='ulSCol d-flex justify-content-center align-items-center' xs={12} md={4}>
-                    <div className='ulSDivP'>
-                        <div className='ulSDiv'>
-                            <img src={smartPhone} alt="Smartphone" />
-                            <p>Smartphone</p>
-                        </div>
-                        <ul className=" ulList">
-                            <li>Android, IOS</li>
-                            <li>IPhone, Google Pixel Samsung Galaxy...</li>
-                        </ul>
-                    </div>
-                </Col>
-                <Col className='ulSCol d-flex justify-content-center align-items-center' xs={12} md={4}>
-                    <div className='ulSDivP'>
-                        <div className='ulSDiv'>
-                            <img src={tablet} alt="Tablet" />
-                            <p>Tablet</p>
-                        </div>
-                        <ul className="ulList">
-                            <li>IPad, Samsung Galaxy, Microsoft surface</li>
-                            <li>IOS, Android, Windows</li>
-                            <li>Various screen sizes</li>
-                        </ul>
-                    </div>
-                </Col>
-                <Col className='ulSCol d-flex justify-content-center align-items-center' xs={12} md={4}>
-                    <div className='ulSDivP'>
-                        <div className='ulSDiv'>
-                            <img src={desktop} alt="Desktop" />
-                            <p>Desktop</p>
-                        </div>
-                        <ul className=" ulList">
-                            <li>Windows, IMac, Linux</li>
-                        </ul>
-                    </div>
-                </Col>
-               
-            </Row>
-            {/* <Row className=' '> */}
-               <div className='row ulSRowMob'>
-                <div className='ulSRow'>
-                <div className='ulSCol d-flex col-sm-12 col-md-4'>
-                    <div className='ulSDivP'>
-                        <div className='ulSDiv'>
-                            <img src={smartPhone} alt="Smartphone" />
-                            <p>Smartphone</p>
-                        </div>
-                        <ul className=" ulList">
-                            <li>Android, IOS</li>
-                            <li>IPhone, Google Pixel Samsung Galaxy...</li>
-                        </ul>
-                    </div>
-                </div>
-                <div className='ulSCol d-flex col-sm-12 col-md-4' xs={12} md={4}>
-                    <div className='ulSDivP'>
-                        <div className='ulSDiv'>
-                            <img src={tablet} alt="Tablet" />
-                            <p>Tablet</p>
-                        </div>
-                        <ul className="ulList">
-                            <li>IPad, Samsung Galaxy, Microsoft surface</li>
-                            <li>IOS, Android, Windows</li>
-                            <li>Various screen sizes</li>
-                        </ul>
-                    </div>
-                </div>
-                <div className='ulSCol d-flex col-sm-12 col-md-4' xs={12} md={4}>
-                    <div className='ulSDivP'>
-                        <div className='ulSDiv ulSDivImgs'>
-                            <img src={desktop} alt="Desktop" />
-                            <p>Desktop</p>
-                        </div>
-                        <ul className=" ulList">
-                            <li>Windows, IMac, Linux</li>
-                        </ul>
-                    </div>
-                </div>
-               </div>
-               </div>
-            {/* </Row> */}
-
+           <Helpers />
             <Row className='sRow'><h4>Join Us</h4></Row>
 
             <Row className='tRow'>
