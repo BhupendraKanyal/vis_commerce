@@ -8,7 +8,7 @@ import company from './assets/company.svg';
 import dynamics from './assets/dynamics.svg';
 import lists from './assets/lists.svg';
 import altf from './assets/altf.svg';
-import BlackOfficeChair from './assets/BlackOfficeChair.png';
+
 import chandeliers from './assets/chandeliers.png';
 import wallLamps from './assets/wallLamps.png';
 import floorLamps from './assets/floorLamps.png';
@@ -21,7 +21,7 @@ import intensity from './assets/intensity.svg';
 import lightControl from '../Helpers/Hero_Section_Lighting_.webm';
 import collaboration3D from './assets/collaboration3D.webp';
 import showCaseMore from './assets/showCaseMore.png';
-import { Chairs } from './Helpers';
+import { Chairs, DifferentChairs, NativeDevices } from './Helpers';
 import backImg from '../Helpers/backImg.webp'
 import { Helpers } from '../Pricing/Helper';
 import comp1 from './assets/comp1.webp';
@@ -69,7 +69,6 @@ export const ShowRoom3D = () => {
                 <Col xs={12} md={6}>
                     <Chairs />
                 </Col>
-                {/* <Col xs={12} md={1}></Col> */}
                 <Col xs={12} md={6}>
                     <div className='flexDivP'>
                     <h4>Catalog<span>3D</span></h4>
@@ -140,23 +139,7 @@ export const ShowRoom3D = () => {
                     </div>
                 </Col>
                 <Col xs={12} md={6}>
-                    <div className='materialsPPDiv'>
-                    <div className='materialsPDiv'>
-                        <div className='materialsCDiv'>                          
-                            <div className='materialsBtDiv'>
-                            <h3>Select<br/>Material</h3>
-                            <Button className='blackImg'>Black<br/>Leather</Button>
-                            <Button className='brownImg'>Brown<br/>Leather</Button>
-                            <Button className='greyImg'>Grey<br/>Leather</Button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='chairsImgDivs'>
-                      
-                            <img src={BlackOfficeChair} />
-                        
-                    </div>
-                    </div>
+                    <DifferentChairs />
                 </Col>
             </Row>
 
@@ -278,9 +261,9 @@ with Instore <br/>
                     </div>
                 </Col>
             </Row>
-            <Row>
-            <Helpers />
-            </Row>
+           
+            <NativeDevices />
+            
            
         </Container>
         </>

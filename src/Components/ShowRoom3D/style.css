@@ -71,6 +71,7 @@ width: 35rem;
     color: #fff;
     border: none;
     width: 99.1px;
+    box-shadow: none;
 }
 .showRoomBtDiv button:active {
     background: none !important;
@@ -79,7 +80,7 @@ width: 35rem;
 .showRoomBtDiv button:hover, .showRoomBtDiv button:focus ,.showRoomBtDiv button:focus-visible{
     background: #fff ;
     color: #FF5A50;
-    border: none;
+    box-shadow: none;
 }
 .showRoomFPDiv{
     border: 1px solid #FF4233;
@@ -315,4 +316,14 @@ border: none;
 }
 .space3DColS img{
     width: 450px !important;
+}
+.imgDivsParent{
+    text-align: center;
+}
+.imgDivsChild{
+    padding-top: 30px;
+}
+.imgDivsChild img{
+        width: 500px !important;
+        height: 550px !important;
 }
