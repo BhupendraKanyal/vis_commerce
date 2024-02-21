@@ -7,6 +7,8 @@ import {Pricing} from './Pricing/Pricing.js';
 import { ShowRoom3D } from './ShowRoom3D/ShowRoom3D.js';
 import Benefit from './Benefitss/Benefit.jsx';
 import About from './About/About.jsx';
+import Team from "./Team/Team.jsx"
+import TeamUpdate from './Team/TeamUpdate.jsx';
 const Routing = () => {
   return (
     <Router>
@@ -18,6 +20,8 @@ const Routing = () => {
         <Route path='/pricing' element={<Pricing />} />
         <Route path='/showroom3D' element={<ShowRoom3D />} />
         <Route path='/about' element={<About />} />
+        <Route path='/team' element={<TeamUpdate />} />
+
 
       </Routes>
     </Router>

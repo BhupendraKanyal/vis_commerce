@@ -1,13 +1,13 @@
 import React from "react";
 import Discussion from "./AboutAssets/Discussion.svg";
-
+import "./AboutCard.css";
 const AboutBanner = () => {
   return (
-    <div className="container  text-white mb-5">
-      <div className="mt-3 card" style={{ border: "none" }}>
+    <div className="container aboutContainer text-white mb-5">
+      <div className="mt-3 card " style={{ border: "none" }}>
         {/* Remove border here */}
         {/* Left */}
-        <div className="row  benefit_inital">
+        <div className="row  benefit_inital ">
           <div className="col-xs-12 col-md-6 col-lg-8 ">
             <div>
               <h2>
@@ -23,7 +23,7 @@ const AboutBanner = () => {
             </p>
           </div>
           {/* Right */}
-          <div className="col-xs-12 col-lg-4 col-md-6 d-flex justify-content-center align-items-center">
+          <div className="col-xs-12 col-lg-4 col-md-6 d-flex justify-content-center align-items-center mb-4">
             <div className="collo-image-container py-4">
               <img
                 src={Discussion}

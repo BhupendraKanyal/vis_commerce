@@ -7,7 +7,7 @@ import "./AboutCard.css"; // Import custom CSS file for styling
 
 const AboutCard = () => {
   return (
-    <Container className=" marginBottom">
+    <Container className="mt-5   marginBottom">
       <Row className="about-row">
         <Col xs={12} md={6} lg={6} className="about-col text-center">
           <div

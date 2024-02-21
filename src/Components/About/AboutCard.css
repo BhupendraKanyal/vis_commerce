@@ -4,6 +4,9 @@
   align-items: center;
 }
 
+.aboutContainer {
+  background-color: blue;
+}
 .about-heading {
   font-size: 60px;
 }
@@ -50,4 +53,3 @@
 .text-red {
   color: red;
 }
-
