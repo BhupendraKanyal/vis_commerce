@@ -66,10 +66,10 @@ export const ShowRoom3D = () => {
             </div>
             <Container>
             <Row>
-                <Col xs={12} md={6}>
+                <Col xs={12} md={6} className='chairsCol'>
                     <Chairs />
                 </Col>
-                <Col xs={12} md={6}>
+                <Col xs={12} md={6} className='chairsDescCol'>
                     <div className='flexDivP'>
                     <h4>Catalog<span>3D</span></h4>
                     <h3>Create your next gen product catalog in 3D.</h3>
@@ -115,7 +115,7 @@ export const ShowRoom3D = () => {
                 </Col>
             </Row>
 
-            <Row style={{ marginBottom: '100px',marginTop:'50px' }}>
+            <Row style={{ marginBottom: '50px',marginTop:'50px' }}>
                 <Col xs={12} md={6} className='leatherCol'>
                     <div className='customizeDiv'>
                         <h4>Customize<span>3D</span></h4>
@@ -138,7 +138,7 @@ export const ShowRoom3D = () => {
                         </div>
                     </div>
                 </Col>
-                <Col xs={12} md={6}>
+                <Col xs={12} md={6} className='leatherCols'>
                     <DifferentChairs />
                 </Col>
             </Row>
@@ -167,8 +167,8 @@ export const ShowRoom3D = () => {
                 </Col>
             </Row>
 
-            <Row style={{ marginBottom: '100px',marginTop:'50px' }}>
-                <Col xs={12} md={6}>
+            <Row style={{ marginBottom: '50px',marginTop:'50px' }}>
+                <Col xs={12} md={6} className='lightCtrlCol'>
                     <div className='lightCtrl'>
                         <h4><span>Light control in 3D space</span></h4>
                         <p>Add, delete, move, rotate lights in room.</p>
@@ -198,7 +198,7 @@ export const ShowRoom3D = () => {
                     </div>
                     </div>
                 </Col>
-                <Col>
+                <Col md={6} xs={12} className='vDivCol'>
                 <div className='vDiv'>
                 <video width="100%" autoPlay muted loop style={{ objectFit: 'cover' }}>
                                 <source src={lightControl} type="video/mp4" />
@@ -225,6 +225,7 @@ export const ShowRoom3D = () => {
                 </Col>
             </Row>
             <Row>
+                <h4 className="headings">MySpace<span>3D</span></h4>
                 <Col md={6} xs={12} className='space3DCol'>
                     <div>
                         <img src={space3DF} />
@@ -250,6 +251,7 @@ with Instore <br/>
 </Col>
             </Row>
             <Row>
+            <h4 className='headings pads'>3DCommerce Compliance</h4>
                 <Col md={6} xs={12}>
                     <div>
                         <img src={comp1} />
@@ -261,9 +263,10 @@ with Instore <br/>
                     </div>
                 </Col>
             </Row>
-           
+           <Row>
+           <h4 className='headings padTop'>Web/ Native Version</h4>
             <NativeDevices />
-            
+            </Row>
            
         </Container>
         </>

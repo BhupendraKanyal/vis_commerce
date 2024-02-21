@@ -75,7 +75,7 @@ export const DifferentChairs = ()=>{
 export const NativeDevices=()=>{
     return(
         <>
-        <Row >
+       
         <div>
             <div className='ulSRow ulSRowDesk topBottomPadMore'>
         <Col className='ulSCol d-flex justify-content-center align-items-center' xs={12} md={4}>
@@ -116,9 +116,10 @@ export const NativeDevices=()=>{
         </Col>
         </div>  
         </div> 
-        </Row>
-        <div className='row ulSRowMob topBottomPadMore'>
+      
+        <div className=' ulSRowMob topBottomPadMore'>
         <div className='ulSRow'>
+        <h4 className="headings">MySpace<span>3D</span></h4>
         <div className='ulSCol d-flex col-sm-12 col-md-4'>
             <div className='ulSDivP'>
                 <div className='ulSDiv'>

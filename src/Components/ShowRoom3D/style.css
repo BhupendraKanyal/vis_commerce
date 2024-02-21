@@ -327,3 +327,159 @@ border: none;
         width: 500px !important;
         height: 550px !important;
 }
+.collaboration3DRow h4{
+    font-size:40px;
+}
+.collaboration3DRow {
+    margin-bottom:70px;
+}
+.headings {
+    font-size: 35px;
+    font-weight: 500;
+}
+.pads{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.padTop{
+    padding-top: 50px;
+}
+@media screen and (max-width:1280px) {
+    
+    .showRoomBtDivP{
+        overflow: auto;
+        border-radius: 10px;
+    }
+    .showRoomBtDiv{
+        overflow: scroll;
+    }
+    .showRoomBtDivP::-webkit-scrollbar {
+        display: none;
+      }
+    
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .tryOuts button {
+        width: 125px;
+        font-size: 15px;
+        font-weight: 500;
+        border: 1px solid #FF4233;
+        padding: 0.4rem 1rem 0.4rem 1.5rem;
+    }
+    .ShowroomDiv h2 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .ShowroomDiv p{
+        font-size: 15px;
+        width: 20rem;
+    }
+    .tryOuts button {
+        width: 125px;
+        font-size: 15px;
+        font-weight: 500;
+        border: 1px solid #FF4233;
+        padding: 0.4rem 1rem 0.4rem 1.5rem;
+    }
+    .showRoomBtDivP{
+        overflow: auto;
+        border-radius: 10px;
+    }
+    .showRoomBtDiv{
+        overflow: scroll;
+    }
+    .showRoomBtDivP::-webkit-scrollbar {
+        display: none;
+      }
+      .chairsCol,.leatherCols,.vDivCol{
+        width: 60%;
+      }
+      .chairsDescCol,.leatherCol,.lightCtrlCol{
+        width: 40%;
+      }
+      .flexDivP h4{
+        font-size: 30px;
+      }
+      .flexDivP h3{
+        font-size: 15px;
+      }
+      .flexDivPTag{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        font-size:15px;
+      }
+      .flexDivs img{
+        width: 20px !important;
+      }
+      .flexDivs p{
+        font-size: 12px;
+        font-weight: 400;
+      }
+      .imgDivsChild img{
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .technologies img{
+        width:60px !important;
+        padding: 10px 15px 10px 0px;
+      }
+      .customizeDiv h4,.lightningrow h4,.collaboration3DRow h4{
+        font-size: 30px;
+    }
+    .listsDiv p,.technologiesDiv p{
+        font-size:15px;
+    }
+    .materialsPDiv {
+        padding: 20px 15px;
+    }
+    .materialsBtDiv h3 {
+        font-size: 15px;
+        line-height: 19px;
+        margin-left: 10px;
+    }
+    .materialsBtDiv button {
+        width: 100px;
+        font-size: 15px;
+        font-weight: 400;
+    }
+.materialsBtDiv {
+    padding: 15px 15px 25px 15px;
+}
+.chairsImgDivs{
+    margin-top:0;
+}
+.lightCtrl h4{
+    font-size: 20px;
+}
+.lightCtrl p {
+    font-size: 13px;
+    margin-top: 0.8rem;
+}
+.flexDivs {
+    margin-bottom: 10px;
+}
+.flexDivss {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.collaboration3DRow img{
+    margin-left:0;
+}
+.collaboration3DCol {
+    padding: 15px;
+    margin-top: 15px;
+}
+.collaboration3DRow p{
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+.collaboration3DRow ul li{
+    font-size: 15px;
+}
+.showCaseMore {
+    font-size: 35px;
+    line-height: 50px;
+}
+
+}
