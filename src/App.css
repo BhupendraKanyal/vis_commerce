@@ -1055,4 +1055,6 @@ border-top-right-radius: 10px;
     display: none !important;
   }
 }
-
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark{
+  z-index: 1;
+}

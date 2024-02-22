@@ -33,9 +33,9 @@ export const Header = ()=>{
               onSelect={handleSelect}
               icon={<BsArrowDown />}
             >
-              <NavDropdown.Item href="#/action-1">Option 1</NavDropdown.Item>
-              <NavDropdown.Item href="#/action-2">Option 2</NavDropdown.Item>
-              <NavDropdown.Item href="#/action-3">Option 3</NavDropdown.Item>
+              <NavDropdown.Item href="/aboutus">About Us</NavDropdown.Item>
+              {/* <NavDropdown.Item href="/">Option 2</NavDropdown.Item>
+              <NavDropdown.Item href="/">Option 3</NavDropdown.Item> */}
             </NavDropdown>
             <Nav.Link href="/demos" className="custom-navlink">
               Demos
