@@ -17,8 +17,8 @@ function Team(props) {
           <small className="team-subheading ">{props.subtitle}</small>
           <hr className="line" />
           <div className="team-info ">
-            <img src={linkedin} className="mx-4" alt="Linkedin" />
-            <img src={watch} alt="watch" />
+            <img src={linkedin} className="mx-4 icons" alt="Linkedin" />
+            <img src={watch} className="icons" alt="watch" />
           </div>
         </div>
       </div>
