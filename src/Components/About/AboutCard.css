@@ -98,6 +98,9 @@
   display: grid;
   place-items: center;
 }
+.benefit_inital{
+  margin-top: 4rem;
+}
 @media screen and (max-width:767px){
   .benefit_inital{
     margin-top: 10px;

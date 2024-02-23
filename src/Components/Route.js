@@ -5,8 +5,9 @@ import Home from './Home.js';
 import Card from './HdRenderer/Cards/Screen.jsx';
 import { Pricing } from './Pricing/Pricing.js';
 import { ShowRoom3D } from './ShowRoom3D/ShowRoom3D.js';
-import Benefit from './Benefitss/Benefit.jsx';
+// import Benefit from './Benefitss/Benefit.jsx';
 import About from './About/About.jsx';
+import {Benefit} from './Benefit/Benefit.js';
 const Routing = () => {
   return (
     <Router>

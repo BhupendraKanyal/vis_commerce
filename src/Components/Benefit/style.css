@@ -1,0 +1,197 @@
+.Commerce3DRowRev{
+    place-items: flex-start;
+}
+.benefitsFlex{
+    align-items: center;
+}
+.benefitsFlex,.benefitsPFlex{
+    display: flex;
+    flex-direction: row;
+}
+.benefitsImgDiv{
+    text-align: center;
+}
+.benefits h4{
+    font-size: 45px;
+    font-weight: 500;
+}
+.benefitsFlex img{
+    width: 50px;
+}
+.benefitsFlex p {
+    margin-left: 15px;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #949494;
+}
+.benefitsFlex p span{
+    color: #fff;
+    font-weight: 400;
+    font-size: 20px;
+}
+.benefitsPFlex{
+    gap: 80px;
+}
+.benefitsPPFlex{
+    margin-top: 30px;
+}
+.benefitsPPFlex > div:nth-child(2) {
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+  .benefitsImgDiv img{
+    width: 275px;
+  }
+  .Commerce3DRowRev .Commerce3D{
+    width: 200px;
+    margin-top: 25px;
+  }
+  .cardDiv{
+    border-radius: 10px;
+border: 2px solid #FFF;
+background: var(--Black-Shade-1, #18181B);
+  }
+  .card-heading{
+    display: flex;
+    flex-direction: row;
+    line-height: 20px;
+    margin-top: 20px;
+    padding: 0 20px 0 20px;
+  }
+  .card-heading-div h3{
+    color: #ff595d;
+    font-size: 25px;
+    font-weight: 500;
+  }
+  .card-heading-div p{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .card-heading img{
+    width: 80px;
+  }
+  .increaseIconDiv,.card-heading-div{
+    width: 50%;
+  }
+  .increaseIconDiv{
+    text-align: end;
+  }
+  .cardDivImg{
+    text-align: end;
+  }
+  .cardDivImg img{
+    margin-top: 5rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 225px;
+    margin-bottom: 2rem;
+    aspect-ratio: 1/1;
+  }
+  .cardsRow{
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
+  .befitCollabDiv h4{
+    font-size: 40px;
+    font-weight: 500;
+  }
+  .befitCollabUlDiv{
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  .befitCollabUlDiv li{
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .monitorImgDiv{
+    text-align: end;
+    margin-top: 5rem;
+  }
+  .benefitRevenueDiv{
+    line-height: 20px;
+    margin-bottom: 3rem;
+  }
+  .benefitRevenueDiv h4{
+    font-size: 40px;
+    font-weight: 500;
+  }
+  .benefitRevenueDiv p{
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .benefitRevenuePara{
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  .benefitRevenuePara > span:nth-child(1),.HDRendered {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 25px;
+  }
+  .HDRendered{
+    text-align: center;
+    margin-top: 15px;
+  }
+  .benefitRevenuePara > span:nth-child(2){
+    color: #FFF;
+    font-size: 15px;
+    font-weight: 200;
+  }
+  .dinningDiv{
+    display: flex;
+    flex-direction: row;
+  }
+  .dinningDiv img{
+    width: 30%;
+  }
+  .benefitRevenue > div:nth-child(2){
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+  .benefitRevenue > div:nth-child(2) img{
+    width: 30%;
+  }
+  .shopTheLook{
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+  .shopTheLook h4{
+    font-size: 40px;
+    font-weight: 500;
+    color: #FF595D;
+  }
+  .shopTheLook p{
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .rocketDiv h4{
+    font-size: 40px;
+    font-weight: 500;
+  }
+  .rocketDiv p{
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .rocketCol{
+    display: grid;
+    margin: auto;
+    place-items: center;
+  }
+  .rocketRow{
+    margin-top: 6rem;
+    margin-bottom: 70px;
+  }
+  @media screen and (min-width:1281px) {
+    .hideBenefitCol{
+        width: 9.55%;
+    }
+    .showBenefitCol{
+        width: 27%;
+    }
+    
+  }
+  /* FF595D */
