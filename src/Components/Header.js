@@ -9,21 +9,21 @@ export const Header = ()=>{
       setShowDropdown(false);
     };
    return (
-    <div style={{background:'linear-gradient(180deg, rgba(18, 18, 18, 0.00) 0%, rgba(18, 18, 18, 0.00) 0.01%, #02030B 49.53%)'}}>
+    // <div style={{background:'linear-gradient(180deg, rgba(18, 18, 18, 0.00) 0%, rgba(18, 18, 18, 0.00) 0.01%, #02030B 49.53%)'}}>
    <Container>
       <Navbar variant="dark" bg='dark' expand="lg" className="">
-        <Navbar.Brand href="#home"  className="mr-4 d-flex align-items-center">
+        <Navbar.Brand href="/"  className="mr-4 d-flex align-items-center">
           <img className="navLogo" src={logo} alt="logo/brand" />
           <span className="ml-2">VisCommerce</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
-          <Nav.Link href="#home">Solutions</Nav.Link>
-            <Nav.Link href="#home">Benefits</Nav.Link>
+          <Nav.Link href="/solutions">Solutions</Nav.Link>
+            <Nav.Link href="/benefits">Benefits</Nav.Link>
             <Nav.Link href="/hdrenderer">HDRenders</Nav.Link>
-            <Nav.Link href="#about">Pricing</Nav.Link>
-            <Nav.Link href="#services">Resources</Nav.Link>
+            <Nav.Link href="/pricing">Pricing</Nav.Link>
+            <Nav.Link href="/">Resources</Nav.Link>
             <NavDropdown
               title="Company"
               id="basic-nav-dropdown"
@@ -33,17 +33,17 @@ export const Header = ()=>{
               onSelect={handleSelect}
               icon={<BsArrowDown />}
             >
-              <NavDropdown.Item href="#/action-1">Option 1</NavDropdown.Item>
-              <NavDropdown.Item href="#/action-2">Option 2</NavDropdown.Item>
-              <NavDropdown.Item href="#/action-3">Option 3</NavDropdown.Item>
+              <NavDropdown.Item href="/aboutus">About Us</NavDropdown.Item>
+              {/* <NavDropdown.Item href="/">Option 2</NavDropdown.Item>
+              <NavDropdown.Item href="/">Option 3</NavDropdown.Item> */}
             </NavDropdown>
-            <Nav.Link to="/custom-link" className="custom-navlink">
+            <Nav.Link href="/demos" className="custom-navlink">
               Demos
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
     </Container>
-    </div>
+    // </div>
    )
 }

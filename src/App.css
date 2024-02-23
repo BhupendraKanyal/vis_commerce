@@ -2,73 +2,587 @@
 /* polygon(-17% -31px, 100% 24%, 100% 75%, 39% 100%, -1px 71%, 0px 25%) */
 
 body {
-  background: #1D1D1B !important;
+  /* background: #1D1D1B !important ; */
+  background: #090B0D;
+  color: #FFF !important;
+}
+.navbar{
+border: 1px solid #FFF;
+background: rgba(166, 166, 166, 0.20);
+backdrop-filter: blur(51.375px);
+}
+.navbar span{
+  color: #FFF;
+}
+.ulListF {
+  color: #FFF;
+  font-size: 15px;
+  text-align: left;
+  margin-top: 1rem;
+  font-family: 'Be Vietnam Pro';
+  padding-left: 20px !important;
+  font-weight: 100;
+  line-height: 1.7rem;
+}
+.contactBt,.contactBt:hover,.contactBt:active,.contactBt:focus-visible{
+  border-radius: 1.5rem;
+  /* padding: 0.6rem 3rem;  */
+  color: #090B0D;
+  background: var(--Secondry, #F4F4F4);
+  border: 1px solid var(--Secondry, #F4F4F4);
+  font-weight: 500;
+  padding-left: 18px;
+}
+.contactBt img{
+  margin-left: 5px;
+  width: 37px;
+}
+.LandingV {
+  margin-left: -20px;
+  clip-path: polygon(37% 14%, 100% 17%, 95% 66%, 50% 89%, 5% 67%, 1% 17%);
+}
+.LandingVDiv{
+  margin-top: -3.9rem;
+}
+.playButton,.playButton:hover,.playButton:active,.playButton:focus-visible {
+  background:rgba(166, 166, 166, 0.05);
+  background-color:rgba(166, 166, 166, 0.05) !important;
+  border-radius: 88%;
+  border: 1px solid #FFF !important;
+  padding: 0.7rem 0.7rem;
+  width: 50px;
+  margin-left: 1rem;
+  backdrop-filter: blur(6.375609874725342px);
+  box-shadow: none !important;
+}
+.playButton img{
+  padding-left: 2px;
+}
+.ThreeDButtons {
+  margin-top: -3.5rem;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  padding: 30px 10px;
+  margin-bottom: 20px;
+}
+.ThreeDButtons button {
+  /* border: 1px solid #FFF; */
+  border-radius: 10px !important;
+  width: 250px;
+  font-family: 'Roboto' !important;
+  border: 1.5px solid #FFF;
+  background: var(--Black-Shade-1, #18181B) !important;
+  margin-right: 50px !important;
+  padding: 10px;
+}
+
+.ThreeDButtons button:hover {
+  border: 1px solid #FFF !important;
+  background: var(--Black-Shade-1, #18181B) !important;
+}
+.ThreeDButtons p {
+  display: inline;
+  padding-left: 10px;
+  font-family: 'Roboto';
+}
+
+
+.ThreeDButtons span {
+  color: #FF4233;
+  font-family: 'Roboto';
+}
+
+.ThreeDButtons img {
+  /* width: 15%; */
+  display: inline-block;
+}
+
+.showCaseParentDiv button,.showCaseParentDiv button:hover,.showCaseParentDiv button:active {
+  border-radius: 100px;
+  border: 1px solid #FFF !important;
+  background: #FFF !important;
+  backdrop-filter: blur(50px);
+  margin-top: 3rem;
+  padding: 10px 30px 10px 30px;
+  color: #090B0D !important;
+  font-weight: 500;
+}
+.aboutServices {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background: var(--White-Share-2, #C8C8C8);
+  border: 1px solid var(--Black-Shade-1, #18181B);
+}
+
+.aboutServices h3 {
+  color: #FFF;
+  font-family: "Be Vietnam Pro" !important;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  padding: 25px 20px 15px 25px;
+  background:  var(--Black-Shade-1, #18181B) !important  ;
+  border: 1px solid var(--Black-Shade-1, #18181B) !important  ;
+  border-top-left-radius: 10px;
+  margin-bottom: 0 !important;
+}
+.servicesButtonDiv {
+  width: 235px;
+  padding-top: 10px;
+  padding-left: 10px;
+  background: var(--Secondry, #F4F4F4);
+  border-bottom-left-radius: 10px;
+}
+
+.servicesButtonDiv button {
+  width: 200px;
+  text-align: left;
+  color: var(--Black-Shade-1, #18181B);
+  background: var(--Secondry, #F4F4F4);
+  border: none;
+  border-bottom: 1px solid #C1BDBD;
+  font-family: "Be Vietnam Pro" !important;
+  
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 500;
+}
+
+.bulletIcon {
+  color: var(--Black-Shade-1, #18181B);
+  margin-right: 5px;
+}
+
+.servicesButtonDiv button:hover {
+  background: var(--Primary, #FF595D) !important;
+  color: #FFF !important;
+  border: none;
+}
+.servicesButtonDiv button:focus-visible {
+  border: none !important;
+}
+
+
+.bulletIcon:hover {
   color: #FFF !important;
 }
 
+.servicesButtonDiv button:hover .bulletIcon {
+  color: #FFF !important;
+}
+
+.servicesDetailDiv h5 {
+  color: var(--Tertiary, #090B0D) !important;
+  font-family: "Be Vietnam Pro" !important;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  /* text-transform: capitalize; */
+}
+
+.servicesDetailDiv {
+  padding-top: 28px;
+  padding-left: 30px;
+  background: var(--White-Share-2, #C8C8C8);
+}
+
+.servicesDetailDiv p {
+  color: var(--Tertiary, #090B0D) !important;
+  font-family: "Be Vietnam Pro" !important;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400 !important;
+  /* text-transform: capitalize; */
+}
+.material3dImgDiv{
+  padding: 10px 40px;
+}
+.material3dDiv img{
+  width: 300px;
+  margin-top: 20px;
+}
+.material3dDiv{
+  background: var(--Black-Shade-1, #18181B);
+  border-radius:20px;
+  height: 100%;
+  display: grid;
+  text-align: center;
+  border: 1px solid #fff;
+}
+
+.material3dDiv p{
+  font-size: 20px;
+  text-align: center;
+  font-weight: 200;
+  color: var(--White-Shade-1, #EEE);
+  text-align: center;
+}
+.material3dDivCh{
+  margin-top: -5rem;
+}
+.material3dDivCh h3{
+  font-size: 30px;
+  font-weight: 500;
+}
+.imgColsCr img{
+  border-radius: 10px;
+}
+.carousel-control-prev-icon{
+  margin-left: -14rem;
+}
+.carousel-control-next-icon{
+  margin-right: -14rem;
+}
+
+.MobCrousel{
+  display: none;
+}
+.deskCrousel{
+  display: block;
+}
+
+button {
+  font-family: 'Roboto' !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: 'Roboto' !important;
+}
+
+.headingF {
+  color: #FFF;
+  font-family: "Be Vietnam Pro";
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 75px;
+  width: 40rem;
+}
+
+.crouselItemf, 
+.crouselItemL {
+background: #000;
+border-radius: 20px;
+ height: 400px;
+}
+
+.crouselItemf h4 {
+padding: 27px 30px 0 30px !important;
+}
+
+.crouselItemf h2 {
+color: #FF4B4B !important;
+font-size: 15px !important;
+padding: 0 30px !important;
+}
+
+.crouselItemf p {
+padding: 0 30px 15px 30px;
+margin: 0;
+font-size: 15px;
+font-weight: 100;
+min-height: 177.8px;
+}
+
+.crouselItemDivS {
+display: flex;
+flex-direction: row;
+}
+
+.crouselItemFimg {
+margin-left: 30px;
+width: 100px;
+}
+
+.crouselItemSimg {
+margin-top: -110px;
+border-bottom-left-radius: 20px;
+width: 150px;
+}
+.textImg{
+padding: 40px;
+}
+.textImgSpan{
+margin-top: -29.2px !important;
+min-height: 144.5px !important;
+}
+.textImgSpan span{
+color: #C6C6C6;
+font-size: 30px;
+}
+/* .crouselItemf img{
+width: auto;
+max-width: 100%;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 20px;
+} */
+.crouselItemL h4{
+padding: 20px 20px 0px 20px !important;
+font-size: 15px;
+margin-bottom: 5px;
+}
+.crouselItemL h2{
+font-size: 12px !important;
+padding: 0px 20px 0 20px!important;
+}
+.crouselItemL p{
+font-size: 12px !important;
+padding: 0 20px 0 20px;
+min-height: 100px !important;
+font-weight: 300;
+}
+.crouselItemL .textImg{
+padding: 20px 20px 10px 20px !important;
+width: 222px;
+
+}
+.crouselItemL .textImgSpan{
+min-height: 70px !important;
+padding: 25px;
+}
+.crouselItemL .textImgSpan span{
+  font-size: 20px !important;
+  }
+.crouselBtn{
+  display: flex;
+  flex-direction: row;
+  place-content: flex-end;
+}
+.crouselBtn button.btn.btn-primary {
+  margin: 8px;
+  height: 40px;
+  width: 70px;
+  color: #FFF;
+  background: #F8493B;
+  border: 1px solid #F8493B;
+  border-radius: 25px;
+  /* font-size: 25px; */
+  font-weight: 800;
+  /* padding: 8px !important; */
+}
+.watchVideoDiv{
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  align-items: center;
+}
+.playButtonDiv{
+  display: flex;
+align-items: center;
+margin-left: 15px;
+margin-right: 15px;
+}
+.showCaseDiv h4 {
+  color: #FF4233;
+  font-weight: 500;
+  font-size: 2rem;
+  letter-spacing: 0px;
+  margin-top: -5rem;
+  margin-bottom: 9px;
+}
+
+.showCaseDiv h2 {
+  font-family: "Be Vietnam Pro" !important;
+}
+
+.aboutServices ul li {
+  background-color: #FF4233;
+}
+.aboutServicesParentDiv {
+  background-color: #000;
+}
+.aboutServicesCol{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.catalog3DCol{
+  background: #424242;
+  margin: 0 auto;
+  display: grid;
+  text-align: center;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.catalog3DColImgDiv {
+  place-items: center;
+  display: grid;
+  
+}
+.catalog3DColImgDiv img{
+  place-items: center;
+}
+
+
+
+.industryInsight h3 {
+  color: #F13122;
+  font-family: Roboto;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 51.139px;
+}
+
+.industryInsight h4 {
+  color: #FFF;
+  font-family: "Be Vietnam Pro";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 57px;
+  /* 142.5% */
+  text-transform: capitalize;
+}
+
+.industryInsight {
+  margin-top: -5rem;
+}
+
+.tabCrousel{
+  display: none;
+}
+
+.socialLinks img {
+  margin: 0 5px 0 5px;
+  width: 30px !important;
+  margin-top: -35px;
+}
+.footerUrls h5 {
+  margin-top: 1.6rem;
+  color: #FF422E;
+  font-weight: 600;
+}
+
+.footerUrls .footerUrlsUl {
+  margin-top: 1rem;
+}
+
+.footerUrlsUl li {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.subscribeInput {
+  width: 22rem;
+  background: rgb(221, 220, 220);
+  color: rgb(17, 17, 17);
+  padding: 0px 23px;
+  border: 1px solid rgb(221, 220, 220);
+  border-radius: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.subscribeInput:focus-visible {
+  outline: none;
+}
+
+.subscribeButton {
+  color: #FFF;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: capitalize;
+  background-color: #FF422E;
+  border: 1px solid #FF422E;
+  margin-left: 10px;
+}
+
+.subscribeButton:hover {
+  background-color: #FF422E;
+  border: 1px solid #FF422E;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 20px;
+}
+
+.subscribeDiv {
+  margin-top: 1.6rem;
+}
+.logoName {
+  margin-bottom: 0;
+  background: #fff !important;
+  color: #000 !important;
+  font-weight: 500;
+  text-align: center;
+  padding: 5px 40px !important;
+  font-size: 20px !important;
+  border-radius: 15px 25px 25px 0px;
+  margin-top: 10px;
+  margin-left: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.startsDiv {
+  margin-left: 55px;
+  margin-top: 2px;
+}
+.topPad{
+  margin-top: 50px;
+}
+.topBottomPad{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.topBottomPadMore{
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
 @media screen and (min-width: 992px) {
+  .aboutServicesCol{
+  padding-right: 0;
+}
+  .Commerce3D2{
+    display: none;
+  }
   .navBarDiv {
     background: linear-gradient(180deg, rgba(18, 18, 18, 0.00) 0%, rgba(18, 18, 18, 0.00) 0.01%, #02030B 49.53%);
   }
-
-  button {
-    font-family: 'Roboto' !important;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    font-family: 'Roboto' !important;
-  }
-
   .navLogo {
     padding: 0 10px 0 0px;
     height: 50px;
     margin-left: 1.1rem;
   }
-
   .navbar {
     margin-top: 20px !important;
     margin-bottom: 20px !important;
   }
-
   .navbar-dark .navbar-brand,
   .navbar-dark .navbar-nav .nav-link {
     color: #FFF;
   }
-
   .navbar-dark {
-    border: 2px solid #FF4233;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(90deg, rgba(251, 24, 7, 0.10) -51.32%, rgba(35, 180, 115, 0.10) 98.95%);
-    backdrop-filter: blur(50px);
     border-radius: 4rem;
   }
-
   .navbar-nav:hover .nav-link+.nav-dropdown-hover .dropdown-menu {
     display: block;
     z-index: 1;
   }
-
   .dropdown-toggle::after {
     vertical-align: 0.199em !important;
   }
-
   .custom-navlink {
     background-color: #FF4233;
     border: 1px solid #FF4233;
-    /* padding-left: 15px !important;
-  padding-right: 15px !important; */
     border-radius: 1.5rem;
     width: fit-content;
     color: #FFF;
     text-decoration: none;
     width: 6rem;
     text-align: center;
-    padding: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px !important;
   }
 
   /* Styles for screens wider than 768 pixels */
@@ -86,113 +600,13 @@ body {
     margin-left: 1.1rem !important;
     margin-right: 1.1rem !important;
   }
-
-
-  /* @media screen and (max-width: 991px) {
-  .container {
-    width: auto !important;
-    max-width: 100vh !important;
-  }
-
-} */
-
-  .headingF {
-    color: #FFF;
-    font-family: "Be Vietnam Pro";
-    font-size: 4rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 75px;
-    width: 40rem;
-  }
-
-  .ulListF {
-    color: #FFF;
-    font-size: 15px;
-    text-align: left;
-    margin-top: 1rem;
-    font-family: 'Be Vietnam Pro';
-    padding-left: 20px !important;
-    font-weight: 400;
-    line-height: 1.7rem;
-  }
-
-  .ThreeDButtons {
-    margin-top: -3rem;
-    z-index: 1;
-  }
-
-  .ThreeDButtons img {
-    /* width: 15%; */
-    display: inline-block;
-  }
-
-  .ThreeDButtons p {
-    display: inline;
-    padding-left: 10px;
-    font-family: 'Roboto';
-  }
-
-  .ThreeDButtons button {
-    border: 1px solid #FF4233;
-    border-radius: 10px !important;
-    /* width: 170px; */
-    font-family: 'Roboto' !important;
-  }
-
-  .ThreeDButtons button:hover {
-    border: 1px solid #FF4233;
-  }
-
-  .ThreeDButtons span {
-    color: #FF4233;
-    font-family: 'Roboto';
-  }
-
-  .playButton {
-    background-color: rgb(255, 255, 255);
-    border-radius: 88%;
-    border: 1px solid rgb(255, 255, 255);
-    padding: 0.7rem 0.7rem;
-    width: 50px;
-    margin-left: 1rem;
-  }
-
-  .showCaseDiv h4 {
-    color: #FF4233;
-    font-weight: 500;
-    font-size: 2rem;
-    letter-spacing: 0px;
-    margin-top: -5rem;
-    margin-bottom: 9px;
-  }
-
-  .showCaseDiv h2 {
-    font-family: "Be Vietnam Pro" !important;
-  }
-
   .Commerce3D {
-    width: 200px;
+    width: 150px;
   }
 
   .Commerce3DRow {
     place-content: flex-end;
   }
-
-  .LandingV {
-    margin-left: 20px;
-    /* margin-top: -10px; */
-  }
-
-  .showCaseParentDiv button {
-    border-radius: 100px;
-    border: 1px solid #FF4233;
-    background: linear-gradient(87deg, #FB1807 3.98%, #FF4031 94.53%);
-    backdrop-filter: blur(50px);
-    margin-top: 4rem;
-    padding: 10px 30px 10px 30px;
-  }
-
   .footerFDiv h2 {
     font-size: 40px;
     font-style: normal;
@@ -200,411 +614,447 @@ body {
     line-height: 50px;
     width: 35rem;
   }
-
-  .socialLinks img {
-    margin: 0 5px 0 5px;
-    width: 35px;
-    margin-top: -40px;
+.servicesButtonDivF {
+  display: none !important;
+}
+}
+@media screen and (max-width: 991px) {
+  .hdRendererIMgs img{
+    width: -webkit-fill-available !important;
   }
-
-  .footerUrls h5 {
-    margin-top: 1.6rem;
-    color: #FF422E;
-    font-weight: 600;
+  .ThreeDButtons{
+    display: none !important;
+    /* flex-direction: column !important; */
   }
-
-  .footerUrls .footerUrlsUl {
-    margin-top: 1rem;
+  img{
+    width: auto !important;
+    max-width: 100% !important;
   }
-
-  .footerUrlsUl li {
-    padding-top: 7px;
-    padding-bottom: 7px;
+  .Commerce3DDiv{
+    text-align: -webkit-right;
   }
-
-  .subscribeInput {
-    width: 22rem;
-    background: rgb(221, 220, 220);
-    color: rgb(17, 17, 17);
-    padding: 0px 23px;
-    border: 1px solid rgb(221, 220, 220);
-    border-radius: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+  .Commerce3D2 {
+    width: 115px !important;
+    margin-top: -4rem;
+}
+  .Commerce3DRow{
+    display: none;
   }
-
-  .subscribeInput:focus-visible {
-    outline: none;
+  .sCrouselDiv{
+    display:none;
   }
-
-  .subscribeButton {
-    color: #FFF;
-    text-align: center;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    text-transform: capitalize;
-    background-color: #FF422E;
-    border: 1px solid #FF422E;
-    margin-left: 10px;
-  }
-
-  .subscribeButton:hover {
-    background-color: #FF422E;
-    border: 1px solid #FF422E;
-    padding-left: 30px;
-    padding-right: 30px;
-    border-radius: 20px;
-  }
-
-  .subscribeDiv {
-    margin-top: 1.6rem;
-  }
-
-  .officeChairParentDiv {
-    background: #FF4233;
-    display: flex;
-    flex-direction: row;
-    padding: 30px;
-    border-radius: 20px;
-  }
-
-  .officeChairButtonsParentDiv {
-    text-align: end;
-  }
-
-  .officeChairDiv {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .officeChairDiv h3 {
-    color: #1D1D1B;
-    font-family: "Be Vietnam Pro" !important;
-    font-size: 27px;
-    font-style: normal;
-    font-weight: 600;
-    /* line-height: 57px; */
-    text-transform: capitalize;
-  }
-
-  .officeChairDiv button {
-    border-radius: 33px;
-    background: #FFBBB6;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    text-align: end;
-    border: #FFBBB6;
-    color: #000;
-    padding-left: 15px;
-    padding-right: 15px;
-    text-align: center;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    font-size: 15px;
-    font-weight: 500;
-    margin-top: 25px;
-    margin-bottom: 12px;
-  }
-
-  .officeChairDiv .btn:active {
-    background: #FFBBB6;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    border: #FFBBB6;
-    color: #000;
-  }
-
-  .officeChairDiv .btn:hover {
-    background: #FFBBB6;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    border: #FFBBB6;
-    color: #000;
-  }
-
-  .officeChairDiv img {
-    margin-top: 20px;
-  }
-
-  .officeChairDiv span {
-    margin-left: 5px;
-  }
-
-  .officeChairBt {
-    margin-top: 0 !important;
-  }
-
-  .officeChairButtons {
-    text-align: left;
-  }
-
-  .officeChairButtons {
-    margin-top: 20px;
-    border-radius: 10px;
-    background: #F0645A;
-    height: 70px;
-    width: 230px;
-    border: 1px solid #F0645A;
-    color: #000;
-    font-weight: 400;
-  }
-
-  .officeChairButtons:hover {
-    border: 1px solid #F0645A;
-    background: #F0645A;
-    color: #000;
-  }
-
-  .officeChairButtons:active {
-    border: 1px solid #F0645A !important;
-    background: #F0645A !important;
-    color: #000 !important;
-    --bs-btn-focus-shadow-rgb: :'none' !important;
-  }
-
-  .officeChairButtons:focus-visible {
-    border: 1px solid #F0645A !important;
-    background: #F0645A !important;
-    color: #000 !important;
-    --bs-btn-focus-shadow-rgb: :'none' !important;
-  }
-
-  .officeChairButtons span {
-    padding-left: 15px;
-    font-size: 20px;
-  }
-
-  .aboutServices {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    background-color: #000;
-  }
-
-  .aboutServices h3 {
-    color: #FFF;
-    font-family: "Be Vietnam Pro" !important;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 600;
-    text-transform: capitalize;
-    padding: 20px 20px 20px 15px;
-    background: #FF4233;
-    border: 1px solid #FF4233;
-    border-top-left-radius: 10px;
-    /* border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px; */
-    margin-bottom: 0 !important;
-  }
-
-  .aboutServices ul li {
-    background-color: #FF4233;
-  }
-
-  .servicesButtonDiv {
-    width: 235px;
-    padding-top: 30px;
-    padding-left: 15px;
-    background: var(--Gradient, linear-gradient(87deg, #FB1807 3.98%, #FF4031 94.53%));
-  }
-
-  .servicesButtonDiv button {
-    width: 200px;
-    text-align: left;
-    color: #FFF;
-    background: var(--Gradient, linear-gradient(87deg, #FB1807 3.98%, #FF4031 94.53%));
-    border: none;
-    border-bottom: 1px solid #C1BDBD;
-    ;
-    font-family: "Be Vietnam Pro" !important;
-    font-weight: 500;
-    font-size: 20px;
-    margin-bottom: 20px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-
-  .servicesButtonDiv button:hover {
-    background: #F6F6F6 !important;
-    color: #FF4233 !important;
-    border: none;
-  }
-
-  .servicesButtonDiv button span {
-    vertical-align: middle;
-    font-size: 20px;
-    font-weight: 500;
-  }
-
-  .bulletIcon {
-    color: #F6F6F6;
-    margin-right: 5px;
-  }
-
-  .bulletIcon:hover {
-    color: #FF4233 !important;
-  }
-
-  .servicesButtonDiv button:hover .bulletIcon {
-    color: #FF4233 !important;
-  }
-
-  .aboutServicesParentDiv {
-    background-color: #000;
-  }
-
-  .servicesDetailDiv {
-    padding-top: 28px;
-    padding-left: 30px;
-  }
-
-  .servicesDetailDiv p {
-    color: #FFF;
-    font-family: "Be Vietnam Pro" !important;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400 !important;
-    text-transform: capitalize;
-  }
-
-  .servicesDetailDiv h5 {
-    color: #FF4233;
-    font-family: "Be Vietnam Pro" !important;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 600;
-    text-transform: capitalize;
-  }
-
-  .industryInsight h3 {
-    color: #F13122;
-    font-family: Roboto;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 51.139px;
-  }
-
-  .industryInsight h4 {
-    color: #FFF;
-    font-family: "Be Vietnam Pro";
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 57px;
-    /* 142.5% */
-    text-transform: capitalize;
-  }
-
-  .landingCrousel {
-    border-radius: 20px !important;
-  }
-
-  .logoName {
-    margin-bottom: 0;
-    background: #fff !important;
-    color: #000 !important;
-    font-weight: 500;
-    text-align: center;
-    padding: 5px 40px !important;
-    font-size: 20px !important;
-    border-radius: 15px 25px 25px 0px;
-    margin-top: 10px;
-    margin-left: 30px;
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-
-  .startsDiv {
-    margin-left: 55px;
-    margin-top: 2px;
-  }
-
-  .industryInsight {
-    margin-top: -5rem;
-  }
-
-  .crouselItemf, 
-    .crouselItemL {
-    background: #000;
-    /* background: #2B2B2B; */
-    border-radius: 20px;
-    height: max-content;;
-    /* height: 409px; */
-  }
-
   .crouselItemf h4 {
-    padding: 27px 40px 0 40px !important;
-  }
-
-  .crouselItemf h2 {
-    color: #FF4B4B !important;
-    font-size: 15px !important;
-    padding: 0 40px !important;
-  }
-
+    padding: 27px 40px 0 25px !important;
+    }
+    
+    .crouselItemf h2 {
+    padding: 0 25px !important;
+    }
   .crouselItemf p {
-    padding: 0 40px 15px 40px;
+    padding: 0 40px 15px 25px;
     margin: 0;
     font-size: 15px;
     font-weight: 100;
-    min-height: 132px;
+    }
+    .crouselItemSimg{
+      width: 150px !important;
+    }
+    .crouselItemFimg{
+      width: 100px !important;
+    }
+    .crouselBtn{
+      place-content: flex-start !important;
+    }
+    .headingF{
+      font-family: "Be Vietnam Pro" !important;
+      font-size: 30px;
+      width: 20rem;
+      font-style: normal;
+      margin-top: 25px;
+      line-height: 40px;
+      padding: 0 10px;
   }
-
-  .crouselItemDivS {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .crouselItemFimg {
-    margin-left: 30px;
-    width: 100px;
-  }
-
-  .crouselItemSimg {
-    margin-top: -110px;
-    border-bottom-left-radius: 20px;
-    width: 150px;
-  }
-  .textImg{
-    padding: 40px;
-  }
-  .textImgSpan{
-    margin-top: -29.2px !important;
-    min-height: 87px !important;
+  .navLogo{
+    width: 45px !important;
+    margin: 0 5px 0 5px;
 }
-  .textImgSpan span{
-    color: #C6C6C6;
-    font-size: 20px;
+.navbar-toggler{
+  border-radius: 26.613px !important;
+border: 0.484px solid #FF4233 !important;
+background: var(--saaa, linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(90deg, rgba(251, 24, 7, 0.10) -51.32%, rgba(255, 66, 46, 0.10) 98.95%)) !important;
+padding: 7px !important;
+}
+.ulListF{
+  font-size: 13px !important;
+  margin-top: 0.8rem !important;
+  padding-left: 30px !important;
+  font-weight: 300 !important;
+}
+.navbar span{
+    font-size: 20px !important;
+    font-weight: 500;
+}
+.watchVideoDiv{
+  margin-top: 0px !important;
+  margin-left: 10px !important;
+}
+.contactBt{
+  padding: 0.5rem 1.5rem !important;
+  font-size: 15px !important;
+}
+.playButton{
+  margin:0 !important;
+  padding:0.6rem 0.6rem !important;
+  width: 45px !important;
+}
+.showCaseDiv h4 {
+  line-height: 15px !important;
+  letter-spacing: 0px !important;
+  margin-top: 0 !important;
+  margin-bottom: 25px !important;
+  font-size: 25px !important;
+}
+.showCaseParentDiv button {
+  margin-top: 0.9rem;
+  padding: 5px 20px 5px 20px;
+}
+.cols{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.aboutServices{
+border-radius: 10px;
+}
+.aboutServices h3{
+border-top-right-radius: 10px;
+}
+.catalog3DCol{
+  background: none !important;
+}
+.catalog3DColImgDiv{
+  background: #424242;
+  margin: 0 auto;
+  display: grid;
+  text-align: center;
+  border-radius: 10px;
+  padding: 30px;
+  border-radius: 0 0 10px 10px !important;
+}
+.servicesButtonDiv {
+  width: auto !important;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: left;
+  padding-bottom: 20px;
+  overflow-x: scroll;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.servicesButtonDiv::-webkit-scrollbar {
+  display: none;
+}
+.servicesButtonDiv button{
+  width: 170px;
+  margin-left: 0px ;
+  margin-right: 10px;
+  border-radius: 10px !important;
+  margin-bottom: 0px;
+}
+.servicesButtonDivS{
+  display:none;
+}
+.servicesDetailDiv {
+  padding-left: 15px !important;
+}
+.aboutServicesCol,.aboutServices {
+  border-bottom-left-radius: 0px !important;
+}
+.industryInsight h3{
+  line-height: 30px !important;
+}
+.industryInsight{
+  margin-top: 0;
+}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .navbar{
+    border-radius: 4rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
-  /* .crouselItemf img{
+  .navLogo {
+    margin: 0px 5px 0 15px;
+}
+.navbar-toggler{
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.Commerce3D{
+  width: 125px !important;
+}
+.headingF{
+  font-size: 28px;
+  width: 15rem;
+}
+.ulListF{
+  margin-top:0.5rem !important;
+  margin-bottom: 0.8rem !important;
+}
+.contactBt img{
+  width:35px !important;
+}
+.contactBt {
+  padding: 0.4rem 1rem 0.4rem 1.5rem !important;
+}
+.watchVideoDiv{
+  margin-bottom: 30px;
+  margin-top: 15px !important;
+}
+.LandingVDiv {
+  margin-top: -1rem;
+}
+.LandingV{
+  margin-left: revert;
+} 
+.ThreeDButtons{
+  display: flex !important;
+}
+.ThreeDButtons img{
+  width: 20% !important;
+}
+.ThreeDButtons p{
+  font-size: 11px !important;
+  padding-left: 5px !important;
+}
+.ThreeDButtons button{
+  width: fit-content !important;
+  margin-right: 10px !important;
+  padding: 15px;
+}
+.ThreeDButtons{
+  margin-top:-1.5rem !important;
+  margin-bottom: 12px !important;
+  padding: 30px 20px !important;
+}
+.servicesDetailDiv {
+  padding-bottom: 32px;
+}
+.carousel-control-prev-icon{
+  margin-left: -7rem;
+}
+.carousel-control-next-icon{
+  margin-left: -7rem;
+}
+  .aboutServices{
+    border-radius: 10px !important;
+    border-top-right-radius:0px !important;
+    border-bottom-right-radius: 0px !important;
+  }
+  .servicesDetailDiv{
     width: auto;
-    max-width: 100%;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-  } */
-  .crouselItemL h4{
-    padding: 20px 20px 0px 20px !important;
-    font-size: 15px;
-    margin-bottom: 5px;
+    max-width: fit-content;
 }
-.crouselItemL h2{
-  font-size: 12px !important;
-  padding: 0px 20px 0 20px!important;
+.aboutServicesCol {
+  padding-right: 0;
 }
-.crouselItemL p{
-  font-size: 12px !important;
-  padding: 0 20px 0 20px;
-  min-height: 100px !important;
-  font-weight: 300;
+.catalog3DCol{
+  padding-left: 0;
+  border-radius: 0 10px 10px 0px !important;
 }
-.crouselItemL .textImg{
-  padding: 20px 20px 10px 20px !important;
- 
+.catalog3DColImgDiv{
+  border-radius: 0 10px 10px 0px !important;
 }
-.crouselItemL .textImgSpan{
-  min-height: 70px !important;
-  padding: 30px 20px;
+.aboutServices h3{
+  border-top-right-radius: 0;
 }
-/* .scaled-image {
-  transform: scale(1.1);
-} */
+.Commerce3DRow{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+.Commerce3DDiv{
+  display: none;
+}
+.material3dCol{
+  margin: 0 !important;
+}
+.material3dDiv h3{
+  font-size: 25px !important;
+}
+.material3dDiv p{
+  font-size: 13px !important;
+  margin-bottom: 30px !important;
+  font-weight: 300 !important;
+}
+.material3dDivCh {
+  padding: 0px !important;
+  margin-top: -1rem !important;
+}
+.normalCrousel,.sCrousel{
+ display: none;
+}
+.tabCrousel{
+  display: block !important;
+}
+.crouselItemf p{
+  min-height: 178.9px;
+  font-size: 15px;
+}
+.crouselItemf h2{
+  font-size: 15px !important;
+}
+.textImgSpan{
+  min-height: 144.3px !important;
+}
+.industryInsight{
+  margin-top: 0px !important;
+}
+.subscribeDiv h3{
+  font-size: 20px !important;
+}
+.subscribeInputDiv{
+  display: flex;
+  flex-direction: column;
+}
+.subscribeInput{
+  width: -webkit-fill-available !important;
+  border-radius: 7px;
+  margin-bottom: 15px;
+}
+.subscribeButton{
+  margin: 0 !important;
+  width: -webkit-fill-available !important;
+}
+.socialLinks img{
+  width: 25px !important;
+  margin-top: -20px !important;
+}
+.material3dDiv img{
+  width: 200px !important;
+  margin-top: 0px !important;
+}
+.material3dCol{
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
+}
+}
+@media screen and (min-width: 1024px) and (max-width:1400px) {
+  .ThreeDButtons{
+    margin-top: 0px !important;
+  }
+  .crouselItemf h2{
+    font-size: 20px !important;
+  }
+  .crouselItemf h4 {
+    font-size: 30px !important;
+  }
+  .crouselItemf p{
+    min-height: 164px;
+    font-size: 20px !important;
+  }
+  .crouselItemf .textImgSpan span{
+    min-height: 144.3px !important;
+  }
+  .servicesButtonDiv{
+    width: 185px !important
+  }
+  .servicesButtonDiv button{
+    width:165px !important;
+  }
+  .servicesDetailDiv p{
+    width: 230px !important;
+  }
+  .servicesDetailDiv {
+    padding-left: 15px !important;
+  }
+  .navbar-expand-lg .navbar-nav .nav-link{
+    padding-left: 0px;
+  }
+  .custom-navlink{
+    margin-left: 0 !important;
+    padding-left: 5px !important;
+  }
+}
+@media screen and (max-width:767px) {
+  .navbar{
+    border: none !important;
+    background: none !important;
+  }
+  .navLogo{
+    margin: 0px 10px 0px 5px;
+  }
+  .Commerce3D2 {
+    width: 90px !important;
+    margin-top: -3rem !important;
+}
+.contactBt{
+  padding: 0.5rem 1rem !important;
+}
+.contactBt img{
+  width: 30px !important;
+}
+.LandingVDiv{
+  margin-top: -1rem !important;
+}
+.LandingV{
+  margin-left: 0px !important;
+}
+.showCaseParentDiv{
+  margin-left: 0.5rem;
+}
+.showCaseDiv h4{
+  font-size: 30px !important;
+  font-weight: 600 !important;
+}
+.aboutServices{
+  border-radius: 10px 10px 0px 0px !important;
+}
+.servicesDetailDiv {
+  padding-bottom: 35px;
+}
+.material3dDivCh{
+  margin-top: -1rem !important;
+}
+.material3dDiv p{
+  margin-bottom: 3rem;
+  font-size: 15px !important;
+  font-weight: 300 !important;
+}
+.subscribeInputDiv{
+  display: flex !important;
+  flex-direction: column !important;
+}
+.subscribeInput{
+  width: -webkit-fill-available !important;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px !important;
+}
+.subscribeButton{
+  margin:0 !important;
+}
+.socialLinks{
+  margin-top: -20px;
+}
+.socialLinks img{
+  width: 25px !important;
+}
+  .carousel-control-prev-icon{
+    margin-left: 0 !important;
+  }
+  .carousel-control-next-icon{
+    margin-right: 0 !important;
+  }
+  .MobCrousel{
+    display: block !important;
+  }
+  .deskCrousel{
+    display: none !important;
+  }
+}
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark{
+  z-index: 1;
 }
