@@ -15,9 +15,40 @@ import lightingDetail from "./Helpers/lightingDetail.svg";
 import furniture from "./Helpers/furniture.png";
 import { MdFiberManualRecord } from "react-icons/md";
 
-import coloredfabric from "./Helpers/coloredfabric.svg";
-import { ImgCarousel, MobImgCarousel } from "./LandingCrousel.js";
-import contactIcon from "./Helpers/contactIcon.svg";
+import coloredfabric from './Helpers/coloredfabric.svg';
+import { ImgCarousel, MobImgCarousel } from './LandingCrousel.js'
+import contactIcon from './Helpers/contactIcon.svg'
+import YouTubeModal, { Customized3D } from './Helpers/YouTubeModal/YouTubeModal';
+import { ListModal } from "./Helpers/ListModal/ListModal";
+import CommonNormal from './Helpers/CommonNormal.svg';
+import CommonHover from './Helpers/Commonhover.svg';
+
+
+import FurnitureNormal from './Helpers/FurnitureNormal.svg';
+import FurnitureHover from './Helpers/Furniturehover.svg';
+
+
+import LightingNormal from './Helpers/LightingNormal.svg';
+import LightingHover from './Helpers/Lightinghover.svg';
+
+import PaintsNormal from './Helpers/PaintsNormal.svg';
+import PaintsHover from './Helpers/Paintshover.svg';
+
+import FlooringNormal from './Helpers/FlooringNormal.svg';
+import FlooringHover from './Helpers/Flooringhover.svg';
+
+
+import SanitaryNormal from './Helpers/sanitarynormal.svg';
+import SanitaryHover from './Helpers/sanitaryhover.svg';
+
+import CatalogFurniture from './Helpers/CatalogFurniture.webp';
+import Cataloglighting from './Helpers/Cataloglighting.webp';
+
+import Collaborationvideo from './Helpers/Collaborationvideo.webp';
+import Customizevideo from './Helpers/Customizevideo.webp';
+import Lightingvideo from './Helpers/LightingVid.webp';
+import ButtonImg from './Helpers/Button.svg';
+
 const HomeComponent = () => {
   const divBackground = {
     backgroundImage: `url(${backImg})`,
@@ -26,158 +57,107 @@ const HomeComponent = () => {
     background:
       "background: linear-gradient(180deg, rgba(18, 18, 18, 0.00) 0%, rgba(18, 18, 18, 0.00) 0.01%, #02030B 49.53%)",
   };
-
+  const [currVlinkName, setCurrVlinkName] = useState('customize')
+  const handleIframeVid = (e)=>{
+    let currVlinkName = e.currentTarget.name
+    setCurrVlinkName(currVlinkName)
+  }
   const dynamicData = [
     {
-      name: "Furniture",
-      value: `Showcase your furniture Instore and online. On common smartphone, tablets and pc's. 
-  Our solutions offer high material fedility. We leverage Nvidia, Adobe tecnologies. We conform to 3DCommerce asset guidelines. Showcase your furniture under diverse lighting conditions. for example under sunlight and night lighting. Help your costumers make the right choices using our Collaboration3D technology
-  `,
-      imgUrl: furniture,
+      name: "Common",
+      imgUrl: CatalogFurniture
     },
     {
-      name: "Lighting",
-      value:
-        "Illuminate Your Potential! With Viscommerce, your lighting products become stars with our 3D capabilities. Let your brilliance shine through, captivating customers and setting your brand apart in the world of luminous possibilities.",
-      imgUrl: lightingDetail,
+      name: "Furniture",
+      imgUrl: CatalogFurniture
     },
-  ];
+    { 
+      name: 'Lighting',
+      imgUrl: Cataloglighting 
+    },
+    { 
+      name: 'Paints',
+      imgUrl: CatalogFurniture 
+    },
+    { 
+      name: 'Flooring',
+      imgUrl: CatalogFurniture 
+    },
+    { 
+      name: 'Sanitaryware',
+      imgUrl: CatalogFurniture 
+    }]
   const handleClick = (e) => {
-    const nameVal = e.currentTarget.name;
-    let vals = dynamicData.find((val) => val.name == nameVal);
-    setCatalogStateVal(vals);
-  };
-  const [catalogStateVal, setCatalogStateVal] = useState(dynamicData[0]);
+    const nameVal = e.currentTarget.name
+    let vals = dynamicData.find(val => val.name == nameVal)
+    setCatalogStateVal(vals)
+  }
+  const [catalogStateVal, setCatalogStateVal] = useState(dynamicData[0])
+  const [showModal, setShowModal] = useState(false)
+  const playVideo = () => {
+    setShowModal(!showModal)
+  }
 
   return (
     <>
       <div style={divBackground}>
         <Container>
-          <Row className="Commerce3DRow">
-            <img className="Commerce3D" src={Commerce3D} alt="Commerce3D" />
+          <Row className='Commerce3DRow'>
+            <img className='Commerce3D' src={Commerce3D} />
+          </Row>
+          <Row>
+            <YouTubeModal showModal={showModal} playvideo={playVideo} />
           </Row>
           <Row>
             <Col xs={12} md={7}>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "flex-start",
-                  padding: "",
-                  height: "100%",
-                }}
-              >
-                <h2 className="headingF">3DCommerce Solutions</h2>
-                <ul className="ulListF">
-                  <li>
-                    Furniture, Lighting, Paints, Flooring, Sanitaryware sectors.
-                  </li>
+              <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', padding: '', height: '100%' }}>
+                <h2 className='headingF'>3DCommerce Solutions</h2>
+                <ul className='ulListF'>
+                  <li>Furniture, Lighting, Paints, Flooring, Sanitaryware sectors.</li>
                   <li>Instore and Online.</li>
                   <li>Web & Native Apps on Smartphones, Tablets, PC’s.</li>
                   <li>3D, AI, Web, Crypto technologies.</li>
                 </ul>
-                <div className="Commerce3DDiv">
-                  <img
-                    className="Commerce3D2"
-                    src={Commerce3D}
-                    alt="Commerce3D"
-                  />
-                </div>
-                <div className="watchVideoDiv">
-                  <Button className="contactBt">
-                    Contact Us <img src={contactIcon} alt="Play Icon" />
-                  </Button>
-                  <div className="playButtonDiv">
-                    <Button className="playButton">
+                <div className='Commerce3DDiv'><img className='Commerce3D2' src={Commerce3D} /></div>
+                <div className='watchVideoDiv'>
+                  <Button className='contactBt' >Contact Us <img src={contactIcon} alt="Play Icon" /></Button>
+                  <div className='playButtonDiv' >
+                    <Button className='playButton' onClick={playVideo}>
                       <img src={Play} alt="Play Icon" />
                     </Button>
                   </div>
-                  <p style={{ margin: "0 0 0 4px" }}>Watch Video</p>
+                  <p style={{ margin: '0 0 0 4px' }}>Watch Video</p>
+
                 </div>
+
+
+
               </div>
+
             </Col>
             <Col xs={12} md={5}>
-              <div className="LandingVDiv">
-                <video width="100%" className="LandingV" autoPlay muted loop>
+              <div className='LandingVDiv'>
+                <video width="100%" className='LandingV' autoPlay muted loop >
                   <source src={LandingV} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
+
             </Col>
           </Row>
           <Row>
-            <div className="ThreeDButtons">
-              <Button
-                variant="none"
-                style={{
-                  borderRadius: "1.5rem",
-                  marginRight: "10px",
-                  color: "#FFF",
-                }}
-              >
-                <img src={Showroom} alt="Showroom" />
-                <p>
-                  Showroom<span>3D</span>
-                </p>
-              </Button>
-              <Button
-                variant="none"
-                style={{
-                  borderRadius: "1.5rem",
-                  marginRight: "10px",
-                  color: "#FFF",
-                }}
-              >
-                <img src={Catalog} alt="Catalog" />
-                <p>
-                  Catalog<span>3D</span>
-                </p>
-              </Button>
-              <Button
-                variant="none"
-                style={{
-                  borderRadius: "1.5rem",
-                  marginRight: "10px",
-                  color: "#FFF",
-                }}
-              >
-                <img src={Collaboration} alt="Collaboration" />
-                <p>
-                  Collaboration<span>3D</span>
-                </p>
-              </Button>
-              <Button
-                variant="none"
-                style={{
-                  borderRadius: "1.5rem",
-                  marginRight: "10px",
-                  color: "#FFF",
-                }}
-              >
-                <img src={Material} alt="Material" />
-                <p>
-                  Material<span>3D</span>
-                </p>
-              </Button>
-              <Button
-                variant="none"
-                style={{
-                  borderRadius: "1.5rem",
-                  marginRight: "10px",
-                  color: "#FFF",
-                }}
-              >
-                <img src={Lightning} alt="Lightning" />
-                <p>
-                  Lightning<span>3D</span>
-                </p>
-              </Button>
+            <div className='ThreeDButtons'>
+              <Button variant='none' style={{ borderRadius: '1.5rem', marginRight: '10px', color: '#FFF' }}><img src={Showroom} /><p>Showroom<span>3D</span></p></Button>
+              <Button variant='none' style={{ borderRadius: '1.5rem', marginRight: '10px', color: '#FFF' }}><img src={Catalog} /><p>Catalog<span>3D</span></p></Button>
+              <Button variant='none' style={{ borderRadius: '1.5rem', marginRight: '10px', color: '#FFF' }}><img src={Collaboration} /><p>Collaboration<span>3D</span></p></Button>
+              <Button variant='none' style={{ borderRadius: '1.5rem', marginRight: '10px', color: '#FFF' }}><img src={Material} /><p>Material<span>3D</span></p></Button>
+              <Button variant='none' style={{ borderRadius: '1.5rem', marginRight: '10px', color: '#FFF' }}><img src={Lightning} /><p>Lightning<span>3D</span></p></Button>
             </div>
           </Row>
         </Container>
       </div>
       <Container>
-        <Row className="topPad">
+        <Row className="topPad" style={{display:"none"}}>
           <Col xs={12} md={4} className="d-flex align-items-center cols">
             <div className="showCaseParentDiv">
               <div
@@ -228,7 +208,7 @@ const HomeComponent = () => {
                 <ButtonGroup>
                   <Button onClick={(e) => handleClick(e)} name="Furniture">
                     <MdFiberManualRecord className="bulletIcon" />
-                    Sample Room
+                    Common
                   </Button>
                   <Button onClick={(e) => handleClick(e)} name="Furniture">
                     <MdFiberManualRecord className="bulletIcon" />
@@ -244,64 +224,51 @@ const HomeComponent = () => {
                   </Button>
                   <Button onClick={(e) => handleClick(e)} name="Furniture">
                     <MdFiberManualRecord className="bulletIcon" />
-                    Tiles
-                  </Button>
-                  <Button onClick={(e) => handleClick(e)} name="Furniture">
-                    <MdFiberManualRecord className="bulletIcon" />
                     Flooring
                   </Button>
                   <Button onClick={(e) => handleClick(e)} name="Furniture">
                     <MdFiberManualRecord className="bulletIcon" />
-                    Door/Windows
-                  </Button>
-                  <Button onClick={(e) => handleClick(e)} name="Furniture">
-                    <MdFiberManualRecord className="bulletIcon" />
-                    Accesssories
+                    Sanitaryware
                   </Button>
                 </ButtonGroup>
               </div>
               <div className="row container">
                 <div className="servicesButtonDiv servicesButtonDivS col-md-3">
-                  <Button onClick={(e) => handleClick(e)} name="Furniture">
-                    <MdFiberManualRecord className="bulletIcon" />
-                    Sample Room
+                  <Button onClick={(e) => handleClick(e)} name="Common">
+                    <img className="normalIcon" src={CommonNormal} />
+                    <img className="hoverIcon" src={CommonHover} />
+                    Common
                   </Button>
                   <Button onClick={(e) => handleClick(e)} name="Furniture">
-                    <MdFiberManualRecord className="bulletIcon" />
+                  <img className="normalIcon" src={FurnitureNormal} />
+                    <img className="hoverIcon" src={FurnitureHover} />
                     Furniture
                   </Button>
                   <Button onClick={(e) => handleClick(e)} name="Lighting">
-                    <MdFiberManualRecord className="bulletIcon" />
+                  <img className="normalIcon" src={LightingNormal} />
+                    <img className="hoverIcon" src={LightingHover} />
                     Lighting
                   </Button>
-                  <Button onClick={(e) => handleClick(e)} name="Furniture">
-                    <MdFiberManualRecord className="bulletIcon" />
+                  <Button onClick={(e) => handleClick(e)} name="Paints">
+                  <img className="normalIcon" src={PaintsNormal} />
+                    <img className="hoverIcon" src={PaintsHover} />
                     Paints
                   </Button>
-                  <Button onClick={(e) => handleClick(e)} name="Furniture">
-                    <MdFiberManualRecord className="bulletIcon" />
-                    Tiles
-                  </Button>
-                  <Button onClick={(e) => handleClick(e)} name="Furniture">
-                    <MdFiberManualRecord className="bulletIcon" />
+                  <Button onClick={(e) => handleClick(e)} name="Flooring">
+                  <img className="normalIcon" src={FlooringNormal} />
+                    <img className="hoverIcon" src={FlooringHover} />
                     Flooring
                   </Button>
-                  <Button onClick={(e) => handleClick(e)} name="Furniture">
-                    <MdFiberManualRecord className="bulletIcon" />
-                    Door/Windows
+                  <Button onClick={(e) => handleClick(e)} name="Sanitaryware">
+                  <img className="normalIcon" src={SanitaryNormal} />
+                    <img className="hoverIcon" src={SanitaryHover} />
+                    Sanitaryware
                   </Button>
-                  <Button
-                    style={{ marginBottom: "25px" }}
-                    onClick={(e) => handleClick(e)}
-                    name="Furniture"
-                  >
-                    <MdFiberManualRecord className="bulletIcon" />
-                    Accesssories
-                  </Button>
+                  
                 </div>
                 <div className="servicesDetailDiv col-md-7">
-                  <h5 style={{ color: "#FF4233" }}>{catalogStateVal?.name}</h5>
-                  <p style={{ color: "#fff" }}>{catalogStateVal?.value}</p>
+                  <h5 style={{ color: "#18181b" }}>{catalogStateVal?.name}</h5>
+                  <ListModal catalogStateVal={catalogStateVal.name || dynamicData[0].name}/>
                 </div>
               </div>
             </div>
@@ -313,7 +280,7 @@ const HomeComponent = () => {
           </Col>
         </Row>
 
-        <Row className="topBottomPad">
+        <Row className="topBottomPad" style={{display:"none"}}>
           <Col
             xs={12}
             md={7}
@@ -357,6 +324,57 @@ const HomeComponent = () => {
             </div>
           </Col>
         </Row>
+        <Row>
+        <Col md={8} xs={12}>
+      <Customized3D currVlinkName={currVlinkName}/>
+    </Col>
+    <Col md={4} xs={12}>
+              <div className="iframePDiv">
+                <div className="iframeCtrlDiv">
+                  <div className="videoCustDiv">
+                <img src={Customizevideo} />
+                </div>
+                <div className="iframeBtDiv">
+                  <h4>Customize<span>3D</span></h4>
+                  <div className="iframePlayDiv">
+                    <img name="customize" onClick={handleIframeVid} className="iframePlayImg" src={ButtonImg} />
+                    <p>Play</p>
+                    </div>
+                </div>
+                </div>
+
+                <div className="iframeCtrlDiv">
+                  <div className="videoCustDiv">
+                <img src={Collaborationvideo} />
+                </div>
+                <div className="iframeBtDiv">
+                  <h4>Collaboration<span>3D</span></h4>
+                  <div className="iframePlayDiv">
+                    <img name="collaboration" onClick={handleIframeVid} className="iframePlayImg" src={ButtonImg} />
+                    <p>Play</p>
+                    </div>
+                </div>
+                </div>
+
+
+                <div className="iframeCtrlDiv">
+                  <div className="videoCustDiv">
+                <img src={Lightingvideo} />
+                </div>
+                <div className="iframeBtDiv">
+                  <h4>Lighting<span>3D</span></h4>
+                  <div className="iframePlayDiv">
+                    <img name="lighting"  onClick={handleIframeVid} className="iframePlayImg" src={ButtonImg} />
+                    <p>Play</p>
+                    </div>
+                </div>
+                </div>
+
+
+
+                </div>
+    </Col>
+    </Row>
 
         <Row className="deskCrousel topBottomPadMore">
           <ImgCarousel />
@@ -366,7 +384,7 @@ const HomeComponent = () => {
         </Row>
       </Container>
     </>
-  );
+  );  
 };
 
 export default HomeComponent;

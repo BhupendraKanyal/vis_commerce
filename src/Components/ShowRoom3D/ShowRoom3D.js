@@ -8,7 +8,7 @@ import company from './assets/company.svg';
 import dynamics from './assets/dynamics.svg';
 import lists from './assets/lists.svg';
 import altf from './assets/altf.svg';
-import BlackOfficeChair from './assets/BlackOfficeChair.png';
+
 import chandeliers from './assets/chandeliers.png';
 import wallLamps from './assets/wallLamps.png';
 import floorLamps from './assets/floorLamps.png';
@@ -18,22 +18,40 @@ import realisticRef from './assets/realisticRef.svg';
 import onOff from './assets/onOff.svg';
 import lightColor from './assets/lightColor.svg';
 import intensity from './assets/intensity.svg';
-import lightControl from './assets/lightControl.mp4';
-import { Chairs } from './Helpers';
+import lightControl from '../Helpers/Hero_Section_Lighting_.webm';
+import collaboration3D from './assets/collaboration3D.webp';
+import showCaseMore from './assets/showCaseMore.png';
+import { Chairs, DifferentChairs, NativeDevices } from './Helpers';
+import backImg from '../Helpers/backImg.webp'
+import { Helpers } from '../Pricing/Helper';
+import comp1 from './assets/comp1.webp';
+import comp2 from './assets/comp2.webp';
+import space3DF from './assets/space3DF.webp';
+import space3DS from './assets/space3DS.webp';
+import redArrow from './assets/redArrow.svg';
 export const ShowRoom3D = () => {
+    const divBackground = {
+        backgroundImage: `url(${backImg})`,
+        backgroundSize: '100% 100%',
+        backgroundRepeat: 'no-repeat',
+        background: 'background: linear-gradient(180deg, rgba(18, 18, 18, 0.00) 0%, rgba(18, 18, 18, 0.00) 0.01%, #02030B 49.53%)'
+    };
     return (
-        <Container>
-            <Row>
+        
+<>
+<div style={divBackground}>
+    <Container>
+            <Row className='ShowroomRow'>
                 <Col xs={12} md={6} className='ShowroomCol'>
-                    <div className=''>
+                    <div className='ShowroomDiv'>
                         <h2 className=''>Showroom<span>3D</span></h2>
                         <p>Custom 3DCommerce solutions for Home & Office-décor companies</p>
                     </div>
-                    <div>
+                    <div className='tryOuts'>
                         <Button className='formBt' type="button">
                             Try Now
                         </Button>
-                        <Button className='formBt' type="button">
+                        <Button className='contactBt' type="button">
                             Contact Us
                         </Button>
                     </div>
@@ -44,12 +62,14 @@ export const ShowRoom3D = () => {
                     </div>
                 </Col>
             </Row>
-
+            </Container>
+            </div>
+            <Container>
             <Row>
-                <Col xs={12} md={6}>
+                <Col xs={12} md={6} className='chairsCol'>
                     <Chairs />
                 </Col>
-                <Col xs={12} md={6}>
+                <Col xs={12} md={6} className='chairsDescCol'>
                     <div className='flexDivP'>
                     <h4>Catalog<span>3D</span></h4>
                     <h3>Create your next gen product catalog in 3D.</h3>
@@ -95,8 +115,8 @@ export const ShowRoom3D = () => {
                 </Col>
             </Row>
 
-            <Row style={{ marginBottom: '100px',marginTop:'50px' }}>
-                <Col xs={12} md={6}>
+            <Row style={{ marginBottom: '50px',marginTop:'50px' }}>
+                <Col xs={12} md={6} className='leatherCol'>
                     <div className='customizeDiv'>
                         <h4>Customize<span>3D</span></h4>
                         <div className='listsDiv'>
@@ -118,29 +138,13 @@ export const ShowRoom3D = () => {
                         </div>
                     </div>
                 </Col>
-                <Col xs={12} md={6}>
-                    <div className='materialsPPDiv'>
-                    <div className='materialsPDiv'>
-                        <div className='materialsCDiv'>                          
-                            <div className='materialsBtDiv'>
-                            <h3>Select<br/>Material</h3>
-                            <Button>Black Leather</Button>
-                            <Button>Black Leather</Button>
-                            <Button>Black Leather</Button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='chairsImgDivs'>
-                      
-                            <img src={BlackOfficeChair} />
-                        
-                    </div>
-                    </div>
+                <Col xs={12} md={6} className='leatherCols'>
+                    <DifferentChairs />
                 </Col>
             </Row>
 
-            <Row>
-                <h3>Lighting<span>3D</span></h3>
+            <Row className='lightningrow'>
+                <h4>Lighting<span>3D</span></h4>
                 <Col xs={12} md={3}>
                     <div>
                         <img src={chandeliers} />
@@ -163,9 +167,9 @@ export const ShowRoom3D = () => {
                 </Col>
             </Row>
 
-            <Row style={{ marginBottom: '100px',marginTop:'50px' }}>
-                <Col xs={12} md={6}>
-                    <div>
+            <Row style={{ marginBottom: '50px',marginTop:'50px' }}>
+                <Col xs={12} md={6} className='lightCtrlCol'>
+                    <div className='lightCtrl'>
                         <h4><span>Light control in 3D space</span></h4>
                         <p>Add, delete, move, rotate lights in room.</p>
                     </div>
@@ -194,7 +198,7 @@ export const ShowRoom3D = () => {
                     </div>
                     </div>
                 </Col>
-                <Col>
+                <Col md={6} xs={12} className='vDivCol'>
                 <div className='vDiv'>
                 <video width="100%" autoPlay muted loop style={{ objectFit: 'cover' }}>
                                 <source src={lightControl} type="video/mp4" />
@@ -203,7 +207,69 @@ export const ShowRoom3D = () => {
                 </div>
                 </Col>
             </Row>
-
+            <Row className='collaboration3DRow'>
+                <h3>Collaboration<span>3D</span></h3>
+                <Col md={5} xs={12}>
+                    <img src={collaboration3D} />
+                </Col>
+                <Col md={1} xs={12}> </Col>
+                <Col md={6} xs={12} className='collaboration3DCol'>
+                    <p>Enable two or more users to experience 3DCommerce in real time</p>
+                    <ul>
+                        {/* <li>•	 Version Control</li> */}
+                        <li>Version Control</li>
+                        <li>Share style collaboration</li>
+                        <li>Audio, Video and Chat integration</li>
+                        <li>In context comments</li>
+                    </ul>
+                </Col>
+            </Row>
+            <Row>
+                <h4 className="headings">MySpace<span>3D</span></h4>
+                <Col md={6} xs={12} className='space3DCol'>
+                    <div>
+                        <img src={space3DF} />
+                    </div>
+                </Col>
+                <Col md={6} xs={12}>
+                    <div className='space3DColS'>
+                        <img  src={space3DS} />
+                    </div>
+                </Col>
+            </Row>
+            <Row className='showCaseMoreRow'>
+                <Col md={5} xs={12}>
+                <h5 className='showCaseMore'>Showcase More<br/>
+with Instore <br/>
+<span>Catalog3D</span></h5>
+</Col>
+<Col md={1} xs={12}></Col>
+<Col md={6} xs={12}>
+    <div>
+        <img src={showCaseMore} />
+    </div>
+</Col>
+            </Row>
+            <Row>
+            <h4 className='headings pads'>3DCommerce Compliance</h4>
+                <Col md={6} xs={12}>
+                    <div>
+                        <img src={comp1} />
+                    </div>
+                </Col>
+                <Col md={6} xs={12}>
+                    <div>
+                        <img src={comp2} />
+                    </div>
+                </Col>
+            </Row>
+           <Row>
+           <h4 className='headings padTop'>Web/ Native Version</h4>
+            <NativeDevices />
+            </Row>
+           
         </Container>
+        </>
+
     )
 }
