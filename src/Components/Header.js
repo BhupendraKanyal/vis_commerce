@@ -34,8 +34,8 @@ export const Header = ()=>{
               icon={<BsArrowDown />}
             >
               <NavDropdown.Item href="/aboutus">About Us</NavDropdown.Item>
-              {/* <NavDropdown.Item href="/">Option 2</NavDropdown.Item>
-              <NavDropdown.Item href="/">Option 3</NavDropdown.Item> */}
+              <NavDropdown.Item href="/">Team</NavDropdown.Item>
+              {/* <NavDropdown.Item href="/">Option 3</NavDropdown.Item> */}
             </NavDropdown>
             <Nav.Link href="/demos" className="custom-navlink">
               Demos

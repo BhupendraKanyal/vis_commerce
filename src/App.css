@@ -111,30 +111,36 @@ backdrop-filter: blur(51.375px);
 .aboutServices {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  background: var(--White-Share-2, #C8C8C8);
-  border: 1px solid var(--Black-Shade-1, #18181B);
+  background: #bebebe;
+  border: 1px solid #bebebe;
 }
 
 .aboutServices h3 {
-  color: #FFF;
+  color: #090B0D;
   font-family: "Be Vietnam Pro" !important;
   font-size: 25px;
   font-style: normal;
   font-weight: 600;
   padding: 25px 20px 15px 25px;
-  background:  var(--Black-Shade-1, #18181B) !important  ;
-  border: 1px solid var(--Black-Shade-1, #18181B) !important  ;
+  background:  #bebebe !important  ;
+  border-bottom: 1px solid #000 !important  ;
   border-top-left-radius: 10px;
   margin-bottom: 0 !important;
 }
 .servicesButtonDiv {
-  width: 235px;
+  width: 40%;
   padding-top: 10px;
   padding-left: 10px;
   background: var(--Secondry, #F4F4F4);
   border-bottom-left-radius: 10px;
+  text-align: center;
 }
-
+.servicesButtonDiv button img{
+  margin-right: 5px;
+}
+.hoverIcon{
+  display: none;
+}
 .servicesButtonDiv button {
   width: 200px;
   text-align: left;
@@ -144,11 +150,14 @@ backdrop-filter: blur(51.375px);
   border-bottom: 1px solid #C1BDBD;
   font-family: "Be Vietnam Pro" !important;
   
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
   font-weight: 500;
+  height: 82px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .bulletIcon {
@@ -174,6 +183,13 @@ backdrop-filter: blur(51.375px);
   color: #FFF !important;
 }
 
+.servicesButtonDiv button:hover .hoverIcon{
+  display: flex;
+}
+.servicesButtonDiv button:hover .normalIcon{
+  display: none;
+}
+
 .servicesDetailDiv h5 {
   color: var(--Tertiary, #090B0D) !important;
   font-family: "Be Vietnam Pro" !important;
@@ -184,9 +200,10 @@ backdrop-filter: blur(51.375px);
 }
 
 .servicesDetailDiv {
+  width: 60%;
   padding-top: 28px;
   padding-left: 30px;
-  background: var(--White-Share-2, #C8C8C8);
+  /* background: var(--White-Share-2, #C8C8C8); */
 }
 
 .servicesDetailDiv p {
@@ -394,9 +411,6 @@ margin-right: 15px;
   font-family: "Be Vietnam Pro" !important;
 }
 
-.aboutServices ul li {
-  background-color: #FF4233;
-}
 .aboutServicesParentDiv {
   background-color: #000;
 }
@@ -406,7 +420,7 @@ margin-right: 15px;
 }
 
 .catalog3DCol{
-  background: #424242;
+  background: #e7e7e7;
   margin: 0 auto;
   display: grid;
   text-align: center;
@@ -1057,4 +1071,61 @@ border-top-right-radius: 10px;
 }
 nav.navbar.navbar-expand-lg.navbar-dark.bg-dark{
   z-index: 1;
+}
+
+
+.ListModalParentDiv ul{
+  padding-left: 1rem !important;
+}
+.ListModalParentDiv ul li{
+  color: #18181b;
+}
+.iframeCtrlDiv {
+  display: flex;
+  flex-direction: row;
+  background: #e7e7e7;
+  padding: 10px;
+  border-radius: 10px;
+}
+.videoCustDiv img {
+  border-radius: 10px;
+}
+.videoCustDiv,.iframeBtDiv{
+  width: 50%;
+}
+.iframeBtDiv{
+  display: grid;
+  margin:auto;
+}
+.iframeBtDiv {
+  display: grid;
+  margin: auto;
+  margin-left:30px;
+}
+.iframePlayDiv{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.iframeBtDiv h4 {
+    color: #18181b;
+    font-size: 25px;
+    font-weight: 500;
+}
+.iframePlayDiv img{
+  width: 45px;
+}
+.iframePlayDiv p{
+  font-size: 18px;
+  font-weight: 500;
+  color: #18181b;
+}
+.iframePDiv > div:nth-child(1){
+  margin-bottom: 20px;
+}
+.iframePDiv > div:nth-child(2){
+  margin-bottom: 20px;
+}
+.iframePlayImg:hover{
+  cursor:pointer;
 }

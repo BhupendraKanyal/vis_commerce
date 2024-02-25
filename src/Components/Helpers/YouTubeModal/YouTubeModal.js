@@ -50,3 +50,17 @@ const YouTubeModal = ({showModal,playvideo}) => {
 }
 
 export default YouTubeModal;
+
+
+export const Customized3D = ()=>{
+  return(
+    <iframe
+    className='iframeC'
+    width="100%"
+    height="450"
+    src="https://www.youtube.com/embed/5pePUTAdFVY"
+    title="YouTube Video"
+    allowFullScreen
+  ></iframe>
+  )
+}
