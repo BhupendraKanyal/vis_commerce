@@ -1,0 +1,11 @@
+.furniture p {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #949494;
+}
+
+.FurnitureHead {
+  padding-top: 50px;
+  padding-bottom: 90px;
+}
