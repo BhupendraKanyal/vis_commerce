@@ -43,10 +43,14 @@ import SanitaryHover from './Helpers/sanitaryhover.svg';
 
 import CatalogFurniture from './Helpers/CatalogFurniture.webp';
 import Cataloglighting from './Helpers/Cataloglighting.webp';
+import CatalogCommon from './Helpers/CatalogCommon.webp';
+import CatalogPaints from './Helpers/CatalogPaints.webp';
+import CatalogFlooring from './Helpers/CatalogFlooring.webp';
+import CatalogSanitaryware from './Helpers/CatalogSanitaryware.webp';
 
-import Collaborationvideo from './Helpers/Collaborationvideo.webp';
-import Customizevideo from './Helpers/Customizevideo.webp';
-import Lightingvideo from './Helpers/LightingVid.webp';
+import Collaborationvideo from './Helpers/Collaboration.webp';
+import Customizevideo from './Helpers/Material.webp';
+import Lightingvideo from './Helpers/Lighting.webp';
 import ButtonImg from './Helpers/Button.svg';
 
 const HomeComponent = () => {
@@ -65,7 +69,7 @@ const HomeComponent = () => {
   const dynamicData = [
     {
       name: "Common",
-      imgUrl: CatalogFurniture
+      imgUrl: CatalogCommon
     },
     {
       name: "Furniture",
@@ -77,15 +81,15 @@ const HomeComponent = () => {
     },
     { 
       name: 'Paints',
-      imgUrl: CatalogFurniture 
+      imgUrl: CatalogPaints 
     },
     { 
       name: 'Flooring',
-      imgUrl: CatalogFurniture 
+      imgUrl: CatalogFlooring 
     },
     { 
       name: 'Sanitaryware',
-      imgUrl: CatalogFurniture 
+      imgUrl: CatalogSanitaryware 
     }]
   const handleClick = (e) => {
     const nameVal = e.currentTarget.name
@@ -200,34 +204,40 @@ const HomeComponent = () => {
           </Col>
         </Row>
 
-        <Row className="topBottomPad">
+        <Row className="topBottomPad rowPadd">
           <Col xs={12} md={6} className="aboutServicesCol">
             <div style={{ overflow: "auto" }} className="aboutServices">
               <h3>Catalog3D</h3>
               <div className="servicesButtonDiv servicesButtonDivF col-md-3">
                 <ButtonGroup>
-                  <Button onClick={(e) => handleClick(e)} name="Furniture">
-                    <MdFiberManualRecord className="bulletIcon" />
+                <Button onClick={(e) => handleClick(e)} name="Common">
+                    <img className="normalIcon" src={CommonNormal} />
+                    <img className="hoverIcon" src={CommonHover} />
                     Common
                   </Button>
                   <Button onClick={(e) => handleClick(e)} name="Furniture">
-                    <MdFiberManualRecord className="bulletIcon" />
+                  <img className="normalIcon" src={FurnitureNormal} />
+                    <img className="hoverIcon" src={FurnitureHover} />
                     Furniture
                   </Button>
                   <Button onClick={(e) => handleClick(e)} name="Lighting">
-                    <MdFiberManualRecord className="bulletIcon" />
+                  <img className="normalIcon" src={LightingNormal} />
+                    <img className="hoverIcon" src={LightingHover} />
                     Lighting
                   </Button>
-                  <Button onClick={(e) => handleClick(e)} name="Furniture">
-                    <MdFiberManualRecord className="bulletIcon" />
+                  <Button onClick={(e) => handleClick(e)} name="Paints">
+                  <img className="normalIcon" src={PaintsNormal} />
+                    <img className="hoverIcon" src={PaintsHover} />
                     Paints
                   </Button>
-                  <Button onClick={(e) => handleClick(e)} name="Furniture">
-                    <MdFiberManualRecord className="bulletIcon" />
+                  <Button onClick={(e) => handleClick(e)} name="Flooring">
+                  <img className="normalIcon" src={FlooringNormal} />
+                    <img className="hoverIcon" src={FlooringHover} />
                     Flooring
                   </Button>
-                  <Button onClick={(e) => handleClick(e)} name="Furniture">
-                    <MdFiberManualRecord className="bulletIcon" />
+                  <Button onClick={(e) => handleClick(e)} name="Sanitaryware">
+                  <img className="normalIcon" src={SanitaryNormal} />
+                    <img className="hoverIcon" src={SanitaryHover} />
                     Sanitaryware
                   </Button>
                 </ButtonGroup>
@@ -267,7 +277,7 @@ const HomeComponent = () => {
                   
                 </div>
                 <div className="servicesDetailDiv col-md-7">
-                  <h5 style={{ color: "#18181b" }}>{catalogStateVal?.name}</h5>
+                  {/* <h5 style={{ color: "#18181b" }}>{catalogStateVal?.name}</h5> */}
                   <ListModal catalogStateVal={catalogStateVal.name || dynamicData[0].name}/>
                 </div>
               </div>
@@ -280,7 +290,7 @@ const HomeComponent = () => {
           </Col>
         </Row>
 
-        <Row className="topBottomPad" style={{display:"none"}}>
+        <Row className="topBottomPad rowPadd" style={{display:"none"}}>
           <Col
             xs={12}
             md={7}
@@ -324,11 +334,16 @@ const HomeComponent = () => {
             </div>
           </Col>
         </Row>
-        <Row>
-        <Col md={8} xs={12}>
+        <Row className="rowPadd">
+        <Col md={2} xs={12} className="hideCol"></Col>
+        <Col md={8} xs={12} className="Customized3DCol">
       <Customized3D currVlinkName={currVlinkName}/>
     </Col>
-    <Col md={4} xs={12}>
+    <Col md={2} xs={12} className="hideCol"></Col>
+    </Row>
+    <Row className="rowPadd">
+    <Col md={2} xs={12} className="hideCol"></Col>
+    <Col md={8} xs={12} className="iframePDivCol">
               <div className="iframePDiv">
                 <div className="iframeCtrlDiv">
                   <div className="videoCustDiv">
@@ -374,12 +389,13 @@ const HomeComponent = () => {
 
                 </div>
     </Col>
+    <Col md={2} xs={12} className="hideCol"></Col>
     </Row>
 
-        <Row className="deskCrousel topBottomPadMore">
+        <Row className="deskCrousel topBottomPadMore rowPadd">
           <ImgCarousel />
         </Row>
-        <Row className="MobCrousel topBottomPadMore">
+        <Row className="MobCrousel topBottomPadMore rowPadd">
           <MobImgCarousel />
         </Row>
       </Container>

@@ -160,10 +160,10 @@ backdrop-filter: blur(51.375px);
   align-items: center;
 }
 
-.bulletIcon {
+/* .bulletIcon {
   color: var(--Black-Shade-1, #18181B);
   margin-right: 5px;
-}
+} */
 
 .servicesButtonDiv button:hover {
   background: var(--Primary, #FF595D) !important;
@@ -174,14 +174,14 @@ backdrop-filter: blur(51.375px);
   border: none !important;
 }
 
-
+/* 
 .bulletIcon:hover {
   color: #FFF !important;
 }
 
 .servicesButtonDiv button:hover .bulletIcon {
   color: #FFF !important;
-}
+} */
 
 .servicesButtonDiv button:hover .hoverIcon{
   display: flex;
@@ -746,12 +746,12 @@ border-top-right-radius: 10px;
   background: none !important;
 }
 .catalog3DColImgDiv{
-  background: #424242;
+  background: #e7e7e7;
   margin: 0 auto;
   display: grid;
   text-align: center;
   border-radius: 10px;
-  padding: 30px;
+  padding: 15px;
   border-radius: 0 0 10px 10px !important;
 }
 .servicesButtonDiv {
@@ -770,11 +770,12 @@ border-top-right-radius: 10px;
   display: none;
 }
 .servicesButtonDiv button{
-  width: 170px;
+  width: 195px;
   margin-left: 0px ;
   margin-right: 10px;
   border-radius: 10px !important;
   margin-bottom: 0px;
+  height: auto;
 }
 .servicesButtonDivS{
   display:none;
@@ -791,9 +792,33 @@ border-top-right-radius: 10px;
 .industryInsight{
   margin-top: 0;
 }
+.servicesDetailDiv{
+  width: 100%;
+  height: 475px;
+}
+.servicesDetailDiv h5{
+  margin-bottom: 20px;
+}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1280px) {
+  .Customized3DCol{
+    width: 100%;
+  } 
+  .iframePDivCol{
+    width: 100%;
+  }
+  .iframeBtDiv h4{
+    margin-bottom: 0.2rem;
+    margin-top: 0.2rem;
+    font-size: 15px;
+  }
+  .iframePlayDiv{
+    margin-bottom: 0.2rem;
+  }
+  .iframePlayDiv p{
+    font-size: 13px;
+  }
   .navbar{
     border-radius: 4rem;
     margin-top: 15px;
@@ -868,7 +893,7 @@ border-top-right-radius: 10px;
     border-bottom-right-radius: 0px !important;
   }
   .servicesDetailDiv{
-    width: auto;
+    width: 60%;
     max-width: fit-content;
 }
 .aboutServicesCol {
@@ -973,7 +998,7 @@ border-top-right-radius: 10px;
     min-height: 144.3px !important;
   }
   .servicesButtonDiv{
-    width: 185px !important
+    width: 40% !important
   }
   .servicesButtonDiv button{
     width:165px !important;
@@ -993,6 +1018,12 @@ border-top-right-radius: 10px;
   }
 }
 @media screen and (max-width:767px) {
+  .iframePDiv{
+    flex-direction:column !important;
+  }
+  .iframeCtrlDiv{
+    width: auto !important;
+  }
   .navbar{
     border: none !important;
     background: none !important;
@@ -1068,6 +1099,12 @@ border-top-right-radius: 10px;
   .deskCrousel{
     display: none !important;
   }
+  .catalog3DColImgDiv{
+    padding: 10px;
+  }
+  .catalog3DColImgDiv img{
+    border-radius: 10px;
+  }
 }
 nav.navbar.navbar-expand-lg.navbar-dark.bg-dark{
   z-index: 1;
@@ -1084,23 +1121,25 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark{
   display: flex;
   flex-direction: row;
   background: #e7e7e7;
-  padding: 10px;
+  /* padding: 10px; */
   border-radius: 10px;
+  width: 33.33%;
 }
 .videoCustDiv img {
   border-radius: 10px;
+  height: 100%;
+}
+.videoCustDiv{
+  padding: 5px;
 }
 .videoCustDiv,.iframeBtDiv{
   width: 50%;
 }
-.iframeBtDiv{
-  display: grid;
-  margin:auto;
-}
 .iframeBtDiv {
   display: grid;
   margin: auto;
-  margin-left:30px;
+  margin-left:10px;
+  margin-right: 25px;
 }
 .iframePlayDiv{
   display: flex;
@@ -1109,23 +1148,33 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark{
 }
 .iframeBtDiv h4 {
     color: #18181b;
-    font-size: 25px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 700;
 }
 .iframePlayDiv img{
-  width: 45px;
+  width: 30px !important;
 }
 .iframePlayDiv p{
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
   color: #18181b;
 }
-.iframePDiv > div:nth-child(1){
+/* .iframePDiv > div:nth-child(1){
   margin-bottom: 20px;
 }
 .iframePDiv > div:nth-child(2){
   margin-bottom: 20px;
+} */
+.iframePDiv{
+  /* margin-bottom: 20px; */
 }
 .iframePlayImg:hover{
   cursor:pointer;
+}
+.iframePDiv{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
