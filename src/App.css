@@ -33,13 +33,17 @@ backdrop-filter: blur(51.375px);
   font-weight: 500;
   padding-left: 18px;
 }
-.contactBt img{
+.contactBt img {
   margin-left: 5px;
   width: 37px;
+  border-radius: 100%;
+  background: #FF595D;
+  padding: 6px;
 }
 .LandingV {
   margin-left: -20px;
-  clip-path: polygon(37% 14%, 100% 17%, 95% 66%, 50% 89%, 5% 67%, 1% 17%);
+  /* clip-path: polygon(37% 14%, 100% 17%, 95% 66%, 50% 89%, 5% 67%, 1% 17%); */
+  clip-path: polygon(37% 19%, 97% 20%, 94% 66%, 50% 84%, 6% 67%, 4% 18%);
 }
 .LandingVDiv{
   margin-top: -3.9rem;
@@ -111,8 +115,8 @@ backdrop-filter: blur(51.375px);
 .aboutServices {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  background: #bebebe;
-  border: 1px solid #bebebe;
+  background: #F4F4F4;
+  /* border: 1px solid #bebebe; */
 }
 
 .aboutServices h3 {
@@ -122,18 +126,22 @@ backdrop-filter: blur(51.375px);
   font-style: normal;
   font-weight: 600;
   padding: 25px 20px 15px 25px;
-  background:  #bebebe !important  ;
-  border-bottom: 1px solid #000 !important  ;
+  /* background:  #bebebe !important  ; */
+  /* border-bottom: 1px solid #000 !important  ; */
   border-top-left-radius: 10px;
   margin-bottom: 0 !important;
+  background: linear-gradient(90deg, #FFBCBC 7.63%, #FFE5E5 94.44%);
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .servicesButtonDiv {
   width: 40%;
   padding-top: 10px;
   padding-left: 10px;
-  background: var(--Secondry, #F4F4F4);
+  /* background: var(--Secondry, #F4F4F4); */
   border-bottom-left-radius: 10px;
   text-align: center;
+  border: 1px solid #FFC7C8;
+  background: linear-gradient(180deg, rgba(255, 139, 130, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), linear-gradient(269deg, #FFF 6.35%, #FFF 86.45%);
 }
 .servicesButtonDiv button img{
   margin-right: 5px;
@@ -426,6 +434,8 @@ margin-right: 15px;
   text-align: center;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 .catalog3DColImgDiv {
   place-items: center;
@@ -555,8 +565,23 @@ margin-right: 15px;
   margin-bottom: 100px;
 }
 @media screen and (min-width: 992px) {
+  .catalog3DColImgDiv img{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .aboutServices{
+    padding: 0;
+    height: 100%;
+  }
   .aboutServicesCol{
   padding-right: 0;
+}
+.catalog3DCol{
+  padding: 0;
+}
+.servicesButtonDiv{
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
   .Commerce3D2{
     display: none;
@@ -1116,6 +1141,8 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark{
 }
 .ListModalParentDiv ul li{
   color: #18181b;
+  font-size: 18px;
+  font-weight: 400;
 }
 .iframeCtrlDiv {
   display: flex;

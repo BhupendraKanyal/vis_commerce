@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Button, ButtonGroup } from "react-bootstrap";
-import LandingV from "./Helpers/concept_office.webm";
+// import LandingV from "./Helpers/concept_office.webm";
+import LandingV from "./Helpers/Herosectionfinalvideo.webm";
 import Play from "./Helpers/Play.svg";
 import Showroom from "./Helpers/Showroom.svg";
 import Catalog from "./Helpers/Catalog.svg";
@@ -117,8 +118,8 @@ const HomeComponent = () => {
               <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', padding: '', height: '100%' }}>
                 <h2 className='headingF'>3DCommerce Solutions</h2>
                 <ul className='ulListF'>
-                  <li>Furniture, Lighting, Paints, Flooring, Sanitaryware sectors.</li>
-                  <li>Instore and Online.</li>
+                  <li>Enhance Online and Instore Commerce</li>
+                  <li>Custom Solutions for Home and Office Decor Companies</li>
                   <li>Web & Native Apps on Smartphones, Tablets, PC’s.</li>
                   <li>3D, AI, Web, Crypto technologies.</li>
                 </ul>
@@ -130,7 +131,7 @@ const HomeComponent = () => {
                       <img src={Play} alt="Play Icon" />
                     </Button>
                   </div>
-                  <p style={{ margin: '0 0 0 4px' }}>Watch Video</p>
+                  <p style={{ margin: '0 0 0 4px' }}>Video</p>
 
                 </div>
 
@@ -153,8 +154,8 @@ const HomeComponent = () => {
             <div className='ThreeDButtons'>
               <Button variant='none' style={{ borderRadius: '1.5rem', marginRight: '10px', color: '#FFF' }}><img src={Showroom} /><p>Showroom<span>3D</span></p></Button>
               <Button variant='none' style={{ borderRadius: '1.5rem', marginRight: '10px', color: '#FFF' }}><img src={Catalog} /><p>Catalog<span>3D</span></p></Button>
+              <Button variant='none' style={{ borderRadius: '1.5rem', marginRight: '10px', color: '#FFF' }}><img src={Material} /><p>Customize<span>3D</span></p></Button>
               <Button variant='none' style={{ borderRadius: '1.5rem', marginRight: '10px', color: '#FFF' }}><img src={Collaboration} /><p>Collaboration<span>3D</span></p></Button>
-              <Button variant='none' style={{ borderRadius: '1.5rem', marginRight: '10px', color: '#FFF' }}><img src={Material} /><p>Material<span>3D</span></p></Button>
               <Button variant='none' style={{ borderRadius: '1.5rem', marginRight: '10px', color: '#FFF' }}><img src={Lightning} /><p>Lightning<span>3D</span></p></Button>
             </div>
           </Row>
