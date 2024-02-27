@@ -48,9 +48,9 @@ import CatalogPaints from './Helpers/CatalogPaints.webp';
 import CatalogFlooring from './Helpers/CatalogFlooring.webp';
 import CatalogSanitaryware from './Helpers/CatalogSanitaryware.webp';
 
-import Collaborationvideo from './Helpers/CollaborationVideo.webp';
-import Customizevideo from './Helpers/MaterialVideo.webp';
-import Lightingvideo from './Helpers/LightingVideo.webp';
+import Collaborationvideo from './Helpers/Collaboration.webp';
+import Customizevideo from './Helpers/Material.webp';
+import Lightingvideo from './Helpers/Lighting.webp';
 import ButtonImg from './Helpers/Button.svg';
 
 const HomeComponent = () => {
@@ -277,7 +277,7 @@ const HomeComponent = () => {
                   
                 </div>
                 <div className="servicesDetailDiv col-md-7">
-                  <h5 style={{ color: "#18181b" }}>{catalogStateVal?.name}</h5>
+                  {/* <h5 style={{ color: "#18181b" }}>{catalogStateVal?.name}</h5> */}
                   <ListModal catalogStateVal={catalogStateVal.name || dynamicData[0].name}/>
                 </div>
               </div>

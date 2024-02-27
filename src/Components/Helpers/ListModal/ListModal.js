@@ -55,7 +55,6 @@ export const ListModal = ({ catalogStateVal }) => {
             ' Design & installation services']
     }
     ]
-    console.log(listArr.find(val=>val.name == catalogStateVal),"consoleValue")
     return (
         <>
             <div className="ListModalParentDiv">
