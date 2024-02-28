@@ -1,0 +1,24 @@
+.furniture p {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #949494;
+}
+
+.FurnitureHead {
+  padding-top: 50px;
+  padding-bottom: 90px;
+}
+
+.custom-card {
+  background-color: #18181b;
+  border: 1px solid white;
+  color: white; /* Text color */
+  width: 218px;
+  height: 150px;
+  border-radius: 20px;
+}
+
+.gap-flex-cl {
+  gap: 16px;
+}
