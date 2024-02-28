@@ -86,7 +86,7 @@ export default Furniture;
 const Cards = ({ numColumns, data }) => {
   const renderCards = () => {
     return data.map((item, index) => (
-      <Col key={index}>
+      <Col key={index} xs={3}>
         <Card className="custom-card">
           <Card.Body className="d-flex flex-column align-items-center justify-content-center">
             <img
@@ -109,23 +109,22 @@ const Cards = ({ numColumns, data }) => {
   };
 
   return (
-    <Container>
+    <>
       {/* Rows */}
       {[...Array(1)].map((_, index) => (
         <Row
+          xs={1}
+          md="5"
           key={index}
-          className="justify-content-center"
+          className="justify-content-center gap-flex-cl"
           style={{ marginBottom: '15px' }}
         >
-          <Col md={1} className="hideCol"></Col>
-          {renderCards().slice(0, 3)} {/* Render first 3 cards */}
+          {renderCards().slice(0, 3)}
         </Row>
       ))}
-      <Row className="justify-content-center">
-        <Col md={3} className="hideCol"></Col>
-        {renderCards().slice(3)} {/* Render remaining cards */}
-        <Col md={2} className="hideCol"></Col>
+      <Row md="5" className="justify-content-center gap-flex-cl">
+        {renderCards().slice(3)}
       </Row>
-    </Container>
+    </>
   );
 };
