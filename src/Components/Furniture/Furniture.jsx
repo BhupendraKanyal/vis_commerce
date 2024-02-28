@@ -10,7 +10,7 @@ const Furniture = () => {
   return (
     <>
       <div style={divBackground}>
-        <Container>
+        <Container style={{ minHeight: '50vh' }}>
           <Row className="FurnitureHead">
             <Col className="align-self-center furniture" md={6}>
               {FurnitureHeader &&
@@ -76,6 +76,10 @@ const Furniture = () => {
             })}
           </Col>
         </Row>
+      </Container>
+
+      <Container style={{ border: '1px solid white', borderRadius: '2px' }}>
+        test by radioac7iv3 : auto-sign dont chage
       </Container>
     </>
   );
