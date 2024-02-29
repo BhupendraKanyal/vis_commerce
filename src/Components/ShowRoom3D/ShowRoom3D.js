@@ -22,6 +22,7 @@ import lightControl from '../Helpers/Hero_Section_Lighting_.webm';
 import collaboration3D from './assets/collaboration3D.webp';
 import showCaseMore from './assets/showCaseMore.png';
 import { Chairs, DifferentChairs, NativeDevices, NativeSections, UrlSections } from './Helpers';
+import MyAccordion from './Helpers';
 import backImg from '../Helpers/backImg.webp'
 import { Helpers } from '../Pricing/Helper';
 import comp1 from './assets/comp1.webp';
@@ -78,9 +79,10 @@ export const ShowRoom3D = () => {
             <Container>    
                
                 <Row>
-                    <Col xs={12} md={6} className='chairsCol'>
+                    <Col xs={12} md={5} className='chairsCol'>
                         <Chairs />
                     </Col>
+                    <Col md={1} xs={12} className='hideCol'></Col>
                     <Col xs={12} md={6} className='chairsDescCol'>
                         <div className='flexDivP'>
                             <h4>Catalog<span>3D</span></h4>
@@ -261,6 +263,10 @@ export const ShowRoom3D = () => {
                             <img src={showCaseMore} />
                         </div>
                     </Col>
+                </Row>
+
+                <Row className='accRow'>
+                    <MyAccordion />
                 </Row>
 
             </Container>

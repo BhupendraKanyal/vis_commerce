@@ -15,7 +15,7 @@ const YouTubeModal = ({showModal,playvideo}) => {
             className='iframeC'
             width="100%"
             height="400"
-            src="https://www.youtube.com/embed/x5sNgOo35-4"
+            src="https://www.youtube.com/embed/Znh4SaLpKvw"
             title="YouTube Video"
             allowFullScreen
           ></iframe>
@@ -33,7 +33,7 @@ export default YouTubeModal;
 
 
 export const Customized3D = ({currVlinkName})=>{
-  const vIds = [{name:'customize',id:'https://www.youtube.com/embed/5pePUTAdFVY'},{name:'collaboration',id:'https://www.youtube.com/embed/x5sNgOo35-4'},{name:'lighting',id:'https://www.youtube.com/embed/5pePUTAdFVY'}]
+  const vIds = [{name:'customize',id:'https://www.youtube.com/embed/YFV8hJMKVaM'},{name:'collaboration',id:'https://www.youtube.com/embed/Znh4SaLpKvw'},{name:'lighting',id:'https://www.youtube.com/embed/imNmY5TkO_8'}]
   const [currId,setCurrId] = useState(vIds[0]?.id)
   useEffect(()=>{
     setCurrId(vIds.find(val=>val.name == currVlinkName)?.id)

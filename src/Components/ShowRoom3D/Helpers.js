@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Row, Col } from "react-bootstrap";
+import { Button, Row, Col, Accordion, Card } from "react-bootstrap";
 import Chair from './assets/Chair.webp';
 import Table from './assets/Table.webp';
 import Sofa from './assets/Sofa.webp';
@@ -208,51 +208,125 @@ export const NativeSections = () => {
             url1: Instore,
             url2: Online
         }, multiImg: true
-    }, { name: 'Web/Native', imgurl:{
-        url1:Native1,
-        url2:Native2
-    },multiImg: true },
-     { name: 'Phone, tablet & PC\'S', imgurl: PhoneTablet }, 
-     { name: 'Technology', imgurl: PhoneTablet },
-    { name: '3DCommerce compliance', imgurl: {
-        url1:Complience1,
-        url2:Complience2
-    },multiImg: true }]
-    const [currVal,setCurrVal] = useState(arrData[0])
-    const handlePClick = (e)=>{
-        
+    }, {
+        name: 'Web/Native', imgurl: {
+            url1: Native1,
+            url2: Native2
+        }, multiImg: true
+    },
+    { name: 'Phone, tablet & PC\'S', imgurl: PhoneTablet },
+    { name: 'Technology', imgurl: PhoneTablet },
+    {
+        name: '3DCommerce compliance', imgurl: {
+            url1: Complience1,
+            url2: Complience2
+        }, multiImg: true
+    }]
+    const [currVal, setCurrVal] = useState(arrData[0])
+    const handlePClick = (e) => {
+
         const curr = e.target.name
-        setCurrVal(arrData.find(val=>val.name == curr))
+        setCurrVal(arrData.find(val => val.name == curr))
     }
     return (
         <>
             <div className='nativeSectionsDiv container'>
-                      
-                            <div className="nativeSectionsHeads">
-                                {
-                                    arrData.map((val,idx) => {
-                                        return(
-                                        <Button style={{background:'none',border:'none'}} name={val?.name} key={idx} onClick={handlePClick}>{val?.name}</Button>
-                                        )
-                                    })
-                                }
+
+                <div className="nativeSectionsHeads">
+                    {
+                        arrData.map((val, idx) => {
+                            return (
+                                <Button style={{ background: 'none', border: 'none' }} name={val?.name} key={idx} onClick={handlePClick}>{val?.name}</Button>
+                            )
+                        })
+                    }
+                </div>
+                <div className="nativeSections">
+                    <div className="nativeSectionsRow row">
+                        {currVal?.multiImg && <>
+                            <div className="col-md-6">
+                                <img src={currVal?.imgurl?.url1} />
                             </div>
-                            <div className="nativeSections">
-                                <div className="nativeSectionsRow row">
-                                {currVal?.multiImg && <>
-                                    <div className="col-md-6">
-                                    <img src={currVal?.imgurl?.url1} />
-                                    </div>
-                                    <div className="col-md-6">
-                                    <img src={currVal?.imgurl?.url2} />
-                                    </div>
-                                    </>
-                                }
-                                {!currVal?.multiImg && <img src={currVal?.imgurl} />}
-                                </div>
+                            <div className="col-md-6">
+                                <img src={currVal?.imgurl?.url2} />
                             </div>
-                       
+                        </>
+                        }
+                        {!currVal?.multiImg && <img src={currVal?.imgurl} />}
+                    </div>
+                </div>
+
             </div>
         </>
     )
 }
+
+
+const MyAccordion = () => {
+    const panelData = [
+        {
+            name: 'Quality', ulLists: [
+                { name: 'BrowserStack', list: ['Test mobile apps and web-apps on live devices.'] },
+                {
+                    name: 'Regression test automation', list: ['Kaizen3D',
+                        'Puppeteer for browser automation and pixel-match for image-comparison',
+                        'Leads to higher quality and lower cost']
+                },
+                { name: 'Unity test framework for native Unity based apps' }]
+            , ismulti: true
+        },
+        { name: 'Performance', ulLists: ['Responsiveness of web-apps compliant to industry standards', '3D Rendering pipeline optimized to ensure web-apps are performant'], ismulti: false },
+        {
+            name: 'UX/Ui',
+            ulLists: ['Spinner for long running operations', 'Status exposed via color-coded messages.', 'Integration of UI / UX to customer requirements'],
+            ismulti: false
+        }
+    ]
+    return (
+        <>
+            <Accordion className="acc" defaultActiveKey="0">
+                <Accordion.Item eventKey="0">
+                    <Accordion.Header className="accHeader"><h4>Quality, Performance and UX/Ui</h4></Accordion.Header>
+                    <Accordion.Body>
+                        <Row>
+                            {panelData.map((val, idx) => (
+                                <Col className="accordionCols" key={idx} xs={12} md={4}>
+                                    <div className="accordionP">
+                                        <h4>{val?.name}</h4>
+                                        {val?.ismulti ? (
+                                            val?.ulLists.map((item, itemIdx) => (
+                                                <div key={itemIdx} className="accordionList">
+                                                    <h3>{item?.name}</h3>
+                                                    {item?.list &&
+                                                        <ul className="accordionUnorderedList">
+                                                            {item?.list.map((val, id) => {
+                                                                return (
+                                                                    <li key={id}>{val}</li>
+                                                                )
+                                                            })
+                                                            }
+                                                        </ul>
+                                                    }
+                                                </div>
+                                            ))
+                                        ) : (
+                                            <ul className="accordionUnorderedList">
+                                            {val.ulLists.map((val,id)=>{
+                                                return(
+                                                    <li key={id}>{val}</li>
+                                                )
+                                            })}
+                                            </ul>
+                                           
+                                        )}
+                                    </div>
+                                </Col>
+                            ))}
+                        </Row>
+                    </Accordion.Body>
+                </Accordion.Item>
+            </Accordion>
+        </>
+    )
+}
+export default MyAccordion;
