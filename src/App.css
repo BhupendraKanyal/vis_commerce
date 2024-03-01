@@ -134,14 +134,17 @@ backdrop-filter: blur(51.375px);
 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .servicesButtonDiv {
-  width: 40%;
+  /* width: 40%; */
   padding-top: 10px;
   padding-left: 10px;
   /* background: var(--Secondry, #F4F4F4); */
-  border-bottom-left-radius: 10px;
   text-align: center;
-  border: 1px solid #FFC7C8;
-  background: linear-gradient(180deg, rgba(255, 139, 130, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), linear-gradient(269deg, #FFF 6.35%, #FFF 86.45%);
+  border-radius: 11.071px;
+  background: var(--Secondry, #F4F4F4);
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  /* overflow-x: scroll; */
 }
 .servicesButtonDiv button img{
   margin-right: 5px;
@@ -158,14 +161,15 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   border-bottom: 1px solid #C1BDBD;
   font-family: "Be Vietnam Pro" !important;
   
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-weight: 500;
-  height: 82px;
+  font-weight: 600;
+  height: 70px;
   display: inline-flex;
   align-items: center;
+  margin-bottom: 5px;
 }
 
 /* .bulletIcon {
@@ -198,21 +202,21 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   display: none;
 }
 
-.servicesDetailDiv h5 {
+/* .servicesDetailDiv h5 {
   color: var(--Tertiary, #090B0D) !important;
   font-family: "Be Vietnam Pro" !important;
   font-size: 25px;
   font-style: normal;
   font-weight: 500;
-  /* text-transform: capitalize; */
-}
+  text-transform: capitalize;
+} */
 
-.servicesDetailDiv {
+/* .servicesDetailDiv {
   width: 60%;
   padding-top: 28px;
   padding-left: 30px;
-  /* background: var(--White-Share-2, #C8C8C8); */
-}
+  background: var(--White-Share-2, #C8C8C8);
+} */
 
 .servicesDetailDiv p {
   color: var(--Tertiary, #090B0D) !important;
@@ -428,14 +432,11 @@ margin-right: 15px;
 }
 
 .catalog3DCol{
-  background: #e7e7e7;
+  /* background: #e7e7e7; */
   margin: 0 auto;
   display: grid;
   text-align: center;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-radius: 10px;
 }
 .catalog3DColImgDiv {
   place-items: center;
@@ -444,6 +445,7 @@ margin-right: 15px;
 }
 .catalog3DColImgDiv img{
   place-items: center;
+  border-radius: 10px;
 }
 
 
@@ -565,10 +567,6 @@ margin-right: 15px;
   margin-bottom: 100px;
 }
 @media screen and (min-width: 992px) {
-  .catalog3DColImgDiv img{
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-  }
   .aboutServices{
     padding: 0;
     height: 100%;
@@ -576,9 +574,9 @@ margin-right: 15px;
   .aboutServicesCol{
   padding-right: 0;
 }
-.catalog3DCol{
+/* .catalog3DCol{
   padding: 0;
-}
+} */
 .servicesButtonDiv{
   padding-top: 15px;
   padding-bottom: 15px;
@@ -653,9 +651,6 @@ margin-right: 15px;
     line-height: 50px;
     width: 35rem;
   }
-.servicesButtonDivF {
-  display: none !important;
-}
 }
 @media screen and (max-width: 991px) {
   .hdRendererIMgs img{
@@ -805,9 +800,9 @@ border-top-right-radius: 10px;
 .servicesButtonDivS{
   display:none;
 }
-.servicesDetailDiv {
+/* .servicesDetailDiv {
   padding-left: 15px !important;
-}
+} */
 .aboutServicesCol,.aboutServices {
   border-bottom-left-radius: 0px !important;
 }
@@ -817,13 +812,13 @@ border-top-right-radius: 10px;
 .industryInsight{
   margin-top: 0;
 }
-.servicesDetailDiv{
+/* .servicesDetailDiv{
   width: 100%;
   height: 475px;
-}
-.servicesDetailDiv h5{
+} */
+/* .servicesDetailDiv h5{
   margin-bottom: 20px;
-}
+} */
 }
 
 @media screen and (min-width: 768px) and (max-width: 1280px) {
@@ -903,9 +898,9 @@ border-top-right-radius: 10px;
   margin-bottom: 12px !important;
   padding: 30px 20px !important;
 }
-.servicesDetailDiv {
+/* .servicesDetailDiv {
   padding-bottom: 32px;
-}
+} */
 .carousel-control-prev-icon{
   margin-left: -7rem;
 }
@@ -917,16 +912,12 @@ border-top-right-radius: 10px;
     border-top-right-radius:0px !important;
     border-bottom-right-radius: 0px !important;
   }
-  .servicesDetailDiv{
-    /* width: 60%; */
+  /* .servicesDetailDiv{
+    width: 60%;
     max-width: fit-content;
-}
+} */
 .aboutServicesCol {
   padding-right: 0;
-}
-.catalog3DCol{
-  padding-left: 0;
-  border-radius: 0 10px 10px 0px !important;
 }
 .catalog3DColImgDiv{
   border-radius: 0 10px 10px 0px !important;
@@ -1022,18 +1013,18 @@ border-top-right-radius: 10px;
   .crouselItemf .textImgSpan span{
     min-height: 144.3px !important;
   }
-  .servicesButtonDiv{
+  /* .servicesButtonDiv{
     width: 40% !important
-  }
+  } */
   .servicesButtonDiv button{
     width:165px !important;
   }
-  .servicesDetailDiv p{
+  /* .servicesDetailDiv p{
     width: 230px !important;
-  }
-  .servicesDetailDiv {
+  } */
+  /* .servicesDetailDiv {
     padding-left: 15px !important;
-  }
+  } */
   .navbar-expand-lg .navbar-nav .nav-link{
     padding-left: 0px;
   }
@@ -1082,9 +1073,9 @@ border-top-right-radius: 10px;
 .aboutServices{
   border-radius: 10px 10px 0px 0px !important;
 }
-.servicesDetailDiv {
+/* .servicesDetailDiv {
   padding-bottom: 35px;
-}
+} */
 .material3dDivCh{
   margin-top: -1rem !important;
 }
@@ -1127,9 +1118,7 @@ border-top-right-radius: 10px;
   .catalog3DColImgDiv{
     padding: 10px;
   }
-  .catalog3DColImgDiv img{
-    border-radius: 10px;
-  }
+ 
 }
 nav.navbar.navbar-expand-lg.navbar-dark.bg-dark{
   z-index: 1;
@@ -1141,8 +1130,8 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark{
 }
 .ListModalParentDiv ul li{
   color: #18181b;
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 500;
 }
 .iframeCtrlDiv {
   display: flex;
@@ -1204,4 +1193,25 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark{
   gap: 10px;
   margin-top: 30px;
   margin-bottom: 50px;
+}
+.ListModalParentDiv{
+  background: #fff;
+  border-radius: 10px;
+  height: 100%;
+  padding: 4.5rem 3rem 3rem 3rem;
+}
+.CatalogHead{
+  color: #FFF;
+font-size: 41.517px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-align: center;
+margin-top: 15px;
+margin-bottom: 15px;
+}
+.catalogContainer{
+  border: 1px solid #fff;
+  border-radius: 40px;
+  padding: 1rem 2rem 2rem 2rem;
 }
