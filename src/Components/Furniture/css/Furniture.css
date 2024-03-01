@@ -22,3 +22,44 @@
 .gap-flex-cl {
   gap: 16px;
 }
+
+/* .contactBt,.contactBt:hover,.contactBt:active,.contactBt:focus-visible{ */
+/* border-radius: 1.5rem; */
+/* padding: 0.6rem 3rem;  */
+/* color: #090B0D;
+  background: var(--Secondry, #F4F4F4);
+  border: 1px solid var(--Secondry, #F4F4F4);
+  font-weight: 500;
+  padding-left: 18px; */
+/* } */
+
+.custom-button-active,
+.custom-button-active:hover,
+.custom-button-active:active .custom-button-active:focus-visible {
+  border-radius: 1.5rem;
+  padding: 0.6rem 2rem;
+  color: 'white';
+  background: var(--Secondry, #ff595d);
+  border: 1px solid var(--Secondry, #ff595d);
+  width: 180px;
+}
+
+.custom-button-inactive,
+.custom-button-inactive:hover,
+.custom-button-inactive:active,
+.custom-button-inactive:focus-visible {
+  border-radius: 1.5rem;
+  padding: 0.6rem 2rem;
+  color: 'white';
+  background: transparent;
+  border: 1px solid var(--Secondry, #f4f4f4);
+  width: 180px;
+}
+
+.btn-primary {
+  --bs-btn-active-bg: none;
+}
+
+/* --bs-btn-active-bg{
+
+} */
