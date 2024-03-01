@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Button, ButtonGroup } from "react-bootstrap";
-import LandingV from "./Helpers/concept_office.webm";
+// import LandingV from "./Helpers/concept_office.webm";
+import LandingV from "./Helpers/Herosectionfinalvideo.webm";
 import Play from "./Helpers/Play.svg";
 import Showroom from "./Helpers/Showroom.svg";
 import Catalog from "./Helpers/Catalog.svg";
@@ -20,38 +21,14 @@ import { ImgCarousel, MobImgCarousel } from './LandingCrousel.js'
 import contactIcon from './Helpers/contactIcon.svg'
 import YouTubeModal, { Customized3D } from './Helpers/YouTubeModal/YouTubeModal';
 import { ListModal } from "./Helpers/ListModal/ListModal";
-import CommonNormal from './Helpers/CommonNormal.svg';
-import CommonHover from './Helpers/Commonhover.svg';
 
-
-import FurnitureNormal from './Helpers/FurnitureNormal.svg';
-import FurnitureHover from './Helpers/Furniturehover.svg';
-
-
-import LightingNormal from './Helpers/LightingNormal.svg';
-import LightingHover from './Helpers/Lightinghover.svg';
-
-import PaintsNormal from './Helpers/PaintsNormal.svg';
-import PaintsHover from './Helpers/Paintshover.svg';
-
-import FlooringNormal from './Helpers/FlooringNormal.svg';
-import FlooringHover from './Helpers/Flooringhover.svg';
-
-
-import SanitaryNormal from './Helpers/sanitarynormal.svg';
-import SanitaryHover from './Helpers/sanitaryhover.svg';
-
-import CatalogFurniture from './Helpers/CatalogFurniture.webp';
-import Cataloglighting from './Helpers/Cataloglighting.webp';
-import CatalogCommon from './Helpers/CatalogCommon.webp';
-import CatalogPaints from './Helpers/CatalogPaints.webp';
-import CatalogFlooring from './Helpers/CatalogFlooring.webp';
-import CatalogSanitaryware from './Helpers/CatalogSanitaryware.webp';
 
 import Collaborationvideo from './Helpers/Collaboration.webp';
 import Customizevideo from './Helpers/Material.webp';
 import Lightingvideo from './Helpers/Lighting.webp';
 import ButtonImg from './Helpers/Button.svg';
+
+import  CatalogBackground from './Helpers/CatalogBackground.webp';
 
 const HomeComponent = () => {
   const divBackground = {
@@ -61,42 +38,16 @@ const HomeComponent = () => {
     background:
       "background: linear-gradient(180deg, rgba(18, 18, 18, 0.00) 0%, rgba(18, 18, 18, 0.00) 0.01%, #02030B 49.53%)",
   };
+  const CatalogBack = {
+    backgroundImage: `url(${CatalogBackground})`,
+    borderRadius:'40px',
+  }
   const [currVlinkName, setCurrVlinkName] = useState('customize')
   const handleIframeVid = (e)=>{
     let currVlinkName = e.currentTarget.name
     setCurrVlinkName(currVlinkName)
   }
-  const dynamicData = [
-    {
-      name: "Common",
-      imgUrl: CatalogCommon
-    },
-    {
-      name: "Furniture",
-      imgUrl: CatalogFurniture
-    },
-    { 
-      name: 'Lighting',
-      imgUrl: Cataloglighting 
-    },
-    { 
-      name: 'Paints',
-      imgUrl: CatalogPaints 
-    },
-    { 
-      name: 'Flooring',
-      imgUrl: CatalogFlooring 
-    },
-    { 
-      name: 'Sanitaryware',
-      imgUrl: CatalogSanitaryware 
-    }]
-  const handleClick = (e) => {
-    const nameVal = e.currentTarget.name
-    let vals = dynamicData.find(val => val.name == nameVal)
-    setCatalogStateVal(vals)
-  }
-  const [catalogStateVal, setCatalogStateVal] = useState(dynamicData[0])
+  
   const [showModal, setShowModal] = useState(false)
   const playVideo = () => {
     setShowModal(!showModal)
@@ -117,8 +68,8 @@ const HomeComponent = () => {
               <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', padding: '', height: '100%' }}>
                 <h2 className='headingF'>3DCommerce Solutions</h2>
                 <ul className='ulListF'>
-                  <li>Furniture, Lighting, Paints, Flooring, Sanitaryware sectors.</li>
-                  <li>Instore and Online.</li>
+                  <li>Enhance Online and Instore Commerce</li>
+                  <li>Custom Solutions for Home and Office Decor Companies</li>
                   <li>Web & Native Apps on Smartphones, Tablets, PC’s.</li>
                   <li>3D, AI, Web, Crypto technologies.</li>
                 </ul>
@@ -130,7 +81,7 @@ const HomeComponent = () => {
                       <img src={Play} alt="Play Icon" />
                     </Button>
                   </div>
-                  <p style={{ margin: '0 0 0 4px' }}>Watch Video</p>
+                  <p style={{ margin: '0 0 0 4px' }}>Video</p>
 
                 </div>
 
@@ -153,8 +104,8 @@ const HomeComponent = () => {
             <div className='ThreeDButtons'>
               <Button variant='none' style={{ borderRadius: '1.5rem', marginRight: '10px', color: '#FFF' }}><img src={Showroom} /><p>Showroom<span>3D</span></p></Button>
               <Button variant='none' style={{ borderRadius: '1.5rem', marginRight: '10px', color: '#FFF' }}><img src={Catalog} /><p>Catalog<span>3D</span></p></Button>
+              <Button variant='none' style={{ borderRadius: '1.5rem', marginRight: '10px', color: '#FFF' }}><img src={Material} /><p>Customize<span>3D</span></p></Button>
               <Button variant='none' style={{ borderRadius: '1.5rem', marginRight: '10px', color: '#FFF' }}><img src={Collaboration} /><p>Collaboration<span>3D</span></p></Button>
-              <Button variant='none' style={{ borderRadius: '1.5rem', marginRight: '10px', color: '#FFF' }}><img src={Material} /><p>Material<span>3D</span></p></Button>
               <Button variant='none' style={{ borderRadius: '1.5rem', marginRight: '10px', color: '#FFF' }}><img src={Lightning} /><p>Lightning<span>3D</span></p></Button>
             </div>
           </Row>
@@ -203,93 +154,17 @@ const HomeComponent = () => {
             </div>
           </Col>
         </Row>
+</Container>
 
-        <Row className="topBottomPad rowPadd">
-          <Col xs={12} md={6} className="aboutServicesCol">
-            <div style={{ overflow: "auto" }} className="aboutServices">
-              <h3>Catalog3D</h3>
-              <div className="servicesButtonDiv servicesButtonDivF col-md-3">
-                <ButtonGroup>
-                <Button onClick={(e) => handleClick(e)} name="Common">
-                    <img className="normalIcon" src={CommonNormal} />
-                    <img className="hoverIcon" src={CommonHover} />
-                    Common
-                  </Button>
-                  <Button onClick={(e) => handleClick(e)} name="Furniture">
-                  <img className="normalIcon" src={FurnitureNormal} />
-                    <img className="hoverIcon" src={FurnitureHover} />
-                    Furniture
-                  </Button>
-                  <Button onClick={(e) => handleClick(e)} name="Lighting">
-                  <img className="normalIcon" src={LightingNormal} />
-                    <img className="hoverIcon" src={LightingHover} />
-                    Lighting
-                  </Button>
-                  <Button onClick={(e) => handleClick(e)} name="Paints">
-                  <img className="normalIcon" src={PaintsNormal} />
-                    <img className="hoverIcon" src={PaintsHover} />
-                    Paints
-                  </Button>
-                  <Button onClick={(e) => handleClick(e)} name="Flooring">
-                  <img className="normalIcon" src={FlooringNormal} />
-                    <img className="hoverIcon" src={FlooringHover} />
-                    Flooring
-                  </Button>
-                  <Button onClick={(e) => handleClick(e)} name="Sanitaryware">
-                  <img className="normalIcon" src={SanitaryNormal} />
-                    <img className="hoverIcon" src={SanitaryHover} />
-                    Sanitaryware
-                  </Button>
-                </ButtonGroup>
-              </div>
-              <div className="row container">
-                <div className="servicesButtonDiv servicesButtonDivS col-md-3">
-                  <Button onClick={(e) => handleClick(e)} name="Common">
-                    <img className="normalIcon" src={CommonNormal} />
-                    <img className="hoverIcon" src={CommonHover} />
-                    Common
-                  </Button>
-                  <Button onClick={(e) => handleClick(e)} name="Furniture">
-                  <img className="normalIcon" src={FurnitureNormal} />
-                    <img className="hoverIcon" src={FurnitureHover} />
-                    Furniture
-                  </Button>
-                  <Button onClick={(e) => handleClick(e)} name="Lighting">
-                  <img className="normalIcon" src={LightingNormal} />
-                    <img className="hoverIcon" src={LightingHover} />
-                    Lighting
-                  </Button>
-                  <Button onClick={(e) => handleClick(e)} name="Paints">
-                  <img className="normalIcon" src={PaintsNormal} />
-                    <img className="hoverIcon" src={PaintsHover} />
-                    Paints
-                  </Button>
-                  <Button onClick={(e) => handleClick(e)} name="Flooring">
-                  <img className="normalIcon" src={FlooringNormal} />
-                    <img className="hoverIcon" src={FlooringHover} />
-                    Flooring
-                  </Button>
-                  <Button onClick={(e) => handleClick(e)} name="Sanitaryware">
-                  <img className="normalIcon" src={SanitaryNormal} />
-                    <img className="hoverIcon" src={SanitaryHover} />
-                    Sanitaryware
-                  </Button>
-                  
-                </div>
-                <div className="servicesDetailDiv col-md-7">
-                  {/* <h5 style={{ color: "#18181b" }}>{catalogStateVal?.name}</h5> */}
-                  <ListModal catalogStateVal={catalogStateVal.name || dynamicData[0].name}/>
-                </div>
-              </div>
-            </div>
-          </Col>
-          <Col xs={12} md={6} className="catalog3DCol">
-            <div className="catalog3DColImgDiv">
-              <img src={catalogStateVal?.imgUrl} alt="catalog3DCol" />
-            </div>
-          </Col>
-        </Row>
 
+        
+        <Container>
+        <div style={CatalogBack} className="topBottomPad rowPadd catalogContainer">
+          <ListModal />
+          </div>
+          </Container>
+        
+        <Container>
         <Row className="topBottomPad rowPadd" style={{display:"none"}}>
           <Col
             xs={12}
