@@ -14,6 +14,12 @@ import homeOffice3 from './assets/Homeoffice3.webp';
 import livingRoom1 from './assets/Livingroom1.webp';
 import livingRoom2 from './assets/Livingroom2.webp';
 import livingRoom3 from './assets/Livingroom3.webp';
+import bedRoom1 from './assets/Bedroom1.webp';
+import bedRoom2 from './assets/Bedroom2.webp';
+import bedRoom3 from './assets/Bedroom3.webp';
+import diningRoom1 from './assets/Diningroom1.webp';
+import diningRoom2 from './assets/Diningroom2.webp';
+import diningRoom3 from './assets/Diningroom3.webp';
 
 export const FurnitureHeader = [
   {
@@ -117,8 +123,8 @@ export const SectionTwo = [
       },
       { id: 2, name: 'Home office room', correspondanceImgId: 4 },
       { id: 3, name: 'Living room', correspondanceImgId: 7 },
-      { id: 4, name: 'Bed room' },
-      { id: 5, name: 'Dining room' },
+      { id: 4, name: 'Bed room', correspondanceImgId: 10 },
+      { id: 5, name: 'Dining room', correspondanceImgId: 13 },
     ],
   },
 
@@ -137,6 +143,12 @@ export const SectionTwo = [
       { id: 7, image: `${livingRoom1}` },
       { id: 8, image: `${livingRoom2}` },
       { id: 9, image: `${livingRoom3}` },
+      { id: 10, image: `${bedRoom1}` },
+      { id: 11, image: `${bedRoom2}` },
+      { id: 12, image: `${bedRoom3}` },
+      { id: 13, image: `${diningRoom1}` },
+      { id: 14, image: `${diningRoom2}` },
+      { id: 15, image: `${diningRoom3}` },
     ],
   },
 ];
