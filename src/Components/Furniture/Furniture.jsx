@@ -1,12 +1,28 @@
 import { Col, Container, Row, Button, Card } from 'react-bootstrap';
 import FurnitureImg from './assets/Furniture20Living20Room.H03 1.webp';
 import FileIcon from './assets/IconMedia.svg';
-import { FurnitureHeader, SectionOne } from './InitialState';
+import { FurnitureHeader, SectionOne, SectionTwo } from './InitialState';
 import { divBackground } from './InitialState';
 import './css/Furniture.css';
 import './../../../src/App.css';
+import { useCallback, useState } from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const Furniture = () => {
+  const [currentButton, setCurrentButton] = useState({
+    id: 1,
+    name: 'Corporate office',
+    correspondanceImgId: 1,
+  });
+
+  const onButtonClickHandler = useCallback(
+    (id, name, correspondanceImgId) => {
+      setCurrentButton({ id, name, correspondanceImgId });
+    },
+    [currentButton]
+  );
+
   return (
     <>
       <div style={divBackground}>
@@ -78,8 +94,87 @@ const Furniture = () => {
         </Row>
       </Container>
 
-      <Container style={{ border: '1px solid white', borderRadius: '2px' }}>
-        test by radioac7iv3 : auto-sign dont chage
+      <Container
+        style={{
+          border: '1px solid white',
+          borderRadius: '10px',
+          paddingBottom: '50px',
+        }}
+      >
+        {SectionTwo.map((el, idx) => {
+          if (el.type === 'Heading') {
+            return (
+              <div style={{ marginTop: '70px' }}>
+                <h3 className="mt-3 text-center">{el.value}</h3>
+              </div>
+            );
+          } else if (el.type === 'Button') {
+            return (
+              <Row
+                className="justify-content-center"
+                style={{ marginTop: '40px', marginBottom: '100px' }}
+              >
+                {el.data.map((el, idx) => {
+                  return (
+                    <Col key={idx} xs={2} style={{ marginLeft: '20px' }}>
+                      <Button
+                        style={{ fontSize: '13px' }}
+                        onClick={() =>
+                          onButtonClickHandler(
+                            el.id,
+                            el.name,
+                            el.correspondanceImgId
+                          )
+                        }
+                        className={
+                          currentButton.id === el.id
+                            ? 'custom-button-active'
+                            : 'custom-button-inactive'
+                        }
+                      >
+                        {el.name}
+                      </Button>
+                    </Col>
+                  );
+                })}
+              </Row>
+            );
+          } else if (el.type === 'Carousel') {
+            return (
+              <Container>
+                <Carousel
+                  showThumbs={false}
+                  showArrows={false}
+                  showIndicators={false}
+                  // autoPlay={false}
+                  infiniteLoop={true}
+                  showStatus={false}
+                  centerMode={true}
+                  centerSlidePercentage={33.4}
+                  slidesToShow={3}
+                  dynamicHeight={true}
+                  transitionTime={'0.3s'}
+                  selectedItem={currentButton.correspondanceImgId}
+                  // autoPlay={true}
+                >
+                  {el.data.map((ele, idx) => {
+                    return (
+                      <div
+                        style={{
+                          marginLeft: '12px',
+                          width: '300px',
+                        }}
+                        key={ele.id}
+                      >
+                        <img style={{ borderRadius: '40px' }} src={ele.image} />
+                      </div>
+                    );
+                  })}
+                </Carousel>
+              </Container>
+            );
+          }
+        })}
       </Container>
     </>
   );
