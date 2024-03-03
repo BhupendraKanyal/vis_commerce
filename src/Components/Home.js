@@ -19,7 +19,7 @@ import { MdFiberManualRecord } from "react-icons/md";
 import coloredfabric from './Helpers/coloredfabric.svg';
 import { ImgCarousel, MobImgCarousel } from './LandingCrousel.js'
 import contactIcon from './Helpers/contactIcon.svg'
-import YouTubeModal, { Customized3D } from './Helpers/YouTubeModal/YouTubeModal';
+import YouTubeModal, { Customized3D, FormModal } from './Helpers/YouTubeModal/YouTubeModal';
 import { ListModal } from "./Helpers/ListModal/ListModal";
 
 
@@ -49,8 +49,12 @@ const HomeComponent = () => {
   }
   
   const [showModal, setShowModal] = useState(false)
+  const [showFormModal, setShowFormModal] = useState(false)
   const playVideo = () => {
     setShowModal(!showModal)
+  }
+  const handleContact = () => {
+    setShowFormModal(!showFormModal)
   }
 
   return (
@@ -64,6 +68,9 @@ const HomeComponent = () => {
             <YouTubeModal showModal={showModal} playvideo={playVideo} />
           </Row>
           <Row>
+            <FormModal showFormModal={showFormModal} handleContact={handleContact} />
+          </Row>
+          <Row>
             <Col xs={12} md={7}>
               <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', padding: '', height: '100%' }}>
                 <h2 className='headingF'>3DCommerce Solutions</h2>
@@ -75,7 +82,7 @@ const HomeComponent = () => {
                 </ul>
                 <div className='Commerce3DDiv'><img className='Commerce3D2' src={Commerce3D} /></div>
                 <div className='watchVideoDiv'>
-                  <Button className='contactBt' >Contact Us <img src={contactIcon} alt="Play Icon" /></Button>
+                  <Button className='contactBt' onClick={handleContact}>Contact Us <img src={contactIcon} alt="Play Icon" /></Button>
                   <div className='playButtonDiv' >
                     <Button className='playButton' onClick={playVideo}>
                       <img src={Play} alt="Play Icon" />
@@ -220,45 +227,51 @@ const HomeComponent = () => {
     <Col md={2} xs={12} className="hideCol"></Col>
     <Col md={8} xs={12} className="iframePDivCol">
               <div className="iframePDiv">
-                <div className="iframeCtrlDiv">
-                  <div className="videoCustDiv">
+                <Button name="customize" onClick={handleIframeVid}  className="iframeCtrlDiv">
+                  {/* <div className="videoCustDiv">
                 <img src={Customizevideo} />
-                </div>
+                </div> */}
                 <div className="iframeBtDiv">
+                  
+                  <img  className="iframePlayImg" src={ButtonImg} />
                   <h4>Customize<span>3D</span></h4>
-                  <div className="iframePlayDiv">
+                  {/* <div className="iframePlayDiv">
                     <img name="customize" onClick={handleIframeVid} className="iframePlayImg" src={ButtonImg} />
                     <p>Play</p>
-                    </div>
+                    </div> */}
                 </div>
-                </div>
+                </Button>
 
-                <div className="iframeCtrlDiv">
-                  <div className="videoCustDiv">
+                <Button name="collaboration" onClick={handleIframeVid}  className="iframeCtrlDiv">
+                  {/* <div className="videoCustDiv">
                 <img src={Collaborationvideo} />
-                </div>
+                </div> */}
                 <div className="iframeBtDiv">
+                  
+                  <img  className="iframePlayImg" src={ButtonImg} />
                   <h4>Collaboration<span>3D</span></h4>
-                  <div className="iframePlayDiv">
+                  {/* <div className="iframePlayDiv">
                     <img name="collaboration" onClick={handleIframeVid} className="iframePlayImg" src={ButtonImg} />
                     <p>Play</p>
-                    </div>
+                    </div> */}
                 </div>
-                </div>
+                </Button>
 
 
-                <div className="iframeCtrlDiv">
-                  <div className="videoCustDiv">
+                <Button name="lighting"  onClick={handleIframeVid} className="iframeCtrlDiv">
+                  {/* <div className="videoCustDiv">
                 <img src={Lightingvideo} />
-                </div>
+                </div> */}
                 <div className="iframeBtDiv">
+                  
+                  <img  className="iframePlayImg" src={ButtonImg} />
                   <h4>Lighting<span>3D</span></h4>
-                  <div className="iframePlayDiv">
+                  {/* <div className="iframePlayDiv">
                     <img name="lighting"  onClick={handleIframeVid} className="iframePlayImg" src={ButtonImg} />
                     <p>Play</p>
-                    </div>
+                    </div> */}
                 </div>
-                </div>
+                </Button>
 
 
 

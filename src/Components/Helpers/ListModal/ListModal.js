@@ -140,7 +140,7 @@ export const ListModal = () => {
                         {/* </ButtonGroup> */}
                     </div>
                     <Row>
-                        <Col xs={12} md={5} className="servicesDetailDiv">
+                        <Col xs={12} md={6} className="servicesDetailDiv">
                             <div className="ListModalParentDiv">
                                 <ul className="ListModalDiv">
                                     {
@@ -154,7 +154,7 @@ export const ListModal = () => {
                             </div>
                         </Col>
                         {/* <Col xs={12} md={1} className="hideCol"> </Col> */}
-                        <Col xs={12} md={7} className="catalog3DCol">
+                        <Col xs={12} md={6} className="catalog3DCol">
                             <div className="catalog3DColImgDiv">
                                 {console.log("DataVals", listName)}
                                 <img src={listName?.imgUrl} alt="catalog3DCol" />

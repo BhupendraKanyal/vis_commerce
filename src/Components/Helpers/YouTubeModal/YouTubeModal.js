@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Modal, Button } from 'react-bootstrap';
-
+import { Modal, Button,Col } from 'react-bootstrap';
+import { FormComponent } from '../../Pricing/Pricing';
 const YouTubeModal = ({showModal,playvideo}) => {
   const handleClose = ()=>{
     playvideo()
@@ -48,4 +48,24 @@ export const Customized3D = ({currVlinkName})=>{
     allowFullScreen
   ></iframe>
   )
+}
+
+
+export const FormModal = ({showFormModal,handleContact})=>{
+  const handleClose = ()=>{
+    handleContact()
+  }
+  return (
+<Modal show={showFormModal} onHide={handleClose} size="lg" centered className='FormModalClass'>
+        <Modal.Body>
+        <Modal.Header closeButton style={{color:'#fff'}}>
+      </Modal.Header>
+      <Col xs={12} md={12} className='cols formCol'>
+                    <div className='formPDiv'>
+                        <FormComponent />
+                    </div>
+                </Col>
+        </Modal.Body>
+      </Modal>
+  );
 }

@@ -5,9 +5,6 @@ import pricingImg from './assets/pricingImg.svg';
 import catalog from './assets/catalog.svg';
 import integration from './assets/integration.svg';
 
-import { BsDot } from 'react-icons/bs'
-import phone from './assets/phone.svg';
-import mail from './assets/mail.svg';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { Helpers } from './Helper';
 export const Pricing = () => {
@@ -52,10 +49,11 @@ export const Pricing = () => {
                 </Col>
             </Row>
            <Helpers />
-            <Row className='sRow'><h4>Join Us</h4></Row>
 
-            <Row className='tRow'>
-                <Col xs={12} md={4} className='joinUsCol'>
+            {/* <Row className='sRow'><h4>Join Us</h4></Row> */}
+
+            <Row className='tRow' style={{paddingTop:'80px'}}>
+                {/* <Col xs={12} md={4} className='joinUsCol'>
                     <div className='joinUsPPDiv'>
                         <div className='joinUsPDiv'>
                             <div>
@@ -71,12 +69,14 @@ export const Pricing = () => {
                         </div>
                         </div>
                     </div>
-                </Col>
+                </Col> */}
+                <Col md={2} xs={12} className='hideCol'></Col>
                 <Col xs={12} md={8} className='cols formCol'>
                     <div className='formPDiv'>
                         <FormComponent />
                     </div>
                 </Col>
+                <Col md={2} xs={12} className='hideCol'></Col>
             </Row>
         
         </Container>
@@ -84,7 +84,7 @@ export const Pricing = () => {
 }
 
 
-const FormComponent = () => {
+export const FormComponent = () => {
     const [recaptchaValidation, setRecaptchaValidation] = useState(false)
     const [formDataVals, setFormDataVals] = useState({
         fullName: '',
@@ -163,9 +163,11 @@ const FormComponent = () => {
                     className="custom-recaptcha-style"
                 />
             </Form.Group>
+            <div style={{textAlign:'center'}}>
             <Button className='formBt' type="submit" disabled={!recaptchaValidation}>
                 Submit
             </Button>
+            </div>
         </Form>
     )
 }

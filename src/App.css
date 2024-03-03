@@ -28,8 +28,8 @@ backdrop-filter: blur(51.375px);
   border-radius: 1.5rem;
   /* padding: 0.6rem 3rem;  */
   color: #090B0D;
-  background: var(--Secondry, #F4F4F4);
-  border: 1px solid var(--Secondry, #F4F4F4);
+  background: var(--Secondry, #F4F4F4) !important;
+  border: 1px solid var(--Secondry, #F4F4F4) !important;
   font-weight: 500;
   padding-left: 18px;
 }
@@ -141,7 +141,7 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   text-align: center;
   border-radius: 11.071px;
   background: var(--Secondry, #F4F4F4);
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: row;
   /* overflow-x: scroll; */
@@ -567,6 +567,25 @@ margin-right: 15px;
   margin-bottom: 100px;
 }
 @media screen and (min-width: 992px) {
+  .FormModalClass .modal-body,.FormModalClass .modal-content{
+    width: 900px !important;
+    background: #1d1d1b !important; 
+    border: 1px solid #F87171;
+    border-radius: 10px;
+  }
+  .FormModalClass .formPDiv{
+    border: none !important;
+    border-radius: 0px !important;
+    padding: 20px;
+  }
+  .FormModalClass .formPDiv .form-control{
+    margin-bottom: 25px !important;
+  }
+  .FormModalClass .modal-header{
+    padding: 0 15px 0 10px !important;
+    margin-bottom: 10px !important;
+    border-bottom: none !important
+  }
   .aboutServices{
     padding: 0;
     height: 100%;
@@ -1136,10 +1155,23 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark{
 .iframeCtrlDiv {
   display: flex;
   flex-direction: row;
-  background: #e7e7e7;
   /* padding: 10px; */
   border-radius: 10px;
   width: 33.33%;
+  padding: 18px;
+  border-radius: 50px;
+  border: 1px solid var(--Primary, #000); 
+  /* #FF595D */
+  background: var(--Black-Shade-1, #18181B);
+  cursor: pointer;
+}
+.iframeCtrlDiv:hover,.iframeCtrlDiv:active,.iframeCtrlDiv:focus,.iframeCtrlDiv:focus-visible,.iframeCtrlDiv:focus-within {
+  border: 1px solid #FF595D !important;
+  background: var(--Black-Shade-1, #18181B) !important;
+  box-shadow: none !important;
+}
+.iframeCtrlDiv:hover .iframePlayImg,.iframeCtrlDiv:active .iframePlayImg,.iframeCtrlDiv:focus .iframePlayImg {
+  border: 1px solid #FF595D;
 }
 .videoCustDiv img {
   border-radius: 10px;
@@ -1148,14 +1180,15 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark{
 .videoCustDiv{
   padding: 5px;
 }
-.videoCustDiv,.iframeBtDiv{
+/* .videoCustDiv,.iframeBtDiv{
   width: 50%;
-}
+} */
 .iframeBtDiv {
-  display: grid;
-  margin: auto;
+  display: flex;
+  /* margin: auto; */
   margin-left:10px;
-  margin-right: 25px;
+  /* margin-right: 25px; */
+  align-items: center;
 }
 .iframePlayDiv{
   display: flex;
@@ -1163,9 +1196,16 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark{
   gap: 15px;
 }
 .iframeBtDiv h4 {
-    color: #18181b;
+    color: #fff;
     font-size: 18px;
     font-weight: 700;
+    margin-bottom: 0;
+    margin-left:15px;
+}
+.iframePlayImg{
+  width: 35px !important;
+  border-radius: 100%;
+  border: 1px solid #fff;
 }
 .iframePlayDiv img{
   width: 30px !important;
@@ -1198,7 +1238,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark{
   background: #fff;
   border-radius: 10px;
   height: 100%;
-  padding: 4.5rem 3rem 3rem 3rem;
+  padding: 4.5rem 1.5rem 4.5rem 1rem;
 }
 .CatalogHead{
   color: #FFF;
