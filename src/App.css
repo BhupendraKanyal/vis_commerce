@@ -1255,3 +1255,22 @@ margin-bottom: 15px;
   border-radius: 40px;
   padding: 1rem 2rem 2rem 2rem;
 }
+
+.contactInfoP {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.contactInfoDiv {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 7px;
+}
+.contactInfoDiv img {
+  width: 20px;
+}
+a{
+  cursor: pointer;
+}

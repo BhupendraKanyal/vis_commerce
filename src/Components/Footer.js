@@ -3,8 +3,12 @@ import { Col, Container, Row, Button } from "react-bootstrap";
 import Linkendin from './Helpers/Linkendin.svg';
 import Facebook from './Helpers/Facebook.svg';
 import Twitter from './Helpers/Twitter.svg';
-import Insta from './Helpers/Insta.svg'
+import Insta from './Helpers/Insta.svg';
+import phone from './Helpers/phone.svg';
+import mail from './Helpers/mail.svg';
+import sphere from './Helpers/sphere.svg';
 export const Footer = () => {
+    const infoValues = [{imageUrl:phone,value:'0123654789'},{imageUrl:mail,value:'info@viscommerce.com'},{imageUrl:sphere,value:'www.viscommerce.com',isLink:true}]
     return (
         <div style={{ background: '#282828', paddingTop: '50px', paddingBottom: '50px' }}>
             <Container>
@@ -49,9 +53,9 @@ export const Footer = () => {
 
                     </Col>
 
-                    <Col xs={12} md={1}>
-                    </Col>
-                    <Col xs={12} md={5}>
+                    {/* <Col xs={12} md={1}>
+                    </Col> */}
+                    {/* <Col xs={12} md={5}>
                         <div className="subscribeDiv" style={{ background: '#FFF', padding: '20px', borderRadius: '20px' }}>
                             <h3 style={{ color: '#111', fontWeight: '800' }}>Keep up to date on VisCommerce</h3>
                             <p style={{ color: '#111', fontWeight: '500', fontSize: '20px', marginTop: '-6px' }}>Subscribe</p>
@@ -59,6 +63,21 @@ export const Footer = () => {
                                 <input type="text" className="subscribeInput" placeholder="Enter Your E-mail Id here" />
                                 <Button className="subscribeButton">Sbscribe </Button>
                             </div>
+                        </div>
+                    </Col> */}
+                    <Col xs={12} md={3}>
+                    <h5>Contact</h5>
+                        <div className="contactInfoP">
+                                {
+                                    infoValues.map((val,idx)=>{
+                                        return(
+                                            <div key={idx} className="contactInfoDiv">
+                                                <img src={val?.imageUrl} />
+                                                <a>{val?.value}</a>
+                                            </div>
+                                        )
+                                    })
+                                }
                         </div>
                     </Col>
                 </Row>

@@ -1,0 +1,83 @@
+.demosFImgCol{
+    padding-left: 0;
+  }
+  .demosDescDiv{
+    padding: 40px 25px 20px 25px;
+    height: 100%;
+  }
+  .demosHeadings h5 {
+    font-size: 45px;
+    text-transform: capitalize;
+    font-weight: 600;
+    line-height: 50px;
+  }
+  .demosHeadings p {
+    font-size: 29px;
+    font-weight: 300;
+    text-transform: capitalize;
+  }
+  .DemosRow{
+    margin-top: 80px;
+    margin-bottom: 100px;
+    background: #2F2F2E;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+  .selectButtonDiv{
+    margin-top: 50px;
+  }
+  .selectButtonDiv button,.selectButtonDiv button:hover,.selectButtonDiv button:active,.selectButtonDiv button:focus,.selectButtonDiv button:focus-visible {
+    font-size: 20px;
+    font-weight: 400;
+    padding: 20px 20px 15px 25px;
+    border-radius: 10px;
+    border: 0.964px solid var(--Primary, #FF595D) !important;
+    background: #282828;
+    box-shadow: none;
+    letter-spacing: 0.6px;
+}
+.demoIconsDiv {
+    margin-top: 25px;
+    margin-left: 10px;
+}
+.demoIcons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.screenIcons{
+    font-size: 30px;
+}
+.tryWatchDiv{
+    margin-top: 15px;
+}
+.tryWatch {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.tryWatch .formBt,.tryWatch .formBt:hover {
+    font-size: 18px;
+    border-radius: 25px;
+    padding-left: 3.8rem;
+    padding-right: 3.8rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    border: 1px solid var(--Primary, #FF595D) !important;
+    background: linear-gradient(0deg, #939392 0%, #939392 100%), linear-gradient(87deg, #FB1807 3.98%, #FF4031 94.53%) !important;
+    -webkit-backdrop-filter: blur(51.73652267456055px);
+    backdrop-filter: blur(51.73652267456055px);
+}
+.tryWatch img{
+    margin-top: 10px;
+    cursor: pointer;
+}
+.demosFImgDiv{
+    height: 100%;
+}
+.demosFImgDiv img{
+    height: 100%;
+    border-radius: 10px;
+}
