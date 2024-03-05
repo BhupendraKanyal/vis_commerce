@@ -5,9 +5,13 @@ import logo from '../logo.svg'
 
 export const Header = ()=>{
     const [showDropdown, setShowDropdown] = useState(false);
+    const [showDropdownSols,setShowDropdownSols] = useState(false)
     const handleSelect = () => {
       setShowDropdown(false);
     };
+    const handleSelectSols = ()=>{
+      setShowDropdownSols(false)
+    }
    return (
     // <div style={{background:'linear-gradient(180deg, rgba(18, 18, 18, 0.00) 0%, rgba(18, 18, 18, 0.00) 0.01%, #02030B 49.53%)'}}>
    <Container>
@@ -19,7 +23,18 @@ export const Header = ()=>{
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
-          <Nav.Link href="/solutions">Solutions</Nav.Link>
+          <NavDropdown
+              title="Solutions"
+              id="basic-nav-dropdownSol"
+              show={showDropdownSols}
+              onMouseEnter={() => setShowDropdownSols(true)}
+              onMouseLeave={() => setShowDropdownSols(false)}
+              onSelect={handleSelectSols}
+              icon={<BsArrowDown />}
+            >
+              <NavDropdown.Item href="/solutions">Common</NavDropdown.Item>
+              <NavDropdown.Item href="/furniture">Furniture</NavDropdown.Item>
+            </NavDropdown>
             <Nav.Link href="/benefits">Benefits</Nav.Link>
             <Nav.Link href="/hdrenderer">HDRenders</Nav.Link>
             <Nav.Link href="/pricing">Pricing</Nav.Link>
@@ -35,7 +50,6 @@ export const Header = ()=>{
             >
               <NavDropdown.Item href="/aboutus">About Us</NavDropdown.Item>
               <NavDropdown.Item href="/team">Team</NavDropdown.Item>
-              {/* <NavDropdown.Item href="/">Option 3</NavDropdown.Item> */}
             </NavDropdown>
             <Nav.Link href="/demos" className="custom-navlink">
               Demos

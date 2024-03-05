@@ -33,7 +33,7 @@ export default YouTubeModal;
 
 
 export const Customized3D = ({currVlinkName})=>{
-  const vIds = [{name:'customize',id:'https://www.youtube.com/embed/YFV8hJMKVaM'},{name:'collaboration',id:'https://www.youtube.com/embed/Znh4SaLpKvw'},{name:'lighting',id:'https://www.youtube.com/embed/imNmY5TkO_8'}]
+  const vIds = [{name:'customize',id:'https://www.youtube.com/embed/YFV8hJMKVaM'},{name:'collaboration',id:'https://www.youtube.com/embed/wrNgWDU1Hw4'},{name:'lighting',id:'https://www.youtube.com/embed/imNmY5TkO_8'}]
   const [currId,setCurrId] = useState(vIds[0]?.id)
   useEffect(()=>{
     setCurrId(vIds.find(val=>val.name == currVlinkName)?.id)

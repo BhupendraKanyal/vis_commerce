@@ -311,13 +311,13 @@ const MyAccordion = () => {
                                             ))
                                         ) : (
                                             <ul className="accordionUnorderedList">
-                                            {val.ulLists.map((val,id)=>{
-                                                return(
-                                                    <li key={id}>{val}</li>
-                                                )
-                                            })}
+                                                {val.ulLists.map((val, id) => {
+                                                    return (
+                                                        <li key={id}>{val}</li>
+                                                    )
+                                                })}
                                             </ul>
-                                           
+
                                         )}
                                     </div>
                                 </Col>

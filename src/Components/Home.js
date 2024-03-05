@@ -206,7 +206,7 @@ const HomeComponent = () => {
               </div>
               <div className="material3dDivCh">
                 <h3>
-                  Material<span>3D</span>
+                  Material3D
                 </h3>
                 <p>
                   Your platform for captivating digital material <br />
@@ -234,7 +234,7 @@ const HomeComponent = () => {
                 <div className="iframeBtDiv">
                   
                   <img  className="iframePlayImg" src={ButtonImg} />
-                  <h4>Customize<span>3D</span></h4>
+                  <h4>Customize3D</h4>
                   {/* <div className="iframePlayDiv">
                     <img name="customize" onClick={handleIframeVid} className="iframePlayImg" src={ButtonImg} />
                     <p>Play</p>
@@ -249,7 +249,7 @@ const HomeComponent = () => {
                 <div className="iframeBtDiv">
                   
                   <img  className="iframePlayImg" src={ButtonImg} />
-                  <h4>Collaboration<span>3D</span></h4>
+                  <h4>Collaboration3D</h4>
                   {/* <div className="iframePlayDiv">
                     <img name="collaboration" onClick={handleIframeVid} className="iframePlayImg" src={ButtonImg} />
                     <p>Play</p>
@@ -265,7 +265,7 @@ const HomeComponent = () => {
                 <div className="iframeBtDiv">
                   
                   <img  className="iframePlayImg" src={ButtonImg} />
-                  <h4>Lighting<span>3D</span></h4>
+                  <h4>Lighting3D</h4>
                   {/* <div className="iframePlayDiv">
                     <img name="lighting"  onClick={handleIframeVid} className="iframePlayImg" src={ButtonImg} />
                     <p>Play</p>
