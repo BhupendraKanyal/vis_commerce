@@ -1,7 +1,13 @@
 import { Col, Container, Row, Button, Card } from 'react-bootstrap';
 import FurnitureImg from './assets/Furniture20Living20Room.H03 1.webp';
 import FileIcon from './assets/IconMedia.svg';
-import { FurnitureHeader, SectionOne, SectionTwo } from './InitialState';
+import {
+  FurnitureHeader,
+  SectionFour,
+  SectionOne,
+  SectionThree,
+  SectionTwo,
+} from './InitialState';
 import { divBackground } from './InitialState';
 import './css/Furniture.css';
 import './../../../src/App.css';
@@ -175,6 +181,67 @@ const Furniture = () => {
             );
           }
         })}
+      </Container>
+
+      <Container>
+        <Row style={{ marginTop: '70px' }} className="topBottomPad rowPadd ">
+          {SectionThree.map((el, idx) => {
+            if (el.type === 'Heading') {
+              return <h2 className="text-center">{el.value}</h2>;
+            } else if (el.type === 'image') {
+              return (
+                <div className="text-center  mb-4">
+                  <img style={{ width: '70%' }} src={`${el.value}`} />
+
+                  <div
+                    className="text-center"
+                    style={{
+                      display: 'flex',
+                      gap: '17px',
+                      justifyContent: 'center',
+                      marginTop: '20px',
+                    }}
+                  >
+                    {el.data.map((el, index) => {
+                      return (
+                        <div
+                          style={{
+                            border: '1px solid white',
+                            padding: '5px 13px',
+                            backgroundColor: '#18181B',
+                            borderRadius: '5px',
+                            width: '125px',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            gap: '2px',
+                            alignItems: 'center',
+                          }}
+                        >
+                          <img src={el.icon} />
+                          {el.name}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            }
+          })}
+        </Row>
+
+        <Row style={{ marginTop: '70px' }} className="topBottomPad rowPadd">
+          {SectionFour.map((el, idx) => {
+            if (el.type === 'Heading') {
+              return <h2 className="text-center">{el.value}</h2>;
+            } else if (el.type === 'subheading') {
+              return (
+                <h6 className="text-center mt-2" style={{ color: 'red' }}>
+                  {el.value}
+                </h6>
+              );
+            }
+          })}
+        </Row>
       </Container>
     </>
   );
