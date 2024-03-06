@@ -20,6 +20,11 @@ import bedRoom3 from './assets/Bedroom3.webp';
 import diningRoom1 from './assets/Diningroom1.webp';
 import diningRoom2 from './assets/Diningroom2.webp';
 import diningRoom3 from './assets/Diningroom3.webp';
+import mesurementSofa from './assets/Redsofameasurent.webp';
+import curvature from './assets/frame-1.svg';
+import length from './assets/frame-3.svg';
+import svg2 from './assets/frame-4.svg';
+import angle from './assets/frame-2.svg';
 
 export const FurnitureHeader = [
   {
@@ -92,19 +97,6 @@ export const SectionOne = [
       },
     ],
   },
-  // {
-  //   type: 'card',
-  //   data: [
-  //     {
-  //       imgSrc: `${substanceIcon}`,
-  //       description: 'Adobe substance sampler',
-  //     },
-  //     {
-  //       imgSrc: `${cadIcon}`,
-  //       description: '3D commerce compliant. (g1TF)',
-  //     },
-  //   ],
-  // },
 ];
 
 export const SectionTwo = [
@@ -150,6 +142,43 @@ export const SectionTwo = [
       { id: 14, image: `${diningRoom2}` },
       { id: 15, image: `${diningRoom3}` },
     ],
+  },
+];
+
+export const SectionThree = [
+  {
+    type: 'Heading',
+    value: 'Accurate Measurements',
+  },
+
+  {
+    type: 'image',
+    value: `${mesurementSofa}`,
+
+    data: [
+      {
+        icon: `${length}`,
+        name: 'Length',
+      },
+      { icon: `${svg2}`, name: 'Height' },
+      { icon: `${curvature}`, name: 'Curvature' },
+      { icon: `${angle}`, name: 'Angle' },
+    ],
+  },
+];
+
+export const SectionFour = [
+  {
+    type: 'Heading',
+    value: 'Material Variants',
+  },
+  {
+    type: 'subheading',
+    value: 'Variants of surface appearance effectively changed.',
+  },
+  {
+    type: 'image',
+    value: '',
   },
 ];
 
