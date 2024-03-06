@@ -40,7 +40,6 @@ const HomeComponent = () => {
   };
   const CatalogBack = {
     backgroundImage: `url(${CatalogBackground})`,
-    borderRadius:'40px',
   }
   const [currVlinkName, setCurrVlinkName] = useState('customize')
   const handleIframeVid = (e)=>{

@@ -181,6 +181,7 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   background: var(--Primary, #FF595D) !important;
   color: #FFF !important;
   border: none;
+  border-radius: 6px !important;
 }
 .servicesButtonDiv button:focus-visible {
   border: none !important;
@@ -799,7 +800,7 @@ border-top-right-radius: 10px;
   padding-left: 10px;
   padding-right: 10px;
   text-align: left;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   overflow-x: scroll;
   white-space: nowrap;
   scrollbar-width: none;
@@ -814,7 +815,7 @@ border-top-right-radius: 10px;
   margin-right: 10px;
   border-radius: 10px !important;
   margin-bottom: 0px;
-  height: auto;
+  height: 60px;
 }
 .servicesButtonDivS{
   display:none;
@@ -1032,18 +1033,11 @@ border-top-right-radius: 10px;
   .crouselItemf .textImgSpan span{
     min-height: 144.3px !important;
   }
-  /* .servicesButtonDiv{
-    width: 40% !important
-  } */
+  
   .servicesButtonDiv button{
     width:165px !important;
   }
-  /* .servicesDetailDiv p{
-    width: 230px !important;
-  } */
-  /* .servicesDetailDiv {
-    padding-left: 15px !important;
-  } */
+
   .navbar-expand-lg .navbar-nav .nav-link{
     padding-left: 0px;
   }
@@ -1135,7 +1129,9 @@ border-top-right-radius: 10px;
     display: none !important;
   }
   .catalog3DColImgDiv{
-    padding: 10px;
+    padding: 0px;
+    border-radius: 10px !important;
+    margin-bottom: 15px;
   }
  
 }
@@ -1274,4 +1270,74 @@ margin-bottom: 15px;
 }
 a{
   cursor: pointer;
+}
+
+
+
+
+
+
+@media screen and (max-width:767px) {
+  .catalogContainer {
+    padding: 10px;
+    border-radius: 10px;
+}
+.CatalogHead{
+  font-size: 30px;
+  margin-top: 10px;
+}
+.ListModalParentDiv{
+  padding: 1.5rem 1rem;
+}
+.ListModalParentDiv ul li{
+  font-size: 15px;
+  line-height: 30px;
+}
+.servicesDetailDiv {
+  margin-bottom: 20px;
+}
+.iframeC{
+  height: 200px !important;
+}
+.iframeCtrlDiv{
+  padding: 15px;
+  margin-bottom: 10px;
+}
+.MobCrousel{
+  margin-top: 0px;
+  margin-bottom: 50px;
+}
+.FormModalClass .modal-content{
+  background: #1d1d1b;
+}
+.FormModalClass .modal-body{
+  background: #1d1d1b;
+  border: 1px solid #F87171;
+  border-radius: 10px;
+}
+.FormModalClass .modal-header{
+  padding: 0;
+  border-bottom: none;
+}
+/* .FormModalClass .modal-header button{
+  background-color: #fff;
+    border-radius: 100%;
+    margin-top: 5px;
+    margin-right: 10px;
+} */
+.formPDiv{
+  padding: 0px !important;
+  border: none;
+}
+}
+@media screen and (min-width : 540px) and (max-width:767px) {
+  .iframeC{
+  height: 290px;
+  }  
+}
+.FormModalClass .modal-header button{
+  background-color: #fff;
+    border-radius: 100%;
+    margin-top: 5px;
+    margin-right: 10px;
 }

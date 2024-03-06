@@ -106,7 +106,7 @@ export const ListModal = () => {
                 <div>
                     <h4 className="CatalogHead">Catalog3D</h4>
                     <div className="servicesButtonDiv servicesButtonDivF">
-                        {/* <ButtonGroup> */}
+                        <ButtonGroup>
                             <Button onClick={(e) => handleClick(e)} name="Common">
                                 <img className="normalIcon" src={CommonNormal} />
                                 <img className="hoverIcon" src={CommonHover} />
@@ -137,10 +137,10 @@ export const ListModal = () => {
                                 <img className="hoverIcon" src={SanitaryHover} />
                                 Sanitaryware
                             </Button>
-                        {/* </ButtonGroup> */}
+                        </ButtonGroup>
                     </div>
                     <Row>
-                        <Col xs={12} md={6} className="servicesDetailDiv">
+                        <Col style={{order:'last'}} xs={12} md={6} className="servicesDetailDiv">
                             <div className="ListModalParentDiv">
                                 <ul className="ListModalDiv">
                                     {
@@ -154,7 +154,7 @@ export const ListModal = () => {
                             </div>
                         </Col>
                         {/* <Col xs={12} md={1} className="hideCol"> </Col> */}
-                        <Col xs={12} md={6} className="catalog3DCol">
+                        <Col style={{order:'first'}} xs={12} md={6} className="catalog3DCol">
                             <div className="catalog3DColImgDiv">
                                 {console.log("DataVals", listName)}
                                 <img src={listName?.imgUrl} alt="catalog3DCol" />

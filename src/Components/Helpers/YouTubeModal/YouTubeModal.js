@@ -56,7 +56,7 @@ export const FormModal = ({showFormModal,handleContact})=>{
     handleContact()
   }
   return (
-<Modal show={showFormModal} onHide={handleClose} size="lg" centered className='FormModalClass'>
+<Modal show={showFormModal} backdrop="static" onHide={handleClose} size="lg" centered className='FormModalClass'>
         <Modal.Body>
         <Modal.Header closeButton style={{color:'#fff'}}>
       </Modal.Header>
