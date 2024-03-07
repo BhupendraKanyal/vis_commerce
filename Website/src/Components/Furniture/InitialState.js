@@ -25,6 +25,10 @@ import curvature from './assets/frame-1.svg';
 import length from './assets/frame-3.svg';
 import svg2 from './assets/frame-4.svg';
 import angle from './assets/frame-2.svg';
+import sofa1 from './assets/sofa1.webp';
+import sofa2 from './assets/Sofa2.webp';
+import sofa3 from './assets/sofa3.webp';
+import sofa4 from './assets/Sofa4.webp';
 
 export const FurnitureHeader = [
   {
@@ -178,7 +182,24 @@ export const SectionFour = [
   },
   {
     type: 'image',
-    value: '',
+    data: [
+      {
+        color: '#266026',
+        imgSrc: `${sofa1}`,
+      },
+      {
+        color: '#ADA599',
+        imgSrc: `${sofa2}`,
+      },
+      {
+        color: '#841D15',
+        imgSrc: `${sofa3}`,
+      },
+      {
+        color: '#3D4D51',
+        imgSrc: `${sofa4}`,
+      },
+    ],
   },
 ];
 
