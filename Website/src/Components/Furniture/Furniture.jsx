@@ -11,7 +11,7 @@ import {
 import { divBackground } from './InitialState';
 import './css/Furniture.css';
 import './../../../src/App.css';
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
@@ -22,12 +22,26 @@ const Furniture = () => {
     correspondanceImgId: 1,
   });
 
+  const [currentSofa, setCurrentSofa] = useState('');
+
   const onButtonClickHandler = useCallback(
     (id, name, correspondanceImgId) => {
       setCurrentButton({ id, name, correspondanceImgId });
     },
     [currentButton]
   );
+
+  const onSofaChangeHandler = useCallback((val) => {
+    setCurrentSofa(val);
+  }, []);
+
+  useEffect(() => {
+    // Set Initial Sofa:
+
+    if (SectionFour.length > 0 && SectionFour[2].type === 'image') {
+      setCurrentSofa(SectionFour[2].data[0].imgSrc);
+    }
+  }, [SectionFour]);
 
   return (
     <>
@@ -235,9 +249,59 @@ const Furniture = () => {
               return <h2 className="text-center">{el.value}</h2>;
             } else if (el.type === 'subheading') {
               return (
-                <h6 className="text-center mt-2" style={{ color: 'red' }}>
+                <h6
+                  className="text-center mt-2 mb-5"
+                  style={{ color: '#FF595D' }}
+                >
                   {el.value}
                 </h6>
+              );
+            } else if (el.type === 'image') {
+              return (
+                <div
+                  style={{
+                    width: '800px',
+                    border: '0.5px solid white',
+                    margin: '0 auto',
+                    borderRadius: '11.15px',
+                    height: '400px',
+                    display: 'flex',
+                    // justifyContent: 'center',
+                    flexDirection: 'column',
+                    background: '#383537',
+                  }}
+                >
+                  <img
+                    style={{ width: '75%', alignSelf: 'center' }}
+                    src={currentSofa}
+                  />
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignSelf: 'center',
+                      gap: '20px',
+                    }}
+                  >
+                    {el.data.map((ele, idx) => {
+                      return (
+                        <Button
+                          onClick={() => onSofaChangeHandler(ele.imgSrc)}
+                          style={{
+                            background: `linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4)), ${ele.color}`,
+                            height: '74.78px',
+                            width: '89.41px',
+                            borderRadius: '11px',
+
+                            border:
+                              ele.imgSrc === currentSofa
+                                ? '5px solid white'
+                                : 'none',
+                          }}
+                        ></Button>
+                      );
+                    })}
+                  </div>
+                </div>
               );
             }
           })}
