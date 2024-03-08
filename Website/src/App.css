@@ -1341,3 +1341,50 @@ a{
     margin-top: 5px;
     margin-right: 10px;
 }
+/* --notchange */
+@media screen and (min-width : 767px) and (max-width:1023px) {
+  .ThreeDCommColSecond,.ThreeDCommColFirst{
+  width: 50%;
+  }  
+  .headingF {
+    font-size: 25px;
+    font-weight: 600;
+    width: auto;
+    /* margin-bottom: 0; */
+  }
+  .ThreeDButtons{
+    margin-top: -3.5rem !important;
+  }
+  .ulListF {
+    line-height: 22px;
+    font-size: 11px !important;
+  }
+  .CatalogHead {
+    font-size: 35px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .servicesDetailDiv,.catalog3DCol{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .catalogContainer,.catalog3DColImgDiv{
+    border-radius: 10px !important;
+  }
+  .catalog3DColImgDiv{
+    padding: 0 !important;
+  }
+  .ListModalParentDiv{
+    padding: 1.5rem 1.5rem 1.5rem 2rem;
+  }
+  .iframeBtDiv h4{
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .iframeCtrlDiv {
+    padding: 15px;
+  }
+  .container{
+    width: 100%;
+  }
+}

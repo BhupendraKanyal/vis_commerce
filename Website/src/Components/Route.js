@@ -10,6 +10,7 @@ import { Benefit } from './Benefit/Benefit.js';
 import TeamUpdate from './Team/TeamUpdate.jsx';
 import Furniture from './Furniture/Furniture.jsx';
 import { NotFoundPage } from './Helpers/NotFound/NotFound.js';
+import { Resources } from './Resources/Resources.js';
 const Routing = () => {
   return (
     <Router>
@@ -23,6 +24,7 @@ const Routing = () => {
         <Route path="/aboutus" element={<About />} />
         <Route path="/team" element={<TeamUpdate />} />
         <Route path="/furniture" element={<Furniture />} />
+        <Route path="/resources" element={<Resources />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>

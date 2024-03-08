@@ -38,7 +38,7 @@ export const Header = ()=>{
             <Nav.Link href="/benefits">Benefits</Nav.Link>
             <Nav.Link href="/hdrenderer">HDRenders</Nav.Link>
             <Nav.Link href="/pricing">Pricing</Nav.Link>
-            <Nav.Link href="/">Resources</Nav.Link>
+            <Nav.Link href="/resources">Resources</Nav.Link>
             <NavDropdown
               title="Company"
               id="basic-nav-dropdown"

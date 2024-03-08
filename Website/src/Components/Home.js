@@ -70,7 +70,7 @@ const HomeComponent = () => {
             <FormModal showFormModal={showFormModal} handleContact={handleContact} />
           </Row>
           <Row>
-            <Col xs={12} md={7}>
+            <Col className="ThreeDCommColFirst" xs={12} md={7}>
               <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', padding: '', height: '100%' }}>
                 <h2 className='headingF'>3DCommerce Solutions</h2>
                 <ul className='ulListF'>
@@ -96,7 +96,7 @@ const HomeComponent = () => {
               </div>
 
             </Col>
-            <Col xs={12} md={5}>
+            <Col className="ThreeDCommColSecond" xs={12} md={5}>
               <div className='LandingVDiv'>
                 <video width="100%" className='LandingV' autoPlay muted loop >
                   <source src={LandingV} type="video/mp4" />
