@@ -38,9 +38,9 @@ const HomeComponent = () => {
     background:
       "background: linear-gradient(180deg, rgba(18, 18, 18, 0.00) 0%, rgba(18, 18, 18, 0.00) 0.01%, #02030B 49.53%)",
   };
-  const CatalogBack = {
-    backgroundImage: `url(${CatalogBackground})`,
-  }
+  // const CatalogBack = {
+  //   backgroundImage: `url(${CatalogBackground})`,
+  // }
   const [currVlinkName, setCurrVlinkName] = useState('customize')
   const handleIframeVid = (e)=>{
     let currVlinkName = e.currentTarget.name
@@ -165,7 +165,7 @@ const HomeComponent = () => {
 
         
         <Container>
-        <div style={CatalogBack} className="topBottomPad rowPadd catalogContainer">
+        <div  className="topBottomPad rowPadd catalogContainer">
           <ListModal />
           </div>
           </Container>

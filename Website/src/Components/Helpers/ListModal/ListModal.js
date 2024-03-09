@@ -1,33 +1,33 @@
 import React, { useState } from "react";
 import { Button, ButtonGroup, Row, Col } from "react-bootstrap";
 
-import CommonNormal from '../CommonNormal.svg';
-import CommonHover from '../Commonhover.svg';
+import CommonNormal from '../CatalogIcon.svg';
+import CommonHover from '../CatalogIconH.svg';
 
 
-import FurnitureNormal from '../FurnitureNormal.svg';
-import FurnitureHover from '../Furniturehover.svg';
+import FurnitureNormal from '../FurnitureIcon.svg';
+import FurnitureHover from '../FurnitureIconH.svg';
 
 
-import LightingNormal from '../LightingNormal.svg';
-import LightingHover from '../Lightinghover.svg';
+import LightingNormal from '../lightingicon.svg';
+import LightingHover from '../lightingiconH.svg';
 
-import PaintsNormal from '../PaintsNormal.svg';
-import PaintsHover from '../Paintshover.svg';
+import PaintsNormal from '../Paintsicon.svg';
+import PaintsHover from '../PaintsiconH.svg';
 
-import FlooringNormal from '../FlooringNormal.svg';
-import FlooringHover from '../Flooringhover.svg';
+import FlooringNormal from '../FlooringIcon.svg';
+import FlooringHover from '../FlooringIconH.svg';
 
 
-import SanitaryNormal from '../sanitarynormal.svg';
-import SanitaryHover from '../sanitaryhover.svg';
+import SanitaryNormal from '../Sanitarywareicon.svg';
+import SanitaryHover from '../SanitarywareiconH.svg';
 
 import CatalogFurniture from '../CatalogFurniture.webp';
 import Cataloglighting from '../Cataloglighting.webp';
 import CatalogCommon from '../CatalogCommon.webp';
 import CatalogPaints from '../CatalogPaints.webp';
-import CatalogFlooring from '../CatalogFlooring.webp';
-import CatalogSanitaryware from '../CatalogSanitaryware.webp';
+import CatalogFlooring from '../catalogflorring.webp';
+import CatalogSanitaryware from '../catalog_Sanitaryware.webp';
 
 import  CatalogBackground from '../CatalogBackground.webp';
 
@@ -139,9 +139,10 @@ export const ListModal = () => {
                             </Button>
                         </ButtonGroup>
                     </div>
-                    <Row>
-                        <Col style={{order:'last'}} xs={12} md={6} className="servicesDetailDiv">
+                    <Row className="detailsColsRow">
+                        <Col style={{order:'last'}} xs={12} md={12} lg={12} className="servicesDetailDiv">
                             <div className="ListModalParentDiv">
+                                <h4>{listName?.name}</h4>
                                 <ul className="ListModalDiv">
                                     {
                                         listArr.find(val => val.name == listName?.name)?.lists?.map((val, idx) => {
@@ -152,14 +153,19 @@ export const ListModal = () => {
                                     }
                                 </ul>
                             </div>
-                        </Col>
-                        {/* <Col xs={12} md={1} className="hideCol"> </Col> */}
-                        <Col style={{order:'first'}} xs={12} md={6} className="catalog3DCol">
-                            <div className="catalog3DColImgDiv">
-                                {console.log("DataVals", listName)}
+                            <div className="catalog3DColImgDiv">                          
+                                 <div className="catalog3DColImgDivS" >
                                 <img src={listName?.imgUrl} alt="catalog3DCol" />
+                                </div>
+
                             </div>
                         </Col>
+                        {/* <Col xs={12} md={1} className="hideCol"> </Col> */}
+                        {/* <Col style={{order:'first'}} xs={12} md={6} className="catalog3DCol">
+                            <div className="catalog3DColImgDiv">
+                                <img src={listName?.imgUrl} alt="catalog3DCol" />
+                            </div>
+                        </Col> */}
                     </Row>
                 </div>
             </div>

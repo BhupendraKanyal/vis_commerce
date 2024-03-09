@@ -152,24 +152,28 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 .hoverIcon{
   display: none;
 }
-.servicesButtonDiv button {
-  width: 200px;
+.servicesButtonDiv button{
+color: var(--Black-Shade-1, #18181B);
+}
+.servicesButtonDiv button ,.servicesButtonDiv button:hover  {
   text-align: left;
-  color: var(--Black-Shade-1, #18181B);
-  background: var(--Secondry, #F4F4F4);
+  background: var(--Secondry, #fff) !important;
   border: none;
-  border-bottom: 1px solid #C1BDBD;
+  /* border-bottom: 1px solid #C1BDBD; */
   font-family: "Be Vietnam Pro" !important;
   
   font-size: 16px;
   margin-bottom: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  /* padding-top: 10px;
+  padding-bottom: 10px; */
   font-weight: 600;
   height: 70px;
   display: inline-flex;
   align-items: center;
   margin-bottom: 5px;
+}
+.servicesButtonDiv button:hover{
+ color: var(--Primary, #FF595D) !important;
 }
 
 /* .bulletIcon {
@@ -177,12 +181,12 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   margin-right: 5px;
 } */
 
-.servicesButtonDiv button:hover {
+/* .servicesButtonDiv button:hover {
   background: var(--Primary, #FF595D) !important;
   color: #FFF !important;
   border: none;
   border-radius: 6px !important;
-}
+} */
 .servicesButtonDiv button:focus-visible {
   border: none !important;
 }
@@ -1247,11 +1251,11 @@ text-align: center;
 margin-top: 15px;
 margin-bottom: 15px;
 }
-.catalogContainer{
+/* .catalogContainer{
   border: 1px solid #fff;
   border-radius: 40px;
   padding: 1rem 2rem 2rem 2rem;
-}
+} */
 
 .contactInfoP {
   margin-top: 1rem;
@@ -1278,10 +1282,10 @@ a{
 
 
 @media screen and (max-width:767px) {
-  .catalogContainer {
+  /* .catalogContainer {
     padding: 10px;
     border-radius: 10px;
-}
+} */
 .CatalogHead{
   font-size: 30px;
   margin-top: 10px;
@@ -1368,9 +1372,9 @@ a{
     width: 100%;
     margin-bottom: 20px;
   }
-  .catalogContainer,.catalog3DColImgDiv{
+  /* .catalogContainer,.catalog3DColImgDiv{
     border-radius: 10px !important;
-  }
+  } */
   .catalog3DColImgDiv{
     padding: 0 !important;
   }
@@ -1387,4 +1391,96 @@ a{
   .container{
     width: 100%;
   }
+}
+
+/* catalog changes final desktop */
+.servicesButtonDiv {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    z-index: 1;
+    position: relative;
+    padding:0 10px 0 10px !important;
+    border-radius: 28px !important;
+    border: 2px solid #B8B8B8 !important;
+    background: #FFF !important;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) !important;
+
+}
+.servicesButtonDiv .btn-group {
+  display: flex !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  padding: 10px !important;
+}
+.servicesButtonDiv button {
+  width: auto !important;
+  display: flex;
+  flex-direction: column;
+  border-bottom: none !important;
+  height: 100%;
+}
+.hoverIcon, .normalIcon{
+  margin-right: 0 !important;
+  width: auto !important;
+}
+.servicesDetailDiv {
+  padding-right: 0;
+}
+.catalog3DCol{
+  padding-left: 0;
+}
+.catalog3DColImgDiv{
+  border-radius: 0 28px 28px 0 !important;
+}
+.ListModalParentDiv{
+  border-radius: 28px 0 0 28px !important;
+}
+.detailsColsRow{
+  margin-top: -90px;
+  /* height: 550px !important; */
+}
+.servicesDetailDiv{
+  height: 580px;
+}
+.ListModalParentDiv{
+  width: 60%;
+}
+.catalog3DColImgDiv{
+  width: 40%;
+}
+.servicesDetailDiv{
+  display: flex;
+  flex-direction: row;
+}
+.catalog3DColImgDiv{
+  background: #fff;
+}
+/* .catalog3DColImgDiv >div,.catalog3DColImgDiv >div img{
+  height: 100%;
+} */
+/* .ListModalParentDiv,.catalog3DColImgDivS{
+  margin-top: 5rem;
+} */
+.ListModalParentDiv ul li {
+  color: #18181b;
+  font-size: 17px !important;
+  font-weight: 600;
+  line-height: 32px !important;
+}
+.ListModalParentDiv{
+  padding: 8rem 1rem 4.5rem 8rem;
+}
+.ListModalParentDiv h4{
+  color: #18181b;
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+.catalog3DColImgDivS{
+  text-align: center;
+  margin-left: -12rem;
+}
+.catalog3DColImgDiv img{
+  width: 90%;
+  padding-top: 5rem ;
 }
