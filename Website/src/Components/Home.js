@@ -164,7 +164,7 @@ const HomeComponent = () => {
 
 
         
-        <Container>
+        <Container className="listContainer">
         <div  className="topBottomPad rowPadd catalogContainer">
           <ListModal />
           </div>

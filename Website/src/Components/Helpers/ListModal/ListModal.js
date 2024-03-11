@@ -110,32 +110,32 @@ export const ListModal = () => {
                             <Button onClick={(e) => handleClick(e)} name="Common">
                                 <img className="normalIcon" src={CommonNormal} />
                                 <img className="hoverIcon" src={CommonHover} />
-                                Common
+                                <p>Common</p>
                             </Button>
                             <Button onClick={(e) => handleClick(e)} name="Furniture">
                                 <img className="normalIcon" src={FurnitureNormal} />
                                 <img className="hoverIcon" src={FurnitureHover} />
-                                Furniture
+                                <p>Furniture</p>
                             </Button>
                             <Button onClick={(e) => handleClick(e)} name="Lighting">
                                 <img className="normalIcon" src={LightingNormal} />
                                 <img className="hoverIcon" src={LightingHover} />
-                                Lighting
+                                <p>Lighting</p>
                             </Button>
                             <Button onClick={(e) => handleClick(e)} name="Paints">
                                 <img className="normalIcon" src={PaintsNormal} />
                                 <img className="hoverIcon" src={PaintsHover} />
-                                Paints
+                                <p>Paints</p>
                             </Button>
                             <Button onClick={(e) => handleClick(e)} name="Flooring">
                                 <img className="normalIcon" src={FlooringNormal} />
                                 <img className="hoverIcon" src={FlooringHover} />
-                                Flooring
+                                <p>Flooring</p>
                             </Button>
                             <Button onClick={(e) => handleClick(e)} name="Sanitaryware">
                                 <img className="normalIcon" src={SanitaryNormal} />
                                 <img className="hoverIcon" src={SanitaryHover} />
-                                Sanitaryware
+                                <p>Sanitaryware</p>
                             </Button>
                         </ButtonGroup>
                     </div>
