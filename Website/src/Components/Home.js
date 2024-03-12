@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Button, ButtonGroup } from "react-bootstrap";
 // import LandingV from "./Helpers/concept_office.webm";
-import LandingV from "./Helpers/Herosectionfinalvideo.webm";
+import LandingV from "./Helpers/Hero_section_final_video.mp4";
 import Play from "./Helpers/Play.svg";
 import Showroom from "./Helpers/Showroom.svg";
 import Catalog from "./Helpers/Catalog.svg";
@@ -12,23 +12,13 @@ import Commerce3D from "./Helpers/Commerce3D.svg";
 import ShowCase from "./Helpers/Showcase_and_sell_Video_Loop.webm";
 import backImg from "./Helpers/backImg.webp";
 import LV from "./Helpers/Hero_Section_Lighting_.webm";
-import lightingDetail from "./Helpers/lightingDetail.svg";
-import furniture from "./Helpers/furniture.png";
-import { MdFiberManualRecord } from "react-icons/md";
-
 import coloredfabric from './Helpers/coloredfabric.svg';
 import { ImgCarousel, MobImgCarousel } from './LandingCrousel.js'
 import contactIcon from './Helpers/contactIcon.svg'
 import YouTubeModal, { Customized3D, FormModal } from './Helpers/YouTubeModal/YouTubeModal';
 import { ListModal } from "./Helpers/ListModal/ListModal";
 
-
-import Collaborationvideo from './Helpers/Collaboration.webp';
-import Customizevideo from './Helpers/Material.webp';
-import Lightingvideo from './Helpers/Lighting.webp';
 import ButtonImg from './Helpers/Button.svg';
-
-import  CatalogBackground from './Helpers/CatalogBackground.webp';
 
 const HomeComponent = () => {
   const divBackground = {
@@ -38,9 +28,6 @@ const HomeComponent = () => {
     background:
       "background: linear-gradient(180deg, rgba(18, 18, 18, 0.00) 0%, rgba(18, 18, 18, 0.00) 0.01%, #02030B 49.53%)",
   };
-  // const CatalogBack = {
-  //   backgroundImage: `url(${CatalogBackground})`,
-  // }
   const [currVlinkName, setCurrVlinkName] = useState('customize')
   const handleIframeVid = (e)=>{
     let currVlinkName = e.currentTarget.name

@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import { Navbar, Nav ,NavDropdown ,Container,NavLink  } from 'react-bootstrap';
+import { Navbar, Nav ,NavDropdown ,Container,NavLink, Button  } from 'react-bootstrap';
 import { BsArrowDown } from 'react-icons/bs';
 import logo from '../logo.svg'
 
@@ -13,7 +13,7 @@ export const Header = ()=>{
       setShowDropdownSols(false)
     }
    return (
-    // <div style={{background:'linear-gradient(180deg, rgba(18, 18, 18, 0.00) 0%, rgba(18, 18, 18, 0.00) 0.01%, #02030B 49.53%)'}}>
+    <div>
    <Container>
       <Navbar variant="dark" bg='dark' expand="lg" className="">
         <Navbar.Brand href="/"  className="mr-4 d-flex align-items-center">
@@ -51,13 +51,11 @@ export const Header = ()=>{
               <NavDropdown.Item href="/aboutus">About Us</NavDropdown.Item>
               <NavDropdown.Item href="/team">Team</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="/demos" className="custom-navlink">
-              Demos
-            </Nav.Link>
+            <Button><Nav.Link href="/demos">Demos</Nav.Link></Button>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
     </Container>
-    // </div>
+    </div>
    )
 }

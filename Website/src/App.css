@@ -7,8 +7,9 @@ body {
   color: #FFF !important;
 }
 .navbar{
-border: 1px solid #FFF;
-background: rgba(166, 166, 166, 0.20);
+/* border: 1px solid #FFF; */
+/* background: rgba(166, 166, 166, 0.20); */
+background: #090B0D;
 backdrop-filter: blur(51.375px);
 }
 .navbar span{
@@ -41,7 +42,7 @@ backdrop-filter: blur(51.375px);
   padding: 6px;
 }
 .LandingV {
-  margin-left: -20px;
+  /* margin-left: -20px; */
   /* clip-path: polygon(37% 14%, 100% 17%, 95% 66%, 50% 89%, 5% 67%, 1% 17%); */
   clip-path: polygon(37% 19%, 97% 20%, 94% 66%, 50% 84%, 6% 67%, 4% 18%);
 }
@@ -552,7 +553,16 @@ margin-right: 15px;
   margin-top: 50px;
   margin-bottom: 100px;
 }
+.bg-dark{
+  background-color: revert !important;
+}
 @media screen and (min-width: 992px) {
+  .Commerce3DRow{
+    padding-top: 40px;
+  } 
+  .Customized3DCol{
+    margin-top: 50px;
+  } 
   .FormModalClass .modal-body,.FormModalClass .modal-content{
     width: 900px !important;
     background: #1d1d1b !important; 
@@ -590,7 +600,8 @@ margin-right: 15px;
     display: none;
   }
   .navBarDiv {
-    background: linear-gradient(180deg, rgba(18, 18, 18, 0.00) 0%, rgba(18, 18, 18, 0.00) 0.01%, #02030B 49.53%);
+    background: #090B0D;
+    /* background: linear-gradient(180deg, rgba(18, 18, 18, 0.00) 0%, rgba(18, 18, 18, 0.00) 0.01%, #02030B 49.53%); */
   }
   .navLogo {
     padding: 0 10px 0 0px;
@@ -598,15 +609,25 @@ margin-right: 15px;
     margin-left: 1.1rem;
   }
   .navbar {
-    margin-top: 20px !important;
-    margin-bottom: 20px !important;
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
   }
   .navbar-dark .navbar-brand,
   .navbar-dark .navbar-nav .nav-link {
     color: #FFF;
   }
+  .nav-link{
+    font-size: 17px;
+    font-weight: 400;
+}
+.ThreeDCommColSecond {
+  text-align: center;
+}
+.LandingV{
+  margin-left: 20px !important;
+}
   .navbar-dark {
-    border-radius: 4rem;
+    /* border-radius: 4rem; */
   }
   .navbar-nav:hover .nav-link+.nav-dropdown-hover .dropdown-menu {
     display: block;
@@ -632,11 +653,25 @@ margin-right: 15px;
   .navbar-expand-lg .navbar-collapse {
     place-content: flex-end;
   }
+  
+  .navbar-expand-lg .navbar-nav{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
 
-  .navbar-expand-lg .navbar-nav .nav-link {
+  /* .navbar-expand-lg .navbar-nav .nav-link {
     padding-left: 1.1rem !important;
     padding-right: 1.1rem !important;
-  }
+  } */
+  .navbar-nav button.btn.btn-primary{
+    width: 120px;
+    border-radius: 30px;
+    padding: 0px !important;
+    background: #FF4233;
+    border: 1px solid #FF4233;
+    margin: 0 !important;
+}
 
   .custom-navlink {
     margin-left: 1.1rem !important;
@@ -720,7 +755,8 @@ margin-right: 15px;
 .navbar-toggler{
   border-radius: 26.613px !important;
 border: 0.484px solid #FF4233 !important;
-background: var(--saaa, linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(90deg, rgba(251, 24, 7, 0.10) -51.32%, rgba(255, 66, 46, 0.10) 98.95%)) !important;
+/* background: var(--saaa, linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(90deg, rgba(251, 24, 7, 0.10) -51.32%, rgba(255, 66, 46, 0.10) 98.95%)) !important; */
+background: #090B0D !important;
 padding: 7px !important;
 }
 .ulListF{
@@ -845,9 +881,9 @@ border-top-right-radius: 10px;
     font-size: 13px;
   }
   .navbar{
-    border-radius: 4rem;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    /* border-radius: 4rem; */
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
   .navLogo {
     margin: 0px 5px 0 15px;
@@ -933,7 +969,8 @@ border-top-right-radius: 10px;
 .Commerce3DRow{
   display: flex;
   justify-content: flex-end;
-  margin-top: 20px;
+  /* margin-top: 20px; */
+  padding-top: 25px;
 }
 .Commerce3DDiv{
   display: none;
@@ -1021,10 +1058,6 @@ border-top-right-radius: 10px;
   
   .servicesButtonDiv button{
     width:165px !important;
-  }
-
-  .navbar-expand-lg .navbar-nav .nav-link{
-    padding-left: 0px;
   }
   .custom-navlink{
     margin-left: 0 !important;
@@ -1123,6 +1156,7 @@ border-top-right-radius: 10px;
 nav.navbar.navbar-expand-lg.navbar-dark.bg-dark{
   z-index: 1;
 }
+
 
 
 .ListModalParentDiv ul{
@@ -1343,6 +1377,10 @@ a{
   .ulListF {
     line-height: 22px;
     font-size: 11px !important;
+    padding-left: 24px !important;
+  }
+  .iframeC{
+    height: 395px;
   }
   .CatalogHead {
     font-size: 35px;
@@ -1418,10 +1456,10 @@ a{
 }
 .detailsColsRow{
   margin-top: -90px;
-  height: 550px !important;
+  height: 550px;
 }
 .servicesDetailDiv{
-  height: 580px;
+  height: 550px;
 }
 .ListModalParentDiv{
   width: 60%;
@@ -1459,7 +1497,47 @@ a{
   width: 90%;
   padding-top: 5rem ;
 }
-@media screen and (max-width:767px) {
+
+@media screen and (min-width:767px) and (max-width:1280px) {
+  .servicesDetailDiv {
+    display: flex !important;
+    flex-direction: row !important;
+  }
+  .listContainer {
+    padding: 0 ;
+    margin-right: 0;
+    margin-left: 0;
+    max-width: -webkit-fill-available;
+}
+.detailsColsRow {
+  height: 450px !important;
+}
+.catalog3DColImgDiv img{
+  margin-left: -6rem;
+}
+.hoverIcon, .normalIcon{
+  height: 60px !important;
+  width: 45px !important;
+}
+.ListModalParentDiv{
+  width: 55% !important;
+}
+.catalog3DColImgDiv{
+  width: 45% !important;
+}
+}
+@media screen and (max-width:767px){
+  .servicesDetailDiv,.detailsColsRow {
+    height: revert !important;
+  }
+  .ListModalParentDiv{
+    min-height:360px;
+  }
+  .catalog3DColImgDiv{
+    min-height: 300px;
+  }
+}
+@media screen and (max-width:1023px) {
   /* ctalog changes final mobile  */
 .servicesButtonDiv{
   padding: 10px 0px 6px 10px !important;
@@ -1516,7 +1594,7 @@ a{
   line-height: 22px !important;
 }
 .catalog3DColImgDiv{
-  width: 100% !important;
+  width: 100%;
   margin: 0 !important;
   border-radius: 0px !important;
 }
@@ -1530,7 +1608,7 @@ a{
   /* margin-bottom: 20px; */
 }
 .detailsColsRow{
- height: 650px !important;
+ height: revert;
 }
 .ThreeDButtons{
   display: flex !important;

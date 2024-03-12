@@ -49,7 +49,8 @@ export const ListModal = () => {
             'Dynamics (e.g., recliner sofa)',
             'Material Variants (e.g., fabrics of diverse colors, textures )',
             '360-degree spins',
-            'Measurements', 'Use furniture from Catalog3D to virtually design any space.', 'View under varying lighting conditions. (Sunlight, night lighting etc.)', 'Collaborative usage for two or more users.'],
+            'Measurements', 'Use furniture from Catalog3D to virtually design any space.',],
+            //  'View under varying lighting conditions. (Sunlight, night lighting etc.)', 'Collaborative usage for two or more users.'],
         imgUrl: CatalogFurniture
     },
     {
